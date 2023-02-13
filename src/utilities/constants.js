@@ -1,4 +1,4 @@
-export const navLInks = [
+export const navLinks = [
   {
     id: 1,
     title: 'Home',
