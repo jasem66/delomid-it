@@ -1,5 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChartBar, faDatabase, faEnvelope, faSuitcase, faThumbsUp } from '@fortawesome/free-solid-svg-icons'
+import {
+  faChartBar,
+  faDatabase,
+  faEnvelope,
+  faSuitcase,
+  faThumbsUp,
+} from '@fortawesome/free-solid-svg-icons'
 
 export const businessData = [
   {

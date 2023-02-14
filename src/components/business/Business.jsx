@@ -16,7 +16,10 @@ const Business = () => {
           const { id, icon, title, description } = item
           return (
             <div key={id} className='single-business'>
-              <div className='icon'>{icon}</div>
+              <div className='icon-container'>
+                <div className='middle' />
+                <div className='icon'>{icon}</div>
+              </div>
               <h3 className='title'>{title}</h3>
               <p>{description}</p>
             </div>
