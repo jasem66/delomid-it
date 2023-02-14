@@ -6,10 +6,19 @@
   list-style: none;
   text-decoration: none;
 }
-p {
-  font-size: 1rem;
-  font-weight: 400;
+body{
 }
+p {
+
+  font-weight: 400;
+  color:var(--light-clr);
+}
+ul,li,a{
+   color:var(--light-clr);
+   font-size: .9rem;
+}
+
+
 :root {
   /*---- colors---- */
   --primary-clr: #007cba;
