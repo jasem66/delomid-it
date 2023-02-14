@@ -32,14 +32,34 @@ ul,li,a{
   --light-clr: #edf0f2;
   --light-blue-clr: #43a9d1;
   --red-clr: #fc4349;
+  --dark-clr:#2c3e50;
 
   /*---- font---- */
+  --f-small:14px;
   --f-normal: 1rem;
 
   /*---- transition---- */
   --transition: all .2s ease-in-out;
 }
 
+
+
+/* ---- classes ----*/
+   .seperator{
+     border: 2px solid var(--dark-clr);
+     width: 90%;
+  margin: 2rem auto;
+     opacity: .1;
+    
+
+    }
+       .seperator-dark{
+     border: 1px solid var(--dark-clr);
+     width: 90%;
+     margin:1rem auto;
+     opacity: .5;
+
+    }
 
 /* ---- key frames ----*/
 @keyframes moveup {
