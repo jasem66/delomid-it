@@ -1,6 +1,8 @@
 .business {
   background-image: url('../../assets/career-background.jpg ');
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   text-align: center;
   .business-row {
     background-color: #fffffff2;
@@ -37,9 +39,9 @@
         padding: 30px;
       }
     }
-    .font-icon:hover  {
+    .font-icon:hover {
       color: #ffffffaf;
-  z-index: 1;
+      z-index: 1;
     }
     .icon-container:hover .overlay {
       bottom: 0;
