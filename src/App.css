@@ -46,13 +46,21 @@ ul,li,a{
 
 /* ---- classes ----*/
    .seperator{
-     border: 2px solid var(--dark-clr);
+     border-bottom: 2px solid var(--dark-clr);
      width: 90%;
-  margin: 2rem auto;
+  padding:1rem 2rem ;
+  margin: auto;
      opacity: .1;
     
 
     }
+    /* .seperator-t{
+          border-top: 2px solid var(--dark-clr);
+     width: 90%;
+  padding:1rem 2rem ;
+  margin: auto;
+     opacity: .1;
+    } */
        .seperator-dark{
      border: 1px solid var(--dark-clr);
      width: 90%;

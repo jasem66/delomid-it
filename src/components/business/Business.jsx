@@ -15,9 +15,19 @@ const Business = () => {
           <div className='icon'>
             <FontAwesomeIcon className='font-icon' icon={faDatabase} />
           </div>
+
           <h3 className='title'>data sss</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
         </div>
+        <div className='single-business'>
+          <div className='icon'>
+            <FontAwesomeIcon className='font-icon' icon={faDatabase} />
+          </div>
+
+          <h3 className='title'>data sss</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+        </div>
+        <hr className='seperator' />
       </div>
 
       <div className='business-row'>
