@@ -8,8 +8,7 @@
 }
 
 p {
-
-  font-weight: 400;
+   font-size: .9rem;
   color:var(--light-clr);
 }
 ul,li,a{
@@ -17,10 +16,14 @@ ul,li,a{
    font-size: .9rem;
 }
 
+::placeholder {
+ 
+  opacity: .5;
+}
 
 :root {
   /*---- colors---- */
-  --primary-clr: #007cba;
+  --primary-clr: #1B4454;
   --dark-blue-clr: #2c3e50;
   --light-clr: #edf0f2;
   --light-blue-clr: #43a9d1;
@@ -30,5 +33,5 @@ ul,li,a{
   --f-normal: 1rem;
 
   /*---- transition---- */
-  --transition: all .3s ease-in-out;
+  --transition: all .2s ease-in-out;
 }
