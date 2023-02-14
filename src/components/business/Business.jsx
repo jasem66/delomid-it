@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './business.scss'
 import images from '../../utilities/images'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDatabase, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { businessData } from '../../data/bussinesData'
 const Business = () => {
+  
+
   return (
     <div className='business'>
       <div className='business-row'>
