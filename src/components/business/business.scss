@@ -1,0 +1,40 @@
+.business {
+  background-image: url('../../assets/career-background.jpg ');
+  text-align: center;
+  .business-row {
+    background-color: #fffffff2;
+
+    .single-business{
+   padding-top: 1rem;
+       display: flex;
+       flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    }
+    h3{
+     padding: 1rem;
+    }
+   
+    p {
+      color: var(--black-clr);
+      font-size: var(--f-small)
+      
+      
+      ;
+    }
+ .icon{
+  width: 90px;
+  height: 90px;
+  border:2px solid var(--light-blue-clr) ;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .font-icon{
+font-size: 2.5rem;
+color: var(--light-blue-clr);
+
+  }
+ }
+  }
+}
