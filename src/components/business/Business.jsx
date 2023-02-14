@@ -17,7 +17,7 @@ const Business = () => {
           return (
             <div key={id} className='single-business'>
               <div className='icon-container'>
-                <div className='middle' />
+                <div className='overlay' />
                 <div className='icon'>{icon}</div>
               </div>
               <h3 className='title'>{title}</h3>
