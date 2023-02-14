@@ -18,24 +18,23 @@ const Footer = () => {
         </ul>
         <div className='addresses'>
           <address>
-            <a href='   mailto:jasemsarafraz66@gmail.com'>
-            
-              +32 2 544 04 45 (Belgium)
+            <a href='mailto:jasemsarafraz66@gmail.com'>
+              <span> +32 2 544 04 45</span> (Belgium)
             </a>
           </address>
           <address>
             <a href='   mailto:jasemsarafraz66@gmail.com'>
-              +352 621 47 17 46 (Luxembourg)
+              <span>+352 621 47 17 46</span> (Luxembourg)
             </a>
           </address>
           <address>
             <a href='   mailto:jasemsarafraz66@gmail.com'>
-              info@delomid-it.com
+              <span>info@delomid-it.com </span>
             </a>
           </address>
         </div>
-        <div className="search-footer">
-          <input type="text" placeholder='to search...'/>
+        <div className='search-footer'>
+          <input type='text' placeholder='To research...' />
         </div>
       </div>
     </section>

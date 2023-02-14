@@ -24,10 +24,6 @@ transition: var(--transition);
   .nav-link:hover{
    color: var(--red-clr);
   }
-  .nav-link:active{
-   color: aqua;
-  }
-
   .nav-icons {
     display: flex;
     align-items: center;
@@ -39,6 +35,7 @@ transition: var(--transition);
     color: aliceblue;
     font-size: 1.5rem;
     padding: 0 0.5rem;
+    cursor: pointer;
   }
 }
 

@@ -1,37 +1,43 @@
 .footer {
   background-color: var(--light-blue-clr);
   width: 100%;
-padding: 1rem ;
+  padding: 1rem;
 
-  .footer-links{
-
+  .footer-links {
   }
   .nav-link {
     color: var(--light-clr);
     display: block;
-    padding: .5rem  0;
+    padding: 0.5rem 0;
 
-font-size: .9rem;
+    font-size: 0.9rem;
   }
-  .addresses{
-   margin-top: 2rem;
+  .addresses {
+    margin-top: 2rem;
   }
-  address{
+  address {
     line-height: 2rem;
+    span {
+      transition: var(--transition);
+    }
+    span:hover {
+      color: var(--red-clr);
+    }
   }
-  .search-footer{
-   margin: 1em 0;
-   input{
-       width: 100%;
-   height:40px;
-   border: none;
-   border-radius: 5px;
-   }
-   Input[placeholder]{
-    color: red;
-    padding: 1rem;
-    font-family: ;
-   }
 
+  .search-footer {
+    margin: 1em 0;
+    input {
+      width: 100%;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+    }
+    input[placeholder] {
+      color: rgb(160, 147, 147);
+      padding: 1rem;
+      font-family: 'Open Sans', sans-serif;
+      outline: none;
+    }
   }
 }
