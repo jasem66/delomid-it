@@ -6,9 +6,13 @@
   list-style: none;
   text-decoration: none;
 }
+h3{
+  font-size: 1.8rem;
+font-weight: 100;
+}
 
 p {
-   font-size: .9rem;
+   font-size: 1rem;
   color:var(--light-clr);
 }
 ul,li,a{
@@ -34,4 +38,33 @@ ul,li,a{
 
   /*---- transition---- */
   --transition: all .2s ease-in-out;
+}
+
+
+/* ---- key frames ----*/
+@keyframes moveup {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes movedown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
