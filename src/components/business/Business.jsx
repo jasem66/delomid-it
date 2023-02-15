@@ -22,8 +22,10 @@ const Business = () => {
             </div>
           )
         })}
-
-        <hr className='seperator' />
+<div className="seperator-container">
+  
+</div>
+        <div className='seperator-down' />
       </div>
 
       <div className='business-row'>

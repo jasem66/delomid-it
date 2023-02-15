@@ -8,6 +8,8 @@
     background-color: #fffffff2;
 
     .single-business {
+      max-width: 20rem;
+      margin: auto;
       padding-top: 1rem;
       display: flex;
       flex-direction: column;
@@ -48,6 +50,13 @@
       height: 100%;
       width: 100%;
       left: 0;
+    }
+    .seperator-down{
+      display: inline-block;
+
+   
+      // border: 1px solid ;
+padding: 10rem;
     }
     .overlay {
       position: absolute;
