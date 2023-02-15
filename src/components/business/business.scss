@@ -77,18 +77,18 @@
     }
   }
   .seperator-container {
-  position: relative;
-  padding: 3.5rem;
-}
-.seperator-down {
-  position: absolute;
-  border: 1px solid var(--dark-clr);
-  width: 90%;
-  margin: auto;
-  left: 0;
-  right: 0;
-  opacity: 0.3;
-}
+    position: relative;
+    padding: 3.5rem;
+  }
+  .seperator-down {
+    position: absolute;
+    border: 1px solid var(--dark-clr);
+    width: 90%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    opacity: 0.3;
+  }
 }
 @media screen and (min-width: 768px) {
   .business {
@@ -102,14 +102,14 @@
         justify-content: flex-start;
         height: 250px;
         width: 20%;
-        h3:hover{
-opacity: 1;
-    color: var(--red-clr);
+        h3:hover {
+          opacity: 1;
+          color: var(--red-clr);
         }
       }
     }
   }
-  .seperator{
+  .seperator {
     padding: var(--p-md);
   }
 }
