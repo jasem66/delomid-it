@@ -16,6 +16,7 @@ h3 {
 p {
   font-size: 1rem;
   color: var(--light-clr);
+  opacity: .8;
 }
 
 ul,

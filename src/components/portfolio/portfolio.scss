@@ -1,0 +1,29 @@
+.portfolio {
+  .portfolio-row {
+    h3 {
+      // font-size: var(--f-xxl);
+      text-align: center;
+      padding: var(--p-sm);
+      padding-top: 1.5rem;
+    }
+    p {
+      color: var(--f-dark);
+      text-align: center;
+      font-size: var(--f-lg);
+    }
+  }
+  .seperator-container {
+    position: relative;
+    padding: 1rem;
+  }
+  .seperator-down {
+    position: absolute;
+    border: 0.5px solid var(--dark-clr);
+    width: 90%;
+    // max-width: 300px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    opacity: 0.2;
+  }
+}
