@@ -8,7 +8,7 @@ const Business = () => {
         <h3>Business Intelligence</h3>
         <p>Expertise in data management and processing</p>
         <div className='seperator'></div>
-
+<div className="business-container">
         {businessData.map((item) => {
           const { id, icon, title, description } = item
           return (
@@ -21,11 +21,11 @@ const Business = () => {
               <p>{description}</p>
             </div>
           )
-        })}
+        })}</div>
 <div className="seperator-container">
-  
+       <div className='seperator-down' />
 </div>
-        <div className='seperator-down' />
+   
       </div>
 
       <div className='business-row'>

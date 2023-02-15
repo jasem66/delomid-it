@@ -6,68 +6,93 @@
   list-style: none;
   text-decoration: none;
 }
-h3{
+
+h3 {
   font-size: 1.8rem;
-font-weight: 100;
+  font-weight: 100;
+  opacity: 0.8;
 }
 
 p {
-   font-size: 1rem;
-  color:var(--light-clr);
+  font-size: 1rem;
+  color: var(--light-clr);
 }
-ul,li,a{
-   color:var(--light-clr);
-   font-size: .9rem;
+
+ul,
+li,
+a {
+  color: var(--light-clr);
+  font-size: 0.9rem;
 }
 
 ::placeholder {
- 
-  opacity: .5;
+  opacity: 0.5;
 }
 
 :root {
   /*---- colors---- */
-  --primary-clr: #1B4454;
+  --primary-clr: #1b4454;
   --dark-blue-clr: #2c3e50;
   --light-clr: #edf0f2;
   --light-blue-clr: #43a9d1;
   --red-clr: #fc4349;
-  --dark-clr:#2c3e50;
+  --dark-clr: #2c3e50;
+
+  /*---- padding---- */
+  --p-sm: 1rem;
+  --p-md: 2rem;
+  --p-lg: 3rem;
+  --p-xl: 4rem;
+
+  /*---- margin---- */
+  --m-sm: 1rem;
+  --m-md: 2rem;
+  --m-lg: 3rem;
+  --m-xl: 4rem;
 
   /*---- font---- */
-  --f-small:14px;
-  --f-normal: 1rem;
+  --f-sm: 14px;
+  --f-md: 1rem;
+  --f-lg: 20px;
+  --f-xl: 1.8rem;
+
+  /*---- line-hight---- */
+  --line-1: 1.2rem;
+  --line-2: 1.6rem;
+  --line-3: 2rem;
 
   /*---- transition---- */
-  --transition: all .2s ease-in-out;
+  --transition: all 0.2s ease-in-out;
 }
 
-
-
 /* ---- classes ----*/
-   .seperator{
-     border-bottom: 2px solid var(--dark-clr);
-     width: 90%;
-  padding:1rem 2rem ;
+.seperator {
+  border-bottom: 2px solid var(--dark-clr);
+  width: 90%;
+  padding: 1rem 2rem;
   margin: auto;
-     opacity: .1;
-    
+  opacity: 0.1;
+}
 
-    }
-    /* .seperator-t{
-          border-top: 2px solid var(--dark-clr);
-     width: 90%;
-  padding:1rem 2rem ;
+.seperator-dark {
+  border: 1px solid var(--dark-clr);
+  width: 90%;
+  margin: 1rem auto;
+  opacity: 0.5;
+}
+.seperator-container {
+  position: relative;
+  padding: 3.5rem;
+}
+.seperator-down {
+  position: absolute;
+  border: 1px solid var(--dark-clr);
+  width: 90%;
   margin: auto;
-     opacity: .1;
-    } */
-       .seperator-dark{
-     border: 1px solid var(--dark-clr);
-     width: 90%;
-     margin:1rem auto;
-     opacity: .5;
-
-    }
+  left: 0;
+  right: 0;
+  opacity: 0.3;
+}
 
 /* ---- key frames ----*/
 @keyframes moveup {
