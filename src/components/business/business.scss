@@ -94,13 +94,13 @@
   .business {
     .business-container {
       display: flex;
+      max-width: 1140px;
+      margin: auto;
       column-gap: 1rem;
       .single-business {
         padding-top: 3rem;
-        display: flex;
-        flex-direction: column;
         justify-content: flex-start;
-        height: 250px;
+        height: 270px;
         width: 20%;
         h3:hover {
           opacity: 1;
@@ -111,5 +111,44 @@
   }
   .seperator {
     padding: var(--p-md);
+  }
+  .seperator-dark {
+    width: 25%;
+    max-width: 100%;
+  }
+  //   digital container   //
+  .business-row {
+    .digital-container {
+      max-width: 1140px;
+      display: flex;
+      margin: auto;
+      padding-bottom: 2rem;
+      flex-wrap: wrap;
+      .single-business {
+        padding: 1.5rem 1rem;
+        display: flex;
+        justify-content: flex-start;
+        height: 350px;
+
+        width: 28%;
+
+        h3:hover {
+          opacity: 1;
+          color: var(--red-clr);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 922px) {
+  .business-row {
+    .digital-container {
+      .single-business {
+        animation: movedown 1.2s ease-in-out;
+          height: 300px;
+        
+      }
+    }
   }
 }

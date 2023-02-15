@@ -1,11 +1,12 @@
 import React from 'react'
-import { Business, Hero } from '../components'
+import { Business, Hero, HomeVideo } from '../components'
 
 const Home = () => {
   return (
     <div className='home'>
       <Hero />
-      <Business />
+      {/* <Business /> */}
+      <HomeVideo/>
     </div>
   )
 }

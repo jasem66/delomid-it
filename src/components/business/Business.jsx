@@ -32,7 +32,7 @@ const Business = () => {
         <h3>digital-online</h3>
         <p>Design of web and mobile applications</p>
         <div className='seperator-dark'></div>
-
+<div className="digital-container">
         {digitalData.map((item) => {
           const { id, icon, title, description } = item
           return (
@@ -45,7 +45,7 @@ const Business = () => {
               <p>{description}</p>
             </div>
           )
-        })}
+        })}</div>
       </div>
     </div>
   )

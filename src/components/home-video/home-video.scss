@@ -1,0 +1,36 @@
+.home-video {
+  background-color: var(--dark-blue-clr);
+
+  .video-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h3 {
+      color: var(--light-clr);
+      font-size: var(--f-xxl);
+      opacity: 1;
+      padding: var(--p-lg);
+      text-align: center;
+    }
+    video {
+      width: 90%;
+      max-width: 740px;
+      margin: var(--m-sm) 0 var(--m-lg) 0;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .home-video {
+    .video-container {
+      video {
+        width: 60%;
+      }
+    }
+  }
+}
+@media screen and (min-width: 922px) {
+  .video-container {
+    animation: popin 1s ease-in-out;
+  }
+}
