@@ -8,24 +8,24 @@ const Business = () => {
         <h3>Business Intelligence</h3>
         <p>Expertise in data management and processing</p>
         <div className='seperator'></div>
-<div className="business-container">
-        {businessData.map((item) => {
-          const { id, icon, title, description } = item
-          return (
-            <div key={id} className='single-business'>
-              <div className='icon-container'>
-                <div className='overlay' />
-                <div className='icon'>{icon}</div>
+        <div className='business-container'>
+          {businessData.map((item) => {
+            const { id, icon, title, description } = item
+            return (
+              <div key={id} className='single-business'>
+                <div className='icon-container'>
+                  <div className='overlay' />
+                  <div className='icon'>{icon}</div>
+                </div>
+                <h3 className='title'>{title}</h3>
+                <p>{description}</p>
               </div>
-              <h3 className='title'>{title}</h3>
-              <p>{description}</p>
-            </div>
-          )
-        })}</div>
-<div className="seperator-container">
-       <div className='seperator-down' />
-</div>
-   
+            )
+          })}
+        </div>
+        <div className='seperator-container'>
+          <div className='seperator-down' />
+        </div>
       </div>
 
       <div className='business-row'>
