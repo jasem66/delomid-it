@@ -4,7 +4,24 @@ padding: var(--p-sm) 0;
   max-width: 1140px;
   width: 90%;
     margin: auto;
+    h3{
+     padding: 10px 0;
+     opacity: .6;
+    }
  }
+ .seperator-container {
+  position: relative;
+  padding: .5rem;
+}
+.seperator-down {
+  position: absolute;
+  border: 1px solid var(--dark-clr);
+  width: 90%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  opacity: 0.1;
+}
  .contacts-row-1{
 .icons{
 display: inline-block;

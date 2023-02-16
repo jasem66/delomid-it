@@ -13,8 +13,8 @@ const Contacts = () => {
             <FaFacebookF color='#3b5998' className='font-icon' />
           </div>
         </div>
-        <div className="divider-container">
-         
+        <div className="seperator-container">
+<div className="seperator-down"></div>
         </div>
         <div className='contacts-row-2'>
           <h3>Contact information</h3>
