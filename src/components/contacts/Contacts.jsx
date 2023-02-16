@@ -1,5 +1,6 @@
 import React from 'react'
 import './contacts.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FaFacebookF } from 'react-icons/fa'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { AiOutlinePhone } from 'react-icons/ai'
@@ -12,8 +13,16 @@ const Contacts = () => {
         <div className='contacts-row-1'>
           <h3>Find us on social networks</h3>
           <div className='icons'>
-            <FaLinkedinIn className='font-icon' color='#0072b1' />
-            <FaFacebookF color='#3b5998' className='font-icon' />
+            <div className='icon-wrapper'>
+             <div className="zindex">   <FaLinkedinIn size={50} className='font-icon'  /></div>
+           
+              <div className='overlay'></div>
+            </div>
+            <div className='icon-wrapper'>
+              {' '}
+              <FaFacebookF size={50}  className='font-icon' />
+              <div className='overlay'></div>
+            </div>
           </div>
         </div>
         <div className='seperator-container'>
