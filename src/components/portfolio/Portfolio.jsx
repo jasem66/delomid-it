@@ -18,7 +18,7 @@ const Portfolio = () => {
               const {id,title,text,image} = item
 
 return(
-  <div className="single-portfolio">
+  <div key={id} className="single-portfolio">
     <h3>{title}</h3>
     <p>{text}</p>
     <img src={image} alt={title} />
