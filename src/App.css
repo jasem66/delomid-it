@@ -11,14 +11,14 @@ h3 {
   font-size: 1.8rem;
   font-weight: 100;
   opacity: 0.9;
-  padding: var(--m-sm) 0;
+  line-height: 2.5rem;
   transition: var(--transition);
 }
 
 p {
   font-size: 1rem;
   color: var(--light-clr);
-  padding: 10px 0;
+  line-height: var(--line-2);
 }
 
 ul,
@@ -26,6 +26,15 @@ li,
 a {
   color: var(--light-clr);
   font-size: 0.9rem;
+}
+time {
+  font-size: 14px;
+  opacity: 0.6;
+  line-height: 2rem;
+vertical-align: middle;
+  display: flex;
+  align-items: center;
+
 }
 
 ::placeholder {
@@ -78,6 +87,7 @@ a {
   border: none;
   border-radius: 5px;
   transition: var(--transition);
+  margin: 1.5rem 0;
 }
 .btn:hover {
   color: var(--light-clr);
@@ -134,7 +144,6 @@ a {
   }
 }
 
-
 @keyframes movedown {
   0% {
     transform: translateY(-100%);
@@ -149,8 +158,6 @@ a {
   }
 }
 
-
-
 @keyframes movedownSlow {
   0% {
     transform: translateY(-10%);
@@ -160,7 +167,7 @@ a {
     opacity: 0;
   }
 
-   50% {
+  50% {
     opacity: 0;
   }
 
@@ -169,7 +176,6 @@ a {
     transform: translateY(0);
   }
 }
-
 
 @keyframes popin {
   0% {
@@ -184,4 +190,3 @@ a {
     transform: translateY(1);
   }
 }
-

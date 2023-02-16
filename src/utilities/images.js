@@ -5,6 +5,10 @@ import portfolio1 from '../assets/portfolio1.png'
 import portfolio2 from '../assets/portfolio2.png'
 import portfolio3 from '../assets/portfolio3.png'
 import jobsBg from '../assets/jobs-bg.jpg'
+import blog1 from '../assets/blog1.jpg'
+import blog2 from '../assets/blog2.jpg'
+import blog3 from '../assets/blog3.jpg'
+
 
 export default {
   logo,
@@ -14,4 +18,7 @@ export default {
   portfolio2,
   portfolio1,
   jobsBg,
+  blog1,
+  blog2,
+  blog3,
 }
