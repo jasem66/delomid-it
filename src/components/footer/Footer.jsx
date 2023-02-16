@@ -34,7 +34,6 @@ const Footer = () => {
             <address>
               <a href='   mailto:jasemsarafraz66@gmail.com'>
                 <MdEmail className='icon' />
-
                 <span> info@delomid-it.com </span>
               </a>
             </address>
