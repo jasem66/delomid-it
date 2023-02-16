@@ -5,8 +5,9 @@ const Business = () => {
   return (
     <div className='business'>
       <div className='business-row'>
+        <div className="business-content">
         <h3>Business Intelligence</h3>
-        <p>Expertise in data management and processing</p>
+        <p>Expertise in data management and processing</p></div>
         <div className='seperator'></div>
         <div className='business-container'>
           {businessData.map((item) => {

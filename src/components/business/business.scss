@@ -6,7 +6,9 @@
   text-align: center;
   .business-row {
     background-color: #fffffff2;
-
+   .business-content{
+    padding-top: var(--p-md);
+   }
     p {
       opacity: 0.8;
       color: var(--black-clr);
@@ -28,6 +30,10 @@
       h3 {
         font-size: var(--f-lg);
         transition: var(--transition);
+      }
+      .title:hover {
+        color: var(--red-clr);
+        cursor: pointer;
       }
       p {
         font-size: var(--f-sm);
@@ -55,6 +61,7 @@
     .font-icon:hover {
       color: #ffffffaf;
       z-index: 1;
+      cursor: pointer;
     }
     .icon-container:hover .overlay {
       bottom: 0;
@@ -116,7 +123,8 @@
     width: 25%;
     max-width: 100%;
   }
-  //   digital container   //
+  // ----  digital container  ---- //
+
   .business-row {
     .digital-container {
       max-width: 1140px;
@@ -143,11 +151,14 @@
 
 @media screen and (min-width: 922px) {
   .business-row {
+    .business-container,
+   .business-content {
+      animation: popin 1.2s ease-in-out;
+    }
     .digital-container {
       .single-business {
         animation: movedown 1.2s ease-in-out;
-          height: 300px;
-        
+        height: 300px;
       }
     }
   }
