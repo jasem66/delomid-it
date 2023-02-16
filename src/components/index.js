@@ -6,4 +6,15 @@ import HomeVideo from './home-video/HomeVideo'
 import Portfolio from './portfolio/Portfolio'
 import Jobs from './jobs/Jobs'
 import Blogs from './blogs/Blogs'
-export { Navbar, Footer, Hero, Business, HomeVideo, Portfolio, Jobs, Blogs }
+import Contacts from './contacts/Contacts'
+export {
+  Navbar,
+  Footer,
+  Hero,
+  Business,
+  HomeVideo,
+  Portfolio,
+  Jobs,
+  Blogs,
+  Contacts,
+}

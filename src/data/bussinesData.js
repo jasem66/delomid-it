@@ -4,8 +4,6 @@ import {
   faCode,
   faDatabase,
   faPalette,
-  faPallet,
-  faPen,
   faPenFancy,
   faSearch,
   faStore,
