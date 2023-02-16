@@ -26,6 +26,11 @@
         margin-bottom: 0;
         font-size: var(--f-md);
       }
+      h3:hover {
+        color: var(--red-clr);
+        text-decoration: underline;
+        cursor: pointer;
+      }
       time {
         color: #9aa7b5;
         font-size: var(--f-sm);
@@ -52,3 +57,11 @@
     }
   }
 }
+
+@media screen and (min-width: 922px) {
+ .jobs {
+    .jobs-row {
+
+animation: movedownSlow 1s ease-in-out
+
+    }}}
