@@ -1,7 +1,8 @@
 .footer {
   background-color: var(--light-blue-clr);
   width: 100%;
-
+.footer-row{ max-width: 1140px;
+margin: auto;}
   .footer-links {
     padding: 1rem;
   }
@@ -120,7 +121,7 @@
 @media screen and (min-width: 1200px) {
   .footer {
     .footer-links {
-      justify-content: space-around;
+      justify-content: space-between;
     }
   }
 }
