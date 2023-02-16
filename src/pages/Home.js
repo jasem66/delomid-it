@@ -1,10 +1,10 @@
 import React from 'react'
-import { Business, Hero, HomeVideo, Portfolio } from '../components'
+import { Business, Hero, HomeVideo, Jobs, Portfolio } from '../components'
 
 const Home = () => {
   return (
     <div className='home'>
-      <Portfolio />
+      <Jobs />
     </div>
   )
 }
