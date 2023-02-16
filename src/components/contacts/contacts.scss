@@ -24,41 +24,92 @@
   }
 
   .contacts-row-1 {
+    .icons {
+      // background-color: aqua;
+
+      display: flex;
+      gap: 1rem;
+    }
+    .icon-wrapper {
+      position: relative;
+    }
     .font-icon {
       border: 2px solid rgba(134, 132, 132, 0.329);
-      font-size: var(--f-lg);
-      margin: 0.2rem;
       padding: 0.8rem;
-      width: 50px;
-      height: 50px;
+      width: 100%;
+      color: #0072b1;
+       display: block;
+       z-index: 1;
+    }
+    .font-icon:hover {
+    position: relative;
+      color: aliceblue;
+      cursor: pointer;
+    }
+    .overlay {
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      right: 0;
+      background-color: #3b5998;
+      overflow: hidden;
+      width: 100%;
+      height: 0;
+      transition: 0.5s ease;
+    }
+    .icon-wrapper:hover .overlay {
+      bottom: 0;
+      height: 100%;
+      color: aliceblue;
     }
   }
-   .contacts-row-2 {
-.icons{
-display: flex;
-align-items: center;
-gap: .8rem;
-a{
- color: var(--dark-clr);
- transition: var(--transition);
+  .contacts-row-2 {
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      a {
+        color: var(--dark-clr);
+        transition: var(--transition);
+      }
+      a:hover {
+        color: var(--red-clr);
+        text-decoration: underline;
+      }
+    }
+    .icon {
+      color: var(--light-blue-clr);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid var(--light-blue-clr);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: var(--f-lg);
+    }
+  }
 }
-a:hover{
- color: var(--red-clr);
- text-decoration: underline;
-}
-}
-.icon{color:var(--light-blue-clr) ;
- display: flex;
-justify-content: center;
-align-items: center;
-border: 2px solid var(--light-blue-clr) ;
-width: 50px ;
-height: 50px;
-border-radius: 50%;
-font-size: var(--f-lg);
 
-
+@media screen and (min-width: 768px) {
+  .contacts {
+    .contacts-container {
+      padding: var(--m-sm) 0;
+    }
+    h3 {
+      font-size: var(--f-xxl);
+      margin: var(--m-sm) 0;
+    }
+    .contacts-row-2 {
+      .icon {
+        font-size: var(--f-xl);
+        width: 60px;
+        height: 60px;
+      }
+      a {
+        font-size: var(--f-md);
+      }
+    }
+  }
 }
-
-   }
-}
+// color='#3b5998'
