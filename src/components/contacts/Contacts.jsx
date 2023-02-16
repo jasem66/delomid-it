@@ -25,12 +25,12 @@ const Contacts = () => {
             <div className='icon'>
               <AiOutlinePhone />
             </div>
-            <span>+32 2 544 04 45</span>
+            <a href='tell:+32 2 544 04 45'>+32 2 544 04 45</a>
             <article></article>
             <div className='icon'>
               <AiOutlineMail />
             </div>
-            <span>info@delomid-it.com</span>
+            <a href='mailto:info@delomid-it.com'> info@delomid-it.com</a>
           </div>
         </div>
       </div>
