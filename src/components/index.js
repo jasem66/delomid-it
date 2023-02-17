@@ -7,6 +7,9 @@ import Portfolio from './portfolio/Portfolio'
 import Jobs from './jobs/Jobs'
 import Blogs from './blogs/Blogs'
 import Contacts from './contacts/Contacts'
+import Intelligence from './business-inteligence/Intelligence'
+import Services from './our-services/Services'
+import Digital from './digital-online/Digital'
 export {
   Navbar,
   Footer,
@@ -17,4 +20,7 @@ export {
   Jobs,
   Blogs,
   Contacts,
+  Intelligence,
+  Services,
+  Digital,
 }
