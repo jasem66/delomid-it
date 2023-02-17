@@ -1,12 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faChartBar,
   faCode,
-  faDatabase,
   faGraduationCap,
   faPen,
-  faSuitcase,
-  faThumbsUp,
   faWarehouse,
 } from '@fortawesome/free-solid-svg-icons'
 
@@ -14,7 +10,7 @@ export const servicesData = [
   {
     id: 1,
     title: 'Advice',
-    description: [
+    desc: [
       'Audit project framework',
       'Feasibility study',
       'Process',
@@ -25,7 +21,7 @@ export const servicesData = [
   {
     id: 2,
     title: 'Achievement',
-    description: [
+    desc: [
       'Functional',
       'analysis',
       'Development',
@@ -37,7 +33,7 @@ export const servicesData = [
   {
     id: 3,
     title: 'Integration',
-    description: [
+    desc: [
       'Analysis of your processes',
       'Study of existing architecture',
       'Data management solution integration',
@@ -47,7 +43,7 @@ export const servicesData = [
   {
     id: 4,
     title: 'Coaching',
-    description: ['Training', 'Technical support', 'Change management'],
+    desc: ['Training', 'Technical support', 'Change management'],
     icon: <FontAwesomeIcon className='font-icon' icon={faGraduationCap} />,
   },
 ]
