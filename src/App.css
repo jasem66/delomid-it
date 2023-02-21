@@ -75,6 +75,7 @@ time {
 
   /*---- transition---- */
   --transition: all 0.2s ease-in-out;
+  --transition-2: all 0.4s ease-in-out;
 
   /*---- shadow ---- */
   --shadow-1: 0px 0px 15px 5px #c4c1c1;
@@ -163,6 +164,20 @@ time {
 @keyframes moveleft {
   0% {
     transform: translateX(50%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveright {
+  0% {
+    transform: translateX(-50%);
     opacity: 0;
   }
   50% {
