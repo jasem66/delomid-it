@@ -10,6 +10,8 @@ import Contacts from './contacts/Contacts'
 import Intelligence from './business-inteligence/Intelligence'
 import Services from './our-services/Services'
 import Digital from './digital-online/Digital'
+import Careers from './careers/Careers'
+
 export {
   Navbar,
   Footer,
@@ -23,4 +25,5 @@ export {
   Intelligence,
   Services,
   Digital,
+  Careers,
 }

@@ -1,12 +1,9 @@
 import React from 'react'
-import { Digital, Intelligence } from '../components'
+import { Careers} from '../components'
 
 const Career = () => {
   return (
-    <>
-      <Intelligence />
-      <Digital />
-    </>
+<Careers/>
   )
 }
 
