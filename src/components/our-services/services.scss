@@ -2,5 +2,41 @@
 p{
  color: var(--dark-clr);
 }
+.services-container{
+ max-width: 1140px;
+ width: 90%;
+ margin: 30px auto;
+ text-align: center;
+ 
 
+
+ .single-service{
+  padding: var(--p-sm) 0;
+  .icon{
+font-size: var(--f-xxl);
+padding: 20px;
+
+  }
+ }
+}
+
+}
+
+@media  screen and(min-width:768px) {
+
+ .services{
+
+  .services-col{
+display: flex;
+justify-content: center;
+gap: 1rem;
+
+.single-service{
+ width: 25%;
+ 
+}
+
+  }
+ }
+ 
 }
