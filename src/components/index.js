@@ -11,7 +11,7 @@ import Intelligence from './business-inteligence/Intelligence'
 import Services from './our-services/Services'
 import Digital from './digital-online/Digital'
 import Careers from './careers/Careers'
-
+import Dropdown from './nav-dropdown/Dropdown'
 export {
   Navbar,
   Footer,
@@ -26,4 +26,5 @@ export {
   Services,
   Digital,
   Careers,
+  Dropdown,
 }

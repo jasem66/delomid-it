@@ -25,3 +25,16 @@ export const navLinks = [
     path: '/blog',
   },
 ]
+
+export const navDropdownLInks = [
+  {
+    id: 1,
+    title: 'business intelligence',
+    path: '/business-intelligence',
+  },
+  {
+    id: 2,
+    title: 'digital-online',
+    path: '/digital-online',
+  },
+]
