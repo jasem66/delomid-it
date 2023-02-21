@@ -81,7 +81,7 @@ vertical-align: middle;
 /* ---- classes ----*/
 .btn {
   color: var(--dark-clr);
-  padding: 12px 35px;
+  padding: 13px 35px;
   font-size: medium;
   font-weight: 600;
   border: none;

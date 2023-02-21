@@ -19,6 +19,8 @@ const Intelligence = () => {
               <div className='single-job' key={id}>
                 <h3>{title}</h3>
                 <time><AiOutlineClockCircle/>{date}</time>
+                <p>{desc}</p>
+                <button className="btn">Learn More</button>
 
               </div>
             )

@@ -36,6 +36,23 @@
    width: 100%;
    background-color: white;
   text-align: center;
+  opacity: .8;
+  margin: var(--m-sm) auto;
+  padding:var(--p-sm)  var(--p-md);
+  h3{
+   font-size: var(--f-lg);
+  }
+  time{
+   display: inline-block;
 
+  }
+p{
+   color: var(--dark-clr);
+      font-size: var(--f-sm);
+
+
+}
+.single-job:hover{
+ box-shadow: ;
   }
 }
