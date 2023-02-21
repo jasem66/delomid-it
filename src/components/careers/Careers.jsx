@@ -32,7 +32,9 @@ const careers = () => {
         </div>
       </div>
 
-      <div className='intelligence-header'>
+      {/* online-digital */}
+
+      <div className='intelligence-header second-bg'>
         <div className='overlay'></div>
 
         <h2>digital-online</h2>
@@ -56,7 +58,9 @@ const careers = () => {
         </div>
       </div>
 
-      <div className='intelligence-header'>
+      {/* others */}
+
+      <div className='  intelligence-header third-bg'>
         <div className='overlay'></div>
 
         <h2>digital-online</h2>
