@@ -1,5 +1,5 @@
 .intelligence {
- background-color: #e4e8eb;
+  background-color: #e4e8eb;
   .intelligence-header {
     background: url(../../assets/career-background.jpg) no-repeat;
     background-size: cover;
@@ -29,30 +29,33 @@
 .intelligence-row {
   margin: auto;
   width: 90%;
-
-
-
-  .single-job{
-   width: 100%;
-   background-color: white;
-  text-align: center;
-  opacity: .8;
-  margin: var(--m-sm) auto;
-  padding:var(--p-sm)  var(--p-md);
-  h3{
-   font-size: var(--f-lg);
-  }
-  time{
-   display: inline-block;
-
-  }
-p{
-   color: var(--dark-clr);
+.single-job:hover {
+      box-shadow: var(--shadow-1);
+    }
+  .single-job {
+   transition: var(--transition);
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    opacity: 0.8;
+    margin: var(--m-sm) auto;
+    padding: var(--p-sm) var(--p-md);
+    
+    h3:hover{
+color: var(--red-clr);
+text-decoration: underline;
+    }
+    h3 {
+     transition: var(--transition);
+      font-size: var(--f-lg);
+    }
+    time {
+      display: inline-block;
+    }
+    p {
+      color: var(--dark-clr);
       font-size: var(--f-sm);
-
-
-}
-.single-job:hover{
- box-shadow: ;
+    }
+    
   }
 }

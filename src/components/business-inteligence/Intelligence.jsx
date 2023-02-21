@@ -26,7 +26,7 @@ const Intelligence = () => {
             )
           })}
         </div>
-      </div>{' '}
+      </div>
     </div>
   )
 }

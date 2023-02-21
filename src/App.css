@@ -31,10 +31,9 @@ time {
   font-size: 14px;
   opacity: 0.6;
   line-height: 2rem;
-vertical-align: middle;
+  vertical-align: middle;
   display: flex;
   align-items: center;
-
 }
 
 ::placeholder {
@@ -76,6 +75,9 @@ vertical-align: middle;
 
   /*---- transition---- */
   --transition: all 0.2s ease-in-out;
+
+  /*---- shadow ---- */
+  --shadow-1: 0px 0px 15px 5px #c4c1c1;
 }
 
 /* ---- classes ----*/
