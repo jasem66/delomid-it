@@ -3,13 +3,17 @@ import { Link } from 'react-router-dom'
 import { navDropdownLInks } from '../../utilities/constants'
 import './dropdown.scss'
 
-const Dropdown = () => {
+const Dropdown = ({ setDropdown }) => {
   return (
     <div className='dropdown'>
       <ul>
-   {navDropdownLInks.map((item) => {
+        {navDropdownLInks.map((item) => {
           return (
-            <Link className='single-dropdown' to={item.path}>
+            <Link
+              onClick={() => setDropdown(false)}
+              className='single-dropdown'
+              to={item.path}
+            >
               {item.title}
             </Link>
           )

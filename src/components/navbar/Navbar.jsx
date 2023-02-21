@@ -7,7 +7,7 @@ import { navLinks } from '../../utilities/constants'
 import { Link } from 'react-router-dom'
 import Dropdown from '../nav-dropdown/Dropdown'
 const Navbar = () => {
-  const [dropdown, setDropdown] = useState(false)
+  const [dropdown, setDropdown] = useState(true)
   return (
     <section className='navbar'>
       <div className='nav-container'>
@@ -22,25 +22,24 @@ const Navbar = () => {
               const { id, title, path } = item
               if (item.title === 'Our Services') {
                 return (
-                  <div>
-                    <Link
-                      onMouseEnter={() => setDropdown(true)}
-                      onMouseLeave={() => setDropdown(false)}
-                      className='nav-link'
-                      to={path}
-                    >
+                  <li
+                    // key={id}
+                    // onMouseEnter={() => setDropdown(true)}
+                    // onMouseLeave={() => setDropdown(false)}
+                  >
+                    <Link className='nav-link' to={path}>
                       {title}
                     </Link>
-                    {dropdown && <Dropdown />}
-                  </div>
+                    {dropdown && <Dropdown setDropdown={setDropdown}/>}
+                  </li>
                 )
               }
               return (
-                <div>
+                <li key={id}>
                   <Link className='nav-link' to={path}>
                     {title}
                   </Link>
-                </div>
+                </li>
               )
             })}
           </ul>
