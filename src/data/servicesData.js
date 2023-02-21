@@ -11,24 +11,21 @@ export const servicesData = [
     id: 1,
     title: 'Advice',
     desc: [
-      'Audit project framework',
+      'project framework',
+      'Audit',
       'Feasibility study',
       'Process',
       'Architecture',
     ],
     icon: <FontAwesomeIcon className='font-icon' icon={faPen} />,
+    color: '2da368',
   },
   {
     id: 2,
     title: 'Achievement',
-    desc: [
-      'Functional',
-      'analysis',
-      'Development',
-      'Testing',
-      'Steering',
-    ],
+    desc: ['Functional analysis', 'Development', 'Testing', 'Steering'],
     icon: <FontAwesomeIcon className='font-icon' icon={faCode} />,
+    color: 'b0d13a',
   },
   {
     id: 3,
@@ -39,11 +36,13 @@ export const servicesData = [
       'Data management solution integration',
     ],
     icon: <FontAwesomeIcon className='font-icon' icon={faWarehouse} />,
+    color: 'f29437',
   },
   {
     id: 4,
     title: 'Coaching',
     desc: ['Training', 'Technical support', 'Change management'],
     icon: <FontAwesomeIcon className='font-icon' icon={faGraduationCap} />,
+    color: 'b52929',
   },
 ]
