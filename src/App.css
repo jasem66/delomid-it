@@ -160,6 +160,20 @@ time {
   }
 }
 
+@keyframes moveleft {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes movedownSlow {
   0% {
     transform: translateY(-10%);

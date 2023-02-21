@@ -1,10 +1,11 @@
 .intelligence {
-  padding-bottom: var(--p-sm);
   background-color: #e4e8eb;
-       .third-bg{
-background-image: url(../../assets/career-background-3.jpg) !important;    }
-       .second-bg{
-background-image: url(../../assets/career-background-2.jpg) !important;    }
+  .third-bg {
+    background-image: url(../../assets/career-background-3.jpg) !important;
+  }
+  .second-bg {
+    background-image: url(../../assets/career-background-2.jpg) !important;
+  }
 
   .intelligence-header {
     background: url(../../assets/career-background.jpg) no-repeat;
@@ -21,7 +22,6 @@ background-image: url(../../assets/career-background-2.jpg) !important;    }
       position: absolute;
       background-color: rgba(0, 0, 0, 0.317);
     }
-   
 
     h2 {
       color: var(--light-clr);
@@ -41,20 +41,23 @@ background-image: url(../../assets/career-background-2.jpg) !important;    }
   .single-job:hover {
     box-shadow: var(--shadow-1);
   }
+
   .single-job {
+    margin: var(--m-md) 0;
     transition: var(--transition);
     width: 100%;
     background-color: white;
     text-align: center;
-    opacity: 0.8;
-    margin: var(--m-sm) auto;
     padding: var(--p-sm) var(--p-md);
 
     h3:hover {
       color: var(--red-clr);
       text-decoration: underline;
+      cursor: pointer;
     }
     h3 {
+      display: inline-block;
+      width: 100%;
       transition: var(--transition);
       font-size: var(--f-md);
     }
@@ -64,6 +67,25 @@ background-image: url(../../assets/career-background-2.jpg) !important;    }
     p {
       color: var(--dark-clr);
       font-size: var(--f-sm);
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .intelligence {
+    .intelligence-row {
+        .single-job {
+        animation: moveleft 1.5s 1 ease-out ;
+        h3{
+                font-size: var(--f-lg);
+
+        }
+          p {
+   width: 90%;
+   margin: auto;
+      font-size: var(--f-md);
+    }
+      }
     }
   }
 }
