@@ -1,7 +1,15 @@
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import { Footer, Navbar } from './components'
-import { Blog, Career, Contact, Home, OurServices } from './pages'
+import {
+  Blog,
+  Career,
+  Contact,
+  Home,
+  OurServices,
+  BusinessIntelligence,
+  DigitalOnline,
+} from './pages'
 
 function App() {
   return (
@@ -13,8 +21,15 @@ function App() {
         <Route exact path='/career' element={<Career />} />
         <Route exact path='/contact' element={<Contact />} />
         <Route exact path='/blog' element={<Blog />} />
+
+        <Route exact path='/business-intelligence' element={<DigitalOnline />} />
+        <Route
+          exact
+          path='/digital-online'
+          element={<BusinessIntelligence />}
+        />
       </Routes>
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   )
 }

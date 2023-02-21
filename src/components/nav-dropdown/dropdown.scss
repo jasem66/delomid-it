@@ -2,12 +2,10 @@
   position: relative;
   background-color: var(--dark-blue-clr);
   display: flex;
-  flex-direction: column;
   position: absolute;
   bottom: -50px;
   z-index: 1;
-  padding: 10px 0;
-
+  padding: 10px ;
   .single-dropdown:hover {
     color: var(--red-clr);
     cursor: pointer;
@@ -15,8 +13,8 @@
 
   .single-dropdown {
     display: block;
+    padding: 10px 0px;
     font-size: var(--f-md);
-    padding: 10px;
     transition: var(--transition);
   }
 }

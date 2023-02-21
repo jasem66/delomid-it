@@ -23,9 +23,9 @@ const Navbar = () => {
               if (item.title === 'Our Services') {
                 return (
                   <li
-                    // key={id}
-                    // onMouseEnter={() => setDropdown(true)}
-                    // onMouseLeave={() => setDropdown(false)}
+                    key={id}
+                    onMouseEnter={() => setDropdown(true)}
+                    onMouseLeave={() => setDropdown(false)}
                   >
                     <Link className='nav-link' to={path}>
                       {title}
