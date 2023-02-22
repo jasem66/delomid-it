@@ -22,7 +22,11 @@ function App() {
         <Route exact path='/contact' element={<Contact />} />
         <Route exact path='/blog' element={<Blog />} />
 
-        <Route exact path='/business-intelligence' element={<DigitalOnline />} />
+        <Route
+          exact
+          path='/business-intelligence'
+          element={<DigitalOnline />}
+        />
         <Route
           exact
           path='/digital-online'
