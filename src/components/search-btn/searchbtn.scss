@@ -1,5 +1,7 @@
 .searchbtn {
   position: relative;
+    transition: var(--transition);
+
 }
 .searchbtn > input {
   background-color: var(--light-blue-clr);
