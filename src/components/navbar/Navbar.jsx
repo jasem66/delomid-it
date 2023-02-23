@@ -21,7 +21,7 @@ const Navbar = () => {
   }, [])
 
   return (
-    <section className='navbar'>
+    <section className={imageSize ? 'navbar nav-smaller' : 'navbar '}>
       <div className='nav-container'>
         <div className='nav-logo'>
           <Link to='/'>

@@ -1,9 +1,11 @@
 .navbar {
   background-color: var(--dark-blue-clr);
   height: 50px;
+
   position: sticky;
   top: 0;
   z-index: 1;
+  vertical-align: middle;
 
   .nav-container {
     position: relative;
@@ -11,12 +13,14 @@
     margin: auto;
     display: flex;
     align-items: center;
-    align-items: center;
+    align-content: center;
   }
   .nav-row {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+   
+
   }
 
   .nav-logo {
@@ -68,14 +72,23 @@
       width: 12rem;
       height: 90px;
     }
+        .delomid-logo-smaller {
+      width: 12rem;
+      height: 90px;
+    }
   }
 }
 
-@media screen and (min-width: 922px) {
+@media screen and (min-width: 922px) {   
+  //  .nav-smaller{
+  //     height: 95px !important;
+ 
+  //   }
+
   .navbar {
     height: 102px;
     padding: 0 2rem;
- 
+
 
     .nav-search,
     .nav-toggle {
@@ -90,8 +103,8 @@
       height: 102px;
     }
     .delomid-logo-smaller {
-      width: 12rem;
-      height: 90px;
+    transform: scale(.95);
+      margin: auto;
       object-fit: cover;
       transition: var(--transition);
       vertical-align: middle;
@@ -102,7 +115,7 @@
       gap: 2rem;
       font-weight: 400;
       font-size: 1.2rem;
-      // height: 50px;
+
     }
   }
 }
