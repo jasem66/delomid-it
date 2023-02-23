@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import { Footer, Navbar } from './components'
+import { BackToTopBtn, Footer, Navbar } from './components'
 import {
   Blog,
   Career,
@@ -33,6 +33,7 @@ function App() {
           element={<BusinessIntelligence />}
         />
       </Routes>
+      <BackToTopBtn/>
       <Footer />
     </BrowserRouter>
   )
