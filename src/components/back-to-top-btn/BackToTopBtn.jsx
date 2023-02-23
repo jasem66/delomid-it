@@ -6,7 +6,7 @@ const BackToTopBtn = () => {
   const [goToTop, setGoToTop] = useState(false)
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 900) {
         setGoToTop(true)
       } else setGoToTop(false)
     })
@@ -20,7 +20,15 @@ const BackToTopBtn = () => {
   }
 
   return (
-    <div>{goToTop && <BiChevronUp className='backtotopbtn' size={45} />}</div>
+    <div>
+      {goToTop && (
+        <BiChevronUp
+          className='backtotopbtn'
+          size={45}
+          onClick={scrollUp}
+        />
+      )}
+    </div>
   )
 }
 
