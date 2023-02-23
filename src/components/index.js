@@ -12,6 +12,9 @@ import Services from './our-services/Services'
 import Digital from './digital-online/Digital'
 import Careers from './careers/Careers'
 import Dropdown from './nav-dropdown/Dropdown'
+import BackToTop from './back-to-top/BackToTop'
+import BackToTopBtn from './back-to-top-btn/BackToTopBtn'
+
 export {
   Navbar,
   Footer,
@@ -27,4 +30,6 @@ export {
   Digital,
   Careers,
   Dropdown,
+  BackToTopBtn,
+  BackToTop,
 }
