@@ -1,51 +1,62 @@
 .navbar {
   background-color: var(--dark-blue-clr);
   height: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 
-.nav-container {
-  position: relative;
-  max-width: 1140px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  align-items: center;
-}
-.nav-row {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
+  .nav-container {
+    position: relative;
+    max-width: 1140px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    align-items: center;
+  }
+  .nav-row {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
 
-.nav-logo {
-  padding: 0 1rem;
-}
-img {
-  width: 10.5rem;
-  height: 50px;
-  object-fit: cover;
-}
-img:hover {
-  opacity: 0.8;
-}
-.nav-links {
-  display: none;
-}
-.nav-link {
-  font-size: var(--f-lg);
-  color: #edf0f2;
-  transition: var(--transition);
-}
-.nav-link:hover {
-  color: var(--red-clr);
-}
+  .nav-logo {
+    padding: 0 1rem;
+  }
+  .delomid-logo {
+    width: 10.5rem;
+    height: 50px;
+    object-fit: cover;
+    transition: var(--transition);
+  }
+  .delomid-logo-smaller {
+    width: 10.5rem;
+    height: 50px;
+    object-fit: cover;
+    transition: var(--transition);
+  }
 
+  img:hover {
+    transition: var(--transition);
+    opacity: 0.8;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-link {
+    font-size: var(--f-lg);
+    color: #edf0f2;
+    transition: var(--transition);
+  }
+  .nav-link:hover {
+    color: var(--red-clr);
+  }
 }
 .nav-search,
 .nav-toggle {
   display: inline-block;
   color: var(--light-clr);
   font-size: 1.5rem;
-  padding-right:  1rem;
+  padding-right: 1rem;
   cursor: pointer;
 }
 
@@ -53,31 +64,37 @@ img:hover {
   .navbar {
     height: 80px;
 
-    img {
+    .delomid-logo {
       width: 12rem;
       height: 90px;
     }
   }
 }
 
-
 @media screen and (min-width: 922px) {
   .navbar {
     height: 102px;
     padding: 0 2rem;
+ 
 
     .nav-search,
-.nav-toggle {
-  margin-left: 2rem;
-
-}
+    .nav-toggle {
+      margin-left: 2rem;
+    }
 
     .nav-toggle {
       display: none;
     }
-    img {
+    .delomid-logo {
       width: 15rem;
-      height: 110px;
+      height: 102px;
+    }
+    .delomid-logo-smaller {
+      width: 12rem;
+      height: 90px;
+      object-fit: cover;
+      transition: var(--transition);
+      vertical-align: middle;
     }
     .nav-links {
       display: flex;

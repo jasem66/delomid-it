@@ -5,6 +5,7 @@ import Contact from './Contact'
 import Blog from './Blog'
 import BusinessIntelligence from './BusinessIntelligence'
 import DigitalOnline from './DigitalOnline'
+
 export {
   Home,
   OurServices,
@@ -13,4 +14,5 @@ export {
   Blog,
   BusinessIntelligence,
   DigitalOnline,
+
 }

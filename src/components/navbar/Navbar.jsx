@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './navbar.scss'
 import images from '../../utilities/images'
 import { HiSearch } from 'react-icons/hi'
@@ -7,13 +7,29 @@ import { navLinks } from '../../utilities/constants'
 import { Link } from 'react-router-dom'
 import Dropdown from '../nav-dropdown/Dropdown'
 const Navbar = () => {
-  const [dropdown, setDropdown] = useState(true)
+  const [dropdown, setDropdown] = useState(false)
+  const [imageSize, setImageSize] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        setImageSize(true)
+        console.log(imageSize)
+      }
+      else(setImageSize(false))
+    })
+  }, [])
+
   return (
     <section className='navbar'>
       <div className='nav-container'>
         <div className='nav-logo'>
           <Link to='/'>
-            <img src={images.logo} alt='Delomid-it' />
+            <img
+              className={imageSize ? 'delomid-logo-smaller' : 'delomid-logo '}
+              src={images.logo}
+              alt='Delomid-it'
+            />
           </Link>
         </div>
         <div className='nav-row'>
@@ -30,7 +46,7 @@ const Navbar = () => {
                     <Link className='nav-link' to={path}>
                       {title}
                     </Link>
-                    {dropdown && <Dropdown setDropdown={setDropdown}/>}
+                    {dropdown && <Dropdown setDropdown={setDropdown} />}
                   </li>
                 )
               }

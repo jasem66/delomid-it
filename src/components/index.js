@@ -13,7 +13,7 @@ import Digital from './digital-online/Digital'
 import Careers from './careers/Careers'
 import Dropdown from './nav-dropdown/Dropdown'
 import BackToTopBtn from './back-to-top-btn/BackToTopBtn'
-
+import SearchBtn from './search-btn/SearchBtn'
 export {
   Navbar,
   Footer,
@@ -30,5 +30,5 @@ export {
   Careers,
   Dropdown,
   BackToTopBtn,
-
+  SearchBtn,
 }
