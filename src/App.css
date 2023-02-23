@@ -224,18 +224,11 @@ time {
 
 @keyframes dropdown {
   0% {
-background-color: #744ebb;
-transform: translate(0);
-
-
+    background-color: #744ebb;
+    transform: translate(0);
   }
 
   100% {
- transform: translate(100);
-
+    transform: translate(100);
   }
 }
-
-
-
-

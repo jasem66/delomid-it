@@ -6,23 +6,25 @@ import { FiMenu } from 'react-icons/fi'
 import { navLinks } from '../../utilities/constants'
 import { Link } from 'react-router-dom'
 import Dropdown from '../nav-dropdown/Dropdown'
+import SearchBtn from '../search-btn/SearchBtn'
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(false)
   const [imageSize, setImageSize] = useState(false)
+  const [searchBar, setSearchBar] = useState(true)
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 100) {
         setImageSize(true)
         console.log(imageSize)
-      }
-      else(setImageSize(false))
+      } else setImageSize(false)
     })
   }, [])
 
   return (
     <section className={imageSize ? 'navbar nav-smaller' : 'navbar'}>
       <div className='nav-container'>
+        {searchBar && <SearchBtn setSearchBar={setSearchBar} />}
         <div className='nav-logo'>
           <Link to='/'>
             <img
@@ -64,7 +66,7 @@ const Navbar = () => {
             <FiMenu />
           </span>
           <span className='nav-search'>
-            <HiSearch />
+            <HiSearch onClick={() => setSearchBar(true)} />
           </span>
         </div>
       </div>
