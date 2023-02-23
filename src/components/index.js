@@ -12,7 +12,6 @@ import Services from './our-services/Services'
 import Digital from './digital-online/Digital'
 import Careers from './careers/Careers'
 import Dropdown from './nav-dropdown/Dropdown'
-import BackToTop from './back-to-top/BackToTop'
 import BackToTopBtn from './back-to-top-btn/BackToTopBtn'
 
 export {
@@ -31,5 +30,5 @@ export {
   Careers,
   Dropdown,
   BackToTopBtn,
-  BackToTop,
+
 }
