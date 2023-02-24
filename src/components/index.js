@@ -14,7 +14,7 @@ import Dropdown from './nav-dropdown/Dropdown'
 import BackToTopBtn from './back-to-top-btn/BackToTopBtn'
 import SearchBtn from './search-btn/SearchBtn'
 import NavMobile from './navbar/NavMobile'
-
+import PageHero from './page-hero/PageHero'
 export {
   Navbar,
   Footer,
@@ -32,4 +32,5 @@ export {
   BackToTopBtn,
   SearchBtn,
   NavMobile,
+  PageHero,
 }

@@ -2,18 +2,23 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './footer.scss'
 import { navLinks } from '../../utilities/constants'
+import { navDropdownLInks } from '../../utilities/constants'
 import { MdEmail } from 'react-icons/md'
 import { AiFillPhone } from 'react-icons/ai'
+
 const Footer = () => {
+  
+  const newLinks = navLinks.concat(navDropdownLInks)
+
   return (
     <section className='footer'>
       <article className='footer-row'>
         <div className='footer-links'>
           <ul className='nav-links'>
-            {navLinks.map((item) => {
+            {newLinks.map((item) => {
               const { id, title, path } = item
               return (
-                <Link className='nav-link' to={path}>
+                <Link key={id} className='nav-link' to={path}>
                   {title}
                 </Link>
               )
