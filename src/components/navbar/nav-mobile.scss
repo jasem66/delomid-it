@@ -11,12 +11,18 @@
     font-size: var(--f-sm);
     transition: var(--transition);
   }
-  li:hover {
-    color: var(--red-clr);
-  }
+
   li article {
     display: flex;
     justify-content: space-between;
+  }
+  .mobnav-link {
+    display: block;
+    transition: var(--transition);
+    color: var(--light-clr);
+  }
+  .mobnav-link:hover {
+    color: var(--red-clr);
   }
   .link-chev {
     transition: var(--transition);
@@ -31,17 +37,15 @@
     transition: var(--transition);
   }
   .hide {
-   opacity: 0;
+    opacity: 0;
     height: 0;
     overflow: hidden;
     transition: var(--transition);
   }
 }
 
-
-@media screen and (min-width:768px) {
- .navmob{
-  display: none;
- }
- 
+@media screen and (min-width: 768px) {
+  .navmob {
+    display: none;
+  }
 }

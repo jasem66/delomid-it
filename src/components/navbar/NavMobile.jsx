@@ -15,12 +15,17 @@ const NavMobile = () => {
 
             if (title === 'Our Services') {
               return (
-                <li style={{ paddingBottom: '0' }} key={id}>
-                  <article>
-                    <Link to={path}>{title}</Link>
+                <li  style={{ paddingBottom: '0' }} key={id}>
+                  <article  onClick={() => setOpenLinks(!openLinks)}>
+                    <Link className='mobnav-link' to={path}>
+                      {title}
+                    </Link>
                     <span
-                      onClick={() => setOpenLinks(!openLinks)}
-                      className={openLinks ? 'link-chev' : 'turn-180'}
+                      className={
+                        openLinks
+                          ? ' mobnav-link link-chev'
+                          : 'mobnav-link turn-180'
+                      }
                     >
                       <BiChevronDown size={28} />
                     </span>
@@ -33,7 +38,9 @@ const NavMobile = () => {
             }
             return (
               <li key={id}>
-                <Link to={path}>{title}</Link>
+                <Link className='mobnav-link' to={path}>
+                  {title}
+                </Link>
               </li>
             )
           })}
