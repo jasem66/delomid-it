@@ -18,16 +18,19 @@
   }
 }
 
-@media screen and (max-width:599px) {
+@media screen and (max-width:768px) {
 .dropdown {
-
-
+  padding: 0;
+ .single-dropdown {
+    font-size: var(--f-sm);
+    padding: var(--p-sm) ;
+ }
 position: static;
-display: flex;
-align-items: flex-start;
+
   .single-dropdown:hover {
     color: var(--red-clr);
     cursor: pointer;
   }}
   
 }
+

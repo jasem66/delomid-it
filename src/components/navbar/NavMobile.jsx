@@ -15,18 +15,19 @@ const NavMobile = () => {
 
             if (title === 'Our Services') {
               return (
-                <li key={id}>
-                  <Link to={path}>{title}</Link>
-                  <span
-                    onClick={() => setOpenLinks(!openLinks)}
-                    className={
-                      openLinks ? 'link-chev' : 'turn-180'
-                    }
-                  >
-                    <BiChevronDown size={25} />
-                  </span>
-
-                  <Dropdown />
+                <li style={{ paddingBottom: '0' }} key={id}>
+                  <article>
+                    <Link to={path}>{title}</Link>
+                    <span
+                      onClick={() => setOpenLinks(!openLinks)}
+                      className={openLinks ? 'link-chev' : 'turn-180'}
+                    >
+                      <BiChevronDown size={28} />
+                    </span>
+                  </article>
+                  <div className={openLinks ? 'hide' : 'show'}>
+                    <Dropdown />
+                  </div>
                 </li>
               )
             }
