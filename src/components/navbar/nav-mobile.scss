@@ -1,0 +1,32 @@
+.navmob{
+ margin-top: -5px;
+ width: 100%;
+background-color: var(--dark-blue-clr);
+.navmob-container{
+ width: 90%;
+ margin:0 auto;
+
+}
+li{
+ display: flex;
+ justify-content: space-between;
+ padding: var(--p-sm) 0;
+ font-size: var(--f-sm);
+ transition: var(--transition);
+}
+li:hover{
+ color: var(--red-clr);
+}
+.link-chev{
+transition: var(--transition);
+ transform: rotate(0deg);
+
+}
+.turn-180{
+ transform: rotate(180deg);
+ transition: var(--transition);
+
+}
+
+
+}

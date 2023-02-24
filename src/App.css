@@ -27,6 +27,9 @@ a {
   color: var(--light-clr);
   font-size: 0.9rem;
 }
+li,a{
+  cursor: pointer;
+}
 time {
   font-size: 14px;
   opacity: 0.6;

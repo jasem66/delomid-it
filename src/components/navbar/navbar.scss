@@ -62,7 +62,12 @@
   font-size: 1.5rem;
   padding-right: 1rem;
   cursor: pointer;
+  transition: var(--transition);
 }
+    .nav-search:hover,
+    .nav-toggle:hover {
+    color: var(--red-clr);
+    }
 
 @media screen and (min-width: 599px) {
   .nav-smaller {

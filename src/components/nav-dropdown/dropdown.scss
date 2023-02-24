@@ -1,5 +1,4 @@
 .dropdown {
-  position: relative;
   background-color: var(--dark-blue-clr);
   display: flex;
   position: absolute;
@@ -17,4 +16,18 @@
     font-size: var(--f-md);
     transition: var(--transition);
   }
+}
+
+@media screen and (max-width:599px) {
+.dropdown {
+
+
+position: static;
+display: flex;
+align-items: flex-start;
+  .single-dropdown:hover {
+    color: var(--red-clr);
+    cursor: pointer;
+  }}
+  
 }

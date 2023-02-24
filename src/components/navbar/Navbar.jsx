@@ -7,10 +7,11 @@ import { navLinks } from '../../utilities/constants'
 import { Link } from 'react-router-dom'
 import Dropdown from '../nav-dropdown/Dropdown'
 import SearchBtn from '../search-btn/SearchBtn'
+import NavMobile from './NavMobile'
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(false)
   const [imageSize, setImageSize] = useState(false)
-  const [searchBar, setSearchBar] = useState(true)
+  const [searchBar, setSearchBar] = useState(false)
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -63,13 +64,14 @@ const Navbar = () => {
 
           <span className='nav-toggle'>
             <FiMenu />
-          </span>
+          </span >
           <SearchBtn setSearchBar={setSearchBar} searchBar={searchBar} />
           <span className={!searchBar ? 'nav-search ' : ' nav-search hidden'}>
             <HiSearch onClick={() => setSearchBar(true)} />
           </span>
         </div>
       </div>
+      <NavMobile/>
     </section>
   )
 }

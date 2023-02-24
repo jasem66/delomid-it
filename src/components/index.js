@@ -7,13 +7,14 @@ import Portfolio from './portfolio/Portfolio'
 import Jobs from './jobs/Jobs'
 import Blogs from './blogs/Blogs'
 import Contacts from './contacts/Contacts'
-import Intelligence from './business-inteligence/Intelligence'
 import Services from './our-services/Services'
 import Digital from './digital-online/Digital'
 import Careers from './careers/Careers'
 import Dropdown from './nav-dropdown/Dropdown'
 import BackToTopBtn from './back-to-top-btn/BackToTopBtn'
 import SearchBtn from './search-btn/SearchBtn'
+import NavMobile from './navbar/NavMobile'
+
 export {
   Navbar,
   Footer,
@@ -24,11 +25,11 @@ export {
   Jobs,
   Blogs,
   Contacts,
-  Intelligence,
   Services,
   Digital,
   Careers,
   Dropdown,
   BackToTopBtn,
   SearchBtn,
+  NavMobile,
 }
