@@ -24,7 +24,9 @@ const Navbar = () => {
   return (
     <section className={imageSize ? 'navbar nav-smaller' : 'navbar'}>
       <div className='nav-container'>
-        {searchBar && <SearchBtn setSearchBar={setSearchBar} />}
+    
+          <SearchBtn setSearchBar={setSearchBar} searchBar={searchBar} />
+        
         <div className='nav-logo'>
           <Link to='/'>
             <img

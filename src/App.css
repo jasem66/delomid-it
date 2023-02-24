@@ -112,6 +112,12 @@ time {
   margin: 1rem auto;
   opacity: 0.5;
 }
+.down-anime{
+  animation: movedown 0.5s ease-in-out;
+}
+.up-anime{
+  animation: moveup 0.5s ease-in-out;
+}
 /* .seperator-container {
   position: relative;
   padding: 3.5rem;

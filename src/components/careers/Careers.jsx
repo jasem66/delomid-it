@@ -63,7 +63,7 @@ const careers = () => {
       <div className='  intelligence-header third-bg'>
         <div className='overlay'></div>
 
-        <h2>digital-online</h2>
+        <h2>others</h2>
       </div>
       <div className='intelligence-row'>
         <div className='intelligence-col'>

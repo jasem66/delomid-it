@@ -1,8 +1,15 @@
 .searchbtn {
   position: relative;
-    transition: var(--transition);
+   height: 55px;
+  transition: var(--transition);
 
 }
+.search-btn-close{
+ height: 0;
+   transition: var(--transition);
+
+}
+
 .searchbtn > input {
   background-color: var(--light-blue-clr);
   display: fixed;
