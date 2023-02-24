@@ -22,13 +22,8 @@ const Navbar = () => {
   }, [])
 
   return (
-
-    <section className={imageSize ? 'navbar nav-smaller' : 'navbar'}>  
-<SearchBtn setSearchBar={setSearchBar} searchBar={searchBar} />
+    <section className={imageSize ? 'navbar nav-smaller' : 'navbar'}>
       <div className='nav-container'>
-    
-        
-        
         <div className='nav-logo'>
           <Link to='/'>
             <img
@@ -69,8 +64,9 @@ const Navbar = () => {
           <span className='nav-toggle'>
             <FiMenu />
           </span>
+        <SearchBtn setSearchBar={setSearchBar} searchBar={searchBar} />
           <span className='nav-search'>
-            <HiSearch onClick={() => setSearchBar(true)} />
+            {!searchBar && <HiSearch onClick={() => setSearchBar(true)} />} 
           </span>
         </div>
       </div>

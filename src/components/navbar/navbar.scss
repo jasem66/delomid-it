@@ -1,6 +1,4 @@
-// .nav {
-//   position: sticky;
-// }
+
 .navbar {
   background-color: var(--dark-blue-clr);
   height: 50px;
@@ -22,10 +20,11 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
   }
 
   .nav-logo {
-    padding: 0 1rem;
+    padding: 0 0 0 1rem;
   }
   .delomid-logo {
     width: 10.5rem;
@@ -81,12 +80,15 @@
 
 @media screen and (min-width: 922px) {
   .nav-smaller {
-    height: 100px !important;
+    height: 103px !important;
   }
 
   .navbar {
     height: 103px;
     padding: 0 2rem;
+     .nav-link {
+    font-size: var(--f-md)
+    ;overflow:hidden;}
 
     .nav-search,
     .nav-toggle {
