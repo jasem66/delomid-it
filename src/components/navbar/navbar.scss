@@ -1,3 +1,6 @@
+// .nav {
+//   position: sticky;
+// }
 .navbar {
   background-color: var(--dark-blue-clr);
   height: 50px;
@@ -79,8 +82,6 @@
 @media screen and (min-width: 922px) {
   .nav-smaller {
     height: 100px !important;
-
-
   }
 
   .navbar {
@@ -100,8 +101,8 @@
       height: 100px;
     }
     .delomid-logo-smaller {
-    width: 14rem;
-    height: 90px;
+      width: 14rem;
+      height: 90px;
       transform: scale(0.85);
       object-fit: cover;
       transition: var(--transition);

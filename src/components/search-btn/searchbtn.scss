@@ -1,23 +1,24 @@
 .searchbtn {
-  position: relative;
-   height: 55px;
+  position: absolute;
+  height: 55px;
   transition: var(--transition);
-
+  width: 100%;
+  z-index: 2;
 }
-.search-btn-close{
- height: 0;
-   transition: var(--transition);
-
+.search-btn-close {
+  overflow: hidden; //mohem
+  height: 0;
+  top: 0;
+  transition: var(--transition);
 }
 
 .searchbtn > input {
   background-color: var(--light-blue-clr);
-  display: fixed;
-  height: 55px;
-  width: 100vw;
   border: none;
   padding: 0px 10px;
   transition: var(--transition);
+  width: 100%;
+  height: 55px;
 }
 .cancle-search {
   position: absolute;
@@ -30,9 +31,8 @@
 }
 .cancle-search:hover {
   opacity: 1;
-  color: white; 
-   cursor: pointer;
-
+  color: white;
+  cursor: pointer;
 }
 input:focus {
   outline: none;
@@ -43,4 +43,38 @@ input[placeholder] {
 }
 .searchbtn input::-webkit-input-placeholder {
   color: var(--light-clr);
+}
+
+@media screen and (min-width:599px) {
+
+ .searchbtn {
+  position: absolute;
+left: 68%;
+bottom: 5%;
+
+
+}
+.search-btn-close {
+  overflow: hidden; //mohem
+  height: 0;
+
+  transition: var(--transition);
+}
+
+.searchbtn > input {
+border-radius: 5px;
+  max-width:200px;
+  height: 40px;
+}
+.cancle-search {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--light-clr);
+  opacity: 0.7;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+
 }

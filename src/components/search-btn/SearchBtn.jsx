@@ -4,7 +4,7 @@ import { FaTimes } from 'react-icons/fa'
 
 const SearchBtn = ({ setSearchBar, searchBar }) => {
   return (
-    <div className={searchBar ? 'searchbtn ' : 'searchbtn search-btn-close'}>
+    <div className={searchBar ? 'searchbtn ' : '  searchbtn search-btn-close '}>
       <input placeholder='To research...' type='text' />
       <div className='cancle-search'>
         <FaTimes onClick={() => setSearchBar(false)} />

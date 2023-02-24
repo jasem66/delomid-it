@@ -22,10 +22,12 @@ const Navbar = () => {
   }, [])
 
   return (
-    <section className={imageSize ? 'navbar nav-smaller' : 'navbar'}>
+
+    <section className={imageSize ? 'navbar nav-smaller' : 'navbar'}>  
+<SearchBtn setSearchBar={setSearchBar} searchBar={searchBar} />
       <div className='nav-container'>
     
-          <SearchBtn setSearchBar={setSearchBar} searchBar={searchBar} />
+        
         
         <div className='nav-logo'>
           <Link to='/'>
