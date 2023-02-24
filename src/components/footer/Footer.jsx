@@ -44,7 +44,7 @@ const Footer = () => {
             </address>
           </div>
           <div className='search-footer'>
-            <input type='text' placeholder='To research...' />
+            <input type='text' placeholder='Researcher...' />
           </div>
         </div>
       </article>

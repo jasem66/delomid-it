@@ -51,6 +51,7 @@
       height: 45px;
       border: none;
       border-radius: 5px;
+      color: var(--dark-clr);
     }
     input[placeholder] {
       padding: 1rem;
@@ -68,6 +69,9 @@
     background-color: var(--dark-blue-clr);
     opacity: 0.8;
     text-align: center;
+  }
+  ::placeholder{
+    color: var(--dark-clr);
   }
 }
 

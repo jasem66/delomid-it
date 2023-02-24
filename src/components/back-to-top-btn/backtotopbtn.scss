@@ -13,6 +13,7 @@ border-radius: 5px;
 font-weight: 900;
 transition: var(--transition);
 animation: moveup 0.5s ease-in ;
+z-index: 1;
 
 }
 .backtotopbtn:hover{
