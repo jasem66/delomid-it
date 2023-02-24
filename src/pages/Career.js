@@ -1,9 +1,12 @@
 import React from 'react'
-import { Careers} from '../components'
+import { Careers, PageHero } from '../components'
 
 const Career = () => {
   return (
-<Careers/>
+    <>
+      <PageHero title='Career' />
+      <Careers />
+    </>
   )
 }
 

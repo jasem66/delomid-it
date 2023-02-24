@@ -1,8 +1,11 @@
 import React from 'react'
-import { Contacts } from '../components'
+import { Contacts, PageHero } from '../components'
 
 const Contact = () => {
-  return <Contacts />
+  return <>
+  <PageHero title='Contact'/>
+  <Contacts />
+  </>
 }
 
 export default Contact
