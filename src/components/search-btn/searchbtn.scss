@@ -5,12 +5,11 @@
   width: 100%;
   z-index: 2;
   top: 0;
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
   background-color: var(--light-blue-clr);
-  border-radius: 5px;
-padding:0 5px;
 
+  padding: 0 5px;
 }
 .search-close {
   overflow: hidden; //mohem
@@ -51,6 +50,12 @@ input[placeholder] {
 .searchbtn input::-webkit-input-placeholder {
   color: var(--light-clr);
 }
+.hidden {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
 
 @media screen and (min-width: 599px) {
   .searchbtn {
@@ -59,6 +64,7 @@ input[placeholder] {
     max-width: 200px;
     height: auto;
     margin-left: 1rem;
+    border-radius: 5px;
   }
   .search-close {
     overflow: hidden; //mohem
@@ -72,7 +78,5 @@ input[placeholder] {
   }
   .cancle-search {
     position: static;
-    // right: 60px;
-    // top: 43px;
   }
 }

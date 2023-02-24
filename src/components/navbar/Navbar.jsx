@@ -64,9 +64,9 @@ const Navbar = () => {
           <span className='nav-toggle'>
             <FiMenu />
           </span>
-        <SearchBtn setSearchBar={setSearchBar} searchBar={searchBar} />
-          <span className='nav-search'>
-            {!searchBar && <HiSearch onClick={() => setSearchBar(true)} />} 
+          <SearchBtn setSearchBar={setSearchBar} searchBar={searchBar} />
+          <span className={!searchBar ? 'nav-search ' : ' nav-search hidden'}>
+            <HiSearch onClick={() => setSearchBar(true)} />
           </span>
         </div>
       </div>
