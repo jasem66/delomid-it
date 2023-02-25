@@ -9,14 +9,17 @@ const Services = () => {
 
         <div className='services-col'>
           {servicesData.map((item) => {
-            const { id, title, desc, icon,color } = item
+            const { id, title, desc, icon, color } = item
 
             return (
               <div className='single-service'>
-                <div className='icon' style={{color:`#${color}`}}>{icon}</div>
+                <article>
+                  <div className='icon' style={{ color: `#${color}` }}>
+                    {icon}
+                  </div>
+                </article>
                 <h3>{title}</h3>
                 <div className='desc-wrapper'>
-              
                   {desc.map((item) => {
                     return <p>{item}</p>
                   })}
