@@ -28,12 +28,12 @@ function App() {
         <Route
           exact
           path='/business-intelligence'
-          element={<DigitalOnline />}
+          element={<BusinessIntelligence />} 
         />
         <Route
           exact
           path='/digital-online'
-          element={<BusinessIntelligence />}
+         element={<DigitalOnline />}
         />
         <Route exact path='*' element={<Error />} />
       </Routes>

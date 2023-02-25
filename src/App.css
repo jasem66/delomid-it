@@ -27,7 +27,8 @@ a {
   color: var(--light-clr);
   font-size: 0.9rem;
 }
-li,a{
+li,
+a {
   cursor: pointer;
 }
 time {
@@ -57,12 +58,14 @@ time {
   --p-md: 2rem;
   --p-lg: 3rem;
   --p-xl: 4rem;
+  --p-xxl: 5rem;
 
   /*---- margin---- */
   --m-sm: 1rem;
   --m-md: 2rem;
   --m-lg: 3rem;
   --m-xl: 4rem;
+  --m-xxl: 5rem;
 
   /*---- font---- */
   --f-sm: 14px;
@@ -115,10 +118,10 @@ time {
   margin: 1rem auto;
   opacity: 0.5;
 }
-.down-anime{
+.down-anime {
   animation: movedown 0.5s ease-in-out;
 }
-.up-anime{
+.up-anime {
   animation: moveup 0.5s ease-in-out;
 }
 /* .seperator-container {
@@ -207,9 +210,6 @@ time {
     opacity: 0;
   }
 
-  50% {
-    opacity: 0;
-  }
 
   100% {
     opacity: 1;

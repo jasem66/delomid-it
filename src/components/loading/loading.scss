@@ -9,24 +9,20 @@
     border-radius: 50%;
     border: medium solid var(--light-blue-clr);
     border-width:   medium 0 0 0;
-    animation: spiner 1s ease-in-out infinite ;
+    animation: spiner 1.5s ease-in-out infinite ;
   }
-  .spiner {
-  }
+
 }
 @keyframes spiner {
   0% {
   transform: rotate(0deg);
   }
   50% {
-
-  }
-
-  50% {
-
+transform: rotate(360deg);
   }
 
   100% {
-    transform: rotate(360deg);
+      transform: rotate(0deg);
+
   }
 }
