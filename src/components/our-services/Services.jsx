@@ -28,6 +28,14 @@ const Services = () => {
             )
           })}
         </div>
+        <div className='quote'>
+          <div className='quote-wrapper'>
+            <q>
+              Build an authentic relationship with our customers.
+            </q>
+          </div>
+          <h5>Delomid team</h5>
+        </div>
       </div>
     </div>
   )
