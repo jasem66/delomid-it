@@ -5,6 +5,8 @@ import Contact from './Contact'
 import Blog from './Blog'
 import BusinessIntelligence from './BusinessIntelligence'
 import DigitalOnline from './DigitalOnline'
+import { SingleJob } from '../components'
+import { Error } from '../components'
 
 export {
   Home,
@@ -14,5 +16,6 @@ export {
   Blog,
   BusinessIntelligence,
   DigitalOnline,
-
+  SingleJob,
+  Error,
 }
