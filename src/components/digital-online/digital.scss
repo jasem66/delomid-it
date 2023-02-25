@@ -1,0 +1,56 @@
+.intelligence {
+  background-color: #ffffff;
+  .single-int {
+    .int-title {
+      background-image: url(../../assets/triangle-gris.jpg);
+      background-position: center;
+      background-attachment: fixed;
+    
+    }
+    h3 {
+      color: var(--dark-blue-clr);
+      text-align: center;
+      padding: var(--p-sm);
+    }
+    p {
+      padding: var(--p-md) 0;
+      padding-bottom: var(--p-xxl);
+      opacity: 0.9;
+      width: 90%;
+      margin: auto;
+      color: var(--dark-clr);
+      font-size: var(--f-lg);
+      line-height: var(--line-3);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .intelligence {
+    .single-int {
+     h3{
+            padding: var(--p-md);
+
+     }
+      p {
+        width: 60%;
+        max-width: 750px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 922px) {
+  .intelligence {
+    .single-int {
+      h3 {
+             padding: var(--p-lg);
+        font-size: var(--f-xxl);
+        animation: movedown 1s ease-in-out;
+      }
+      p {
+        animation: popin 1s ease-in-out;
+      }
+    }
+  }
+}

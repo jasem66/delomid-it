@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCode, faPenFancy, faSearch, faStore } from '@fortawesome/free-solid-svg-icons'
 
-export const businessIntelliganceData = [
+export const digitalOnlineData = [
   {
     id: 1,
     title: 'Creation of website and application',
