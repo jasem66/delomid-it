@@ -1,5 +1,5 @@
 import React from 'react'
-import { PageHero } from '../components'
+import { Loading, PageHero } from '../components'
 import Services from '../components/our-services/Services'
 
 const OurServices = () => {

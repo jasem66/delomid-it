@@ -1,0 +1,32 @@
+.loading {
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    margin: auto;
+    border-radius: 50%;
+    border: medium solid var(--light-blue-clr);
+    border-width:   medium 0 0 0;
+    animation: spiner 1s ease-in-out infinite ;
+  }
+  .spiner {
+  }
+}
+@keyframes spiner {
+  0% {
+  transform: rotate(0deg);
+  }
+  50% {
+
+  }
+
+  50% {
+
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

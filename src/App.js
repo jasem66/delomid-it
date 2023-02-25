@@ -1,6 +1,7 @@
+import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import { BackToTopBtn, Error, Footer, Navbar, SingleJob } from './components'
+import { BackToTopBtn, Error, Footer, Loading, Navbar, SingleJob } from './components'
 import {
   Blog,
   Career,
@@ -12,6 +13,7 @@ import {
 } from './pages'
 
 function App() {
+  const [loading, setLoading] = useState(true)
   return (
     <BrowserRouter>
       <Navbar />
