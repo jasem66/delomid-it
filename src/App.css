@@ -144,6 +144,13 @@ time {
   cursor: pointer;
 } */
 
+.up-anime {
+  animation: moveup 1s ease-in-out;
+}
+.down-anime {
+  animation: movedown 1s ease-in-out;
+}
+
 /* ---- key frames ----*/
 @keyframes moveup {
   0% {
@@ -209,7 +216,6 @@ time {
   50% {
     opacity: 0;
   }
-
 
   100% {
     opacity: 1;

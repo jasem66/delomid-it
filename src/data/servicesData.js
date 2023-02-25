@@ -19,6 +19,7 @@ export const servicesData = [
     ],
     icon: <FontAwesomeIcon className='font-icon' icon={faPen} />,
     color: '2da368',
+    anime: 'down-anime',
   },
   {
     id: 2,
@@ -26,6 +27,7 @@ export const servicesData = [
     desc: ['Functional analysis', 'Development', 'Testing', 'Steering'],
     icon: <FontAwesomeIcon className='font-icon' icon={faCode} />,
     color: 'b0d13a',
+    anime: 'up-anime',
   },
   {
     id: 3,
@@ -37,6 +39,7 @@ export const servicesData = [
     ],
     icon: <FontAwesomeIcon className='font-icon' icon={faWarehouse} />,
     color: 'f29437',
+    anime: 'down-anime',
   },
   {
     id: 4,

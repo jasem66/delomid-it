@@ -1,7 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './services.scss'
 import { servicesData } from '../../data/servicesData'
 const Services = () => {
+  const [size, setSize] = useState(window.innerWidth)
+  const [animeOn, setAnimeOn] = useState(false)
+  useEffect(() => {
+    const handleSize = () => {
+      setSize(window.innerWidth)
+    }
+    window.addEventListener('resize', handleSize)
+    if (size > 992) {
+      setAnimeOn(true)
+      console.log(animeOn, size)
+    } else setAnimeOn(false)
+  }, [size])
+
   return (
     <div className='services'>
       <div className='services-container'>
@@ -9,10 +22,15 @@ const Services = () => {
 
         <div className='services-col'>
           {servicesData.map((item) => {
-            const { id, title, desc, icon, color } = item
+            const { id, title, desc, icon, color, anime } = item
 
             return (
-              <div className='single-service'>
+              <div
+                key={id}
+                className={
+                  animeOn ? `single-service ${anime}` : 'single-service '
+                }
+              >
                 <article>
                   <div className='icon' style={{ color: `#${color}` }}>
                     {icon}
@@ -30,9 +48,7 @@ const Services = () => {
         </div>
         <div className='quote'>
           <div className='quote-wrapper'>
-            <q>
-              Build an authentic relationship with our customers.
-            </q>
+            <q>Build an authentic relationship with our customers.</q>
           </div>
           <h5>Delomid team</h5>
         </div>

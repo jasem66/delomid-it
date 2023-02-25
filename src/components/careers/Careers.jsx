@@ -11,7 +11,6 @@ const careers = () => {
     <div className='intelligence'>
       <div className='intelligence-header'>
         <div className='overlay'></div>
-
         <h2>Bussines Intelligence</h2>
       </div>
       <div className='intelligence-row'>
@@ -40,7 +39,7 @@ const careers = () => {
       <div className='intelligence-header second-bg'>
         <div className='overlay'></div>
 
-        <h2>digital-online</h2>
+        <h2>Digital Online</h2>
       </div>
       <div className='intelligence-row'>
         <div className='intelligence-col'>
@@ -66,7 +65,7 @@ const careers = () => {
       <div className='  intelligence-header third-bg'>
         <div className='overlay'></div>
 
-        <h2>others</h2>
+        <h2>Others</h2>
       </div>
       <div className='intelligence-row'>
         <div className='intelligence-col'>
