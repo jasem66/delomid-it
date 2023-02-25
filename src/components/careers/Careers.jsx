@@ -2,6 +2,7 @@ import React from 'react'
 import './careers.scss'
 import { jobsData } from '../../data/jobsData'
 import { AiOutlineClockCircle } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 const bussinesIntelligence = jobsData.slice(2)
 const digitalOnline = jobsData.slice(0, 1)
 const others = jobsData.slice(1, 2)
@@ -25,7 +26,9 @@ const careers = () => {
                   {date}
                 </time>
                 <p>{desc}</p>
-                <button className='btn'>Learn More</button>
+                <Link to='/career/id'>
+                  <button className='btn'>Learn More</button>
+                </Link>
               </div>
             )
           })}

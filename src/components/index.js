@@ -15,7 +15,13 @@ import BackToTopBtn from './back-to-top-btn/BackToTopBtn'
 import SearchBtn from './search-btn/SearchBtn'
 import NavMobile from './navbar/NavMobile'
 import PageHero from './page-hero/PageHero'
+import Loading from './loading/Loading'
+import Error from './error-page/Error'
+import SingleJob from './single-job/SingleJob'
 export {
+  Loading,
+  Error,
+  SingleJob,
   Navbar,
   Footer,
   Hero,

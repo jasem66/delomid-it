@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import { BackToTopBtn, Footer, Navbar } from './components'
+import { BackToTopBtn, Error, Footer, Navbar, SingleJob } from './components'
 import {
   Blog,
   Career,
@@ -19,6 +19,7 @@ function App() {
         <Route exact path='/' element={<Home />} />
         <Route exact path='/our services' element={<OurServices />} />
         <Route exact path='/career' element={<Career />} />
+        <Route exact path='/career/:id' element={<SingleJob />} />
         <Route exact path='/contact' element={<Contact />} />
         <Route exact path='/blog' element={<Blog />} />
 
@@ -32,8 +33,9 @@ function App() {
           path='/digital-online'
           element={<BusinessIntelligence />}
         />
+        <Route exact path='*' element={<Error />} />
       </Routes>
-      <BackToTopBtn/>
+      <BackToTopBtn />
       <Footer />
     </BrowserRouter>
   )
