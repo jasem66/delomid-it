@@ -2,17 +2,17 @@ import React, { useEffect, useState } from 'react'
 import './slider.scss'
 import { sliderData } from '../../data/sliderData'
 const Slider = () => {
-  const [index, setIndex] = useState(0)
-  const [anime, setAnime] = useState(false)
+  const [index, setIndex] = useState(1)
+  const [anime, setAnime] = useState('')
 
-  const lastSlide = sliderData.length - 1
+  const lastSlide = sliderData.length -1
   const increase = () => {
     setIndex((num) => num + 1)
-    setAnime(true)
+    setAnime(false)
   }
   const decrease = () => {
     setIndex((num) => num - 1)
-    setAnime(false)
+    setAnime(true)
   }
 
   useEffect(() => {
@@ -25,20 +25,22 @@ const Slider = () => {
   }, [index])
 
   useEffect(() => {
-setAnime(!anime)
+    if (anime) {
+      setAnime('ltr-anime')
+    } else {
+      setAnime('rtl-anime')
+    }
   }, [index])
 
   return (
-    <div className='slider'>{anime}
+    <div className='slider'>
+      {anime}
+      {index}
       <div className='slider-container'>
         <h3>Customer references </h3>
         <div className='slider-col '>
           <div className={anime}>
-            <img
-              className={anime ? 'rtl-anime' : 'ltr-anime'}
-              src={sliderData[index]}
-              alt=''
-            />
+            <img src={sliderData[index]} alt='' />
           </div>
           <div className='button-wrapper'>
             <button className='btn' onClick={decrease} setAnime>
