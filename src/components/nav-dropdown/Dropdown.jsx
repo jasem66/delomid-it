@@ -3,10 +3,9 @@ import { Link } from 'react-router-dom'
 import { navDropdownLInks } from '../../utilities/constants'
 import './dropdown.scss'
 
-const Dropdown = ({ setDropdown }) => {
-  
+const Dropdown = ({ setDropdown, dropdown }) => {
   return (
-    <div className='dropdown'>
+    <div className={dropdown ? 'dropdown' : 'dropdown  close'}>
       <ul>
         {navDropdownLInks.map((item) => {
           return (
