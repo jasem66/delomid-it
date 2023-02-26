@@ -20,7 +20,6 @@ const Navbar = () => {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 100) {
         setImageSize(true)
-        console.log(imageSize)
       } else setImageSize(false)
     })
   }, [])
