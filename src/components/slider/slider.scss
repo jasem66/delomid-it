@@ -1,0 +1,48 @@
+.slider {
+  text-align: center;
+  .slider-container {
+   width: 60%;
+   max-width: 1140px;
+   margin: auto;
+    .image-wrapper {
+    }
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+    }
+  }
+  .rtl-anime{
+animation: rtl 1s ease-in-out;
+  }
+    .ltr-anime{
+animation: ltr 1s ease-in-out;
+  }
+}
+
+
+
+
+
+@keyframes rtl {
+  0% {
+    transform: translateX(-50%);
+  }
+  50% {
+
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes ltr {
+  0% {
+    transform: translateX(50%);
+  }
+  50% {
+
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
