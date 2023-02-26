@@ -20,7 +20,6 @@ import Error from './error-page/Error'
 import SingleJob from './single-job/SingleJob'
 import Intelligence from './business-inteligence/Intelligence'
 import Slider from './slider/Slider'
-import MyCard from './slider/MyCard'
 
 export {
   Loading,
@@ -45,5 +44,4 @@ export {
   PageHero,
   Intelligence,
   Slider,
-  MyCard,
 }
