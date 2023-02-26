@@ -119,10 +119,13 @@ time {
   opacity: 0.5;
 }
 .down-anime {
-  animation: movedown 0.5s ease-in-out;
+  animation: movedown 1s ease-in-out;
 }
 .up-anime {
-  animation: moveup 0.5s ease-in-out;
+  animation: moveup 1s ease-in-out;
+}
+.popin-anime {
+  animation: popin 1s ease-in-out;
 }
 /* .seperator-container {
   position: relative;
