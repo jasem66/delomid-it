@@ -11,7 +11,7 @@ import SearchBtn from '../search-btn/SearchBtn'
 import NavMobile from './NavMobile'
 
 const Navbar = () => {
-  const [dropdown, setDropdown] = useState(false)
+  const [dropdown, setDropdown] = useState(true)
   const [imageSize, setImageSize] = useState(false)
   const [searchBar, setSearchBar] = useState(false)
   const [navToggler, setNavToggler] = useState(false)
@@ -48,10 +48,11 @@ const Navbar = () => {
                     onMouseEnter={() => setDropdown(true)}
                     onMouseLeave={() => setDropdown(false)}
                   >
-                    <Link className='nav-link' to={path}>
+                    <Link className='nav-link ' to={path}>
                       {title}
                     </Link>
-                    {dropdown && <Dropdown setDropdown={setDropdown} />}
+
+                    <Dropdown setDropdown={setDropdown} dropdown ={dropdown}/>
                   </li>
                 )
               }

@@ -1,4 +1,3 @@
-
 .navbar {
   background-color: var(--dark-blue-clr);
   height: 50px;
@@ -47,12 +46,21 @@
     display: none;
   }
   .nav-link {
+    padding: 10px 0;
     font-size: var(--f-lg);
     color: #edf0f2;
     transition: var(--transition);
+    position: relative;
+    z-index: 2;
   }
   .nav-link:hover {
     color: var(--red-clr);
+  }
+
+  .close {
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden;
   }
 }
 .nav-search,
@@ -64,10 +72,10 @@
   cursor: pointer;
   transition: var(--transition);
 }
-    .nav-search:hover,
-    .nav-toggle:hover {
-    color: var(--red-clr);
-    }
+.nav-search:hover,
+.nav-toggle:hover {
+  color: var(--red-clr);
+}
 
 @media screen and (min-width: 599px) {
   .nav-smaller {
@@ -91,9 +99,10 @@
   .navbar {
     height: 103px;
     padding: 0 2rem;
-     .nav-link {
-    font-size: var(--f-md)
-    ;overflow:hidden;}
+    .nav-link {
+      font-size: var(--f-md);
+      overflow: hidden;
+    }
 
     .nav-search,
     .nav-toggle {

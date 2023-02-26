@@ -19,6 +19,7 @@ import Loading from './loading/Loading'
 import Error from './error-page/Error'
 import SingleJob from './single-job/SingleJob'
 import Intelligence from './business-inteligence/Intelligence'
+import Slider from './slider/Slider'
 export {
   Loading,
   Error,
@@ -41,4 +42,5 @@ export {
   NavMobile,
   PageHero,
   Intelligence,
+  Slider,
 }
