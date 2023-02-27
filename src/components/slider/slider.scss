@@ -38,4 +38,14 @@
       border-radius: 50%;
     }
   }
+
+  .right{
+   transform: translate(100%);
+
+  }
+  .center{   transform: translate(0);
+ }
+   .left{
+   transform: translate(-100%);
+  }
 }
