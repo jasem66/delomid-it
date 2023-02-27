@@ -61,7 +61,7 @@ const Slider = () => {
           </div>
         ))
     }
-    if (winSize > 768) {
+    if (winSize > 922) {
       // Display 4 cards in large screens
       return sliderData
         .slice(currentIndex, currentIndex + 3)
@@ -101,7 +101,7 @@ const Slider = () => {
       <h3>Customer references</h3>
 
       <div className='seperator-container'>
-        <div className='seperator-down' >dds</div>
+        <div className='seperator-down' ></div>
       </div>
       <div className='card-container'>
         <RenderCards />
