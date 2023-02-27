@@ -129,8 +129,10 @@ time {
 }
 .right-anime-f {
   animation: moveright .6s ease-in-out;
+  
 }
 .left-anime {
+
   animation: moveleft 1s ease-in-out;
 }
 .left-anime-f {

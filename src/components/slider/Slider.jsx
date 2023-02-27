@@ -31,6 +31,22 @@ const Slider = () => {
     window.addEventListener('resize', handleSize)
   }, [])
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex(currentIndex + 1)
+    }, 300033)
+    return () => clearInterval(interval)
+  }, [currentIndex])
+  useEffect(() => {
+    const lastSlide = sliderData.length - 1
+    if (currentIndex > lastSlide) {
+      setCurrentIndex(0)
+    }
+    if (currentIndex < 0) {
+      setCurrentIndex(lastSlide)
+    }
+  }, [currentIndex])
+
   const RenderCards = () => {
     if (winSize > 1200) {
       // Display 4 cards in large screens
@@ -86,10 +102,10 @@ const Slider = () => {
         <RenderCards />
         <div className='button-container'>
           <button className='prev-btn' onClick={handlePrevClick}>
-            <BsChevronLeft color='#222' size={30} />
+            <BsChevronLeft size={25} />
           </button>
           <button className='next-btn' onClick={handleNextClick}>
-            <BsChevronRight color='#222' size={30} />
+            <BsChevronRight size={25} />
           </button>
         </div>
       </div>
@@ -97,14 +113,21 @@ const Slider = () => {
         {sliderData.map((item, index) => {
           if (index === currentIndex) {
             return (
-              <RxDotFilled
+              <RxDot
+              opacity={0.5}
+                color='#43a9d1'
                 size={30}
                 onClick={() => goToSlide(index)}
               />
             )
           }
           return (
-            <RxDot color='#43a9d1' size={30} onClick={() => goToSlide(index)} />
+            <RxDotFilled
+            color='#222'
+              opacity={0.4}
+              size={30}
+              onClick={() => goToSlide(index)}
+            />
           )
         })}
       </div>
