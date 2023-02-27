@@ -1,55 +1,86 @@
-.slider {
-  .slider-container {
-    max-width: 1140px;
-    width: 90%;
-    height: 250px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    column-gap: 3rem;
-    position: relative;
+.card-carousel {
+  max-width: 1140px;   margin: auto;
+display: flex;
+justify-content: center !important;
+
+
+}
+.card-container { 
+  position: relative;
+
+  max-width: 1140px; 
+   width: 100%;
+  height: 400px;
+  margin: auto;
+  display: flex;
+align-items: center;
+  justify-content: center;
+
+  article{
+     display: flex;
+
   }
-  .img-wrapper {
-   display: flex;
-    width: 100%;
-    margin: auto;
-  }
+}
+
+.card-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: 23%;
+  margin-bottom: 20px;
+  // background-color: #fff;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+
   img {
-    width: 50%;
-    height: 250px;
-    object-fit: contain;
-    padding: 5rem;
+    width: 100px;
+    height: 100px;
   }
-  .slider-btn {
+}
 
-    .slider-left {
-      position: absolute;
-      top: calc(50% - 50px / 2);
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      z-index: 3;
-    }
-    .slider-right {
-      position: absolute;
-      right: 0;
-      top: calc(50% - 50px / 2);
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-            z-index: 3;
+.card:hover {
+  transform: translateY(-5px);
+}
 
-    }
-  }
+.card.active {
+  width: 100%;
+  margin-bottom: 0;
+}
+.button-container{
+   max-width: 1140px; 
 
-  .right{
-   transform: translate(100%);
+}
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer; 
+border-radius: 50%;
+border: 1px solid black;
+width: 50px;
+height: 50px;
+}
 
-  }
-  .center{   transform: translate(0);
- }
-   .left{
-   transform: translate(-100%);
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
   }
 }
