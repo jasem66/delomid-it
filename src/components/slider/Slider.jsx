@@ -1,43 +1,33 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { sliderData } from '../../data/sliderData'
 import './slider.scss'
-import Carousel from 'react-elastic-carousel'
-import Items from './items'
+import { BiChevronLeft, BiChevronRight } from 'react-icons/bi'
 const Slider = () => {
- const [imgIndex, setImgIndex] = useState(0)
-  const breakPoints = [
-    {
-      width: 1,
-      itemToShow: 1,
-    },
-    {
-      width: 550,
-      itemToShow: 2,
-    },
-    {
-      width: 768,
-      itemToShow: 3,
-    },
-    {
-      width: 1200,
-      itemToShow: 4,
-    },
-  ]
+ const [index, setIndex] = useState(0)
+const [data, setData] = useState(sliderData)
+ const increase=()=>{
+
+ }
   return (
-    <div>
-      <h1 style={{ textAlign: 'center' }}>
-        Example to setup your carousel in react
-      </h1>
-      <div className='slider'>
-        <Carousel breakPoints={breakPoints}>
-      
-          {sliderData.map((item, index) => (
-            <div className='slider' key={index}>
-              <img src={item} alt='' />
-            </div>
-          ))} 
-   
-        </Carousel>
+    <div className='slider'>
+      <div className='slider-container'>
+        <div className='img-wrapper'>
+          <div className='slider-btn'>
+            <button className='slider-left'>
+              <BiChevronLeft size={30} />
+            </button>
+            <button className='slider-right'>
+              <BiChevronRight size={30} />
+            </button>
+          </div>
+          <img src={data[index]} alt='' />
+          <img src={data[index+1]} alt='' />
+          <img src={data[index+2]} alt='' />
+
+          {/* {sliderData.map((item,index) => (
+            <img key={index} src={item} alt='' />
+          ))} */}
+        </div>
       </div>
     </div>
   )
