@@ -45,6 +45,9 @@ const Slider = () => {
             if(imageIndex===index){
              position='center'
             }
+            if(imageIndex=== index-1 || index === 0 && imageIndex === lastImage){
+             position = 'left'
+            }
 
             return <img className={position} key={index} src={item} alt='' />
           })}
