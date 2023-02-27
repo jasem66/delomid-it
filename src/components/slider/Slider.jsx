@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './slider.scss'
 import { sliderData } from '../../data/sliderData'
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
-import { RxDotFilled } from 'react-icons/rx'
+import { RxDot, RxDotFilled } from 'react-icons/rx'
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -96,13 +96,16 @@ const Slider = () => {
       <div className='dots'>
         {sliderData.map((item, index) => {
           if (index === currentIndex) {
-            return <RxDotFilled
-              size={50}
-              color='#d81414'
-              onClick={() => goToSlide(index)}
-            />
+            return (
+              <RxDotFilled
+                size={30}
+                onClick={() => goToSlide(index)}
+              />
+            )
           }
-          return <RxDotFilled size={50} onClick={() => goToSlide(index)} />
+          return (
+            <RxDot color='#43a9d1' size={30} onClick={() => goToSlide(index)} />
+          )
         })}
       </div>
     </div>

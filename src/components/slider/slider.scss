@@ -1,24 +1,21 @@
 .card-carousel {
-  max-width: 1140px;   margin: auto;
-display: flex;
-justify-content: center !important;
-
-
+  max-width: 1140px;
+  margin: auto;
+  display: flex;
+  justify-content: center !important;
 }
-.card-container { 
+.card-container {
   position: relative;
-
-  max-width: 1140px; 
-   width: 100%;
+  max-width: 1140px;
+  width: 100%;
   height: 400px;
   margin: auto;
   display: flex;
-align-items: center;
+  align-items: center;
   justify-content: center;
 
-  article{
-     display: flex;
-
+  article {
+    display: flex;
   }
 }
 
@@ -31,28 +28,33 @@ align-items: center;
 .card {
   width: 23%;
   margin-bottom: 20px;
-  // background-color: #fff;
   transition: transform 0.2s ease-in-out;
   display: flex;
   justify-content: center;
 
   img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+opacity: .7;
+transition: var(--transition);
+
   }
+  img:hover{
+   opacity: 1 ;
+     transform: translateY(-5px);
+
+  }
+
 }
 
 .card:hover {
-  transform: translateY(-5px);
 }
 
 .card.active {
   width: 100%;
   margin-bottom: 0;
 }
-.button-container{
-   max-width: 1140px; 
-
+.button-container {
+  max-width: 1140px;
 }
 .prev-btn,
 .next-btn {
@@ -64,11 +66,11 @@ align-items: center;
   outline: none;
   font-size: 2rem;
   color: #fff;
-  cursor: pointer; 
-border-radius: 50%;
-border: 1px solid black;
-width: 50px;
-height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
 }
 
 .prev-btn {
