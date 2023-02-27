@@ -114,7 +114,7 @@ const Slider = () => {
           if (index === currentIndex) {
             return (
               <RxDot
-              opacity={0.5}
+                opacity={0.5}
                 color='#43a9d1'
                 size={30}
                 onClick={() => goToSlide(index)}
@@ -123,7 +123,7 @@ const Slider = () => {
           }
           return (
             <RxDotFilled
-            color='#222'
+              color='#222'
               opacity={0.4}
               size={30}
               onClick={() => goToSlide(index)}

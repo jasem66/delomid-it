@@ -46,8 +46,6 @@ transition: var(--transition);
 
 }
 
-.card:hover {
-}
 
 .card.active {
   width: 100%;
@@ -95,4 +93,11 @@ color:var(--light-blue-clr); ;
   .card {
     width: 100%;
   }
+
+}
+@media screen and (max-width:922px) {
+ .prev-btn,
+.next-btn {
+ display: none;
+}
 }
