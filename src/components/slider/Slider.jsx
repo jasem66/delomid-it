@@ -98,6 +98,11 @@ const Slider = () => {
 
   return (
     <div className='card-carousel'>
+      <h3>Customer references</h3>
+
+      <div className='seperator-container'>
+        <div className='seperator-down' >dds</div>
+      </div>
       <div className='card-container'>
         <RenderCards />
         <div className='button-container'>

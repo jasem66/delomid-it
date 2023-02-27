@@ -3,12 +3,28 @@
   margin: auto;
   display: flex;
   justify-content: center !important;
+  .dots {
+    padding-bottom: 2rem;
+  }
+  .seperator-container {
+position: relative;
+background-color: green !important;
+  }
+  .seperator-down {
+   position: absolute;
+   border-bottom: 1px solid rgb(12, 17, 12);
+   top: 100%;
+   left: 50%;
+    width: 50%;
+    margin: auto;
+  }
 }
 .card-container {
   position: relative;
   max-width: 1140px;
   width: 100%;
-  height: 400px;
+  // height: 300px;
+  padding: 3rem 0;
   margin: auto;
   display: flex;
   align-items: center;
@@ -34,18 +50,14 @@
 
   img {
     width: 200px;
-opacity: .7;
-transition: var(--transition);
-
+    opacity: 0.7;
+    transition: var(--transition);
   }
-  img:hover{
-   opacity: 1 ;
-     transform: translateY(-5px);
-
+  img:hover {
+    opacity: 1;
+    transform: translateY(-5px);
   }
-
 }
-
 
 .card.active {
   width: 100%;
@@ -53,51 +65,53 @@ transition: var(--transition);
 }
 .button-container {
   max-width: 1140px;
-}
-.prev-btn,
-.next-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: transparent;
-  border: 2px solid transparent;
-  outline: none;
-  font-size: 2rem;
-  color: #131212;
-  cursor: pointer;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  padding: 10px;
-color:'#222';
-transition: var(--transition);
-display: flex;
-align-items: center;
-justify-content: center;
-}
-.prev-btn:hover,
-.next-btn:hover {
-border: 2px solid var(--light-blue-clr);
-color:var(--light-blue-clr); ;
-}
 
-.prev-btn {
-  left: 10px;
-}
+  .prev-btn,
+  .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: 2px solid transparent;
+    outline: none;
+    font-size: 2rem;
+    color: #131212;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    color: '#222';
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .prev-btn:hover,
+  .next-btn:hover {
+    border: 2px solid var(--light-blue-clr);
+    color: var(--light-blue-clr);
+  }
 
-.next-btn {
-  right: 10px;
+  .prev-btn {
+    left: 10px;
+  }
+
+  .next-btn {
+    right: 10px;
+  }
 }
 
 @media (max-width: 768px) {
   .card {
     width: 100%;
   }
-
 }
-@media screen and (max-width:922px) {
- .prev-btn,
-.next-btn {
- display: none;
-}
+@media screen and (max-width: 922px) {
+  .button-container {
+    .prev-btn,
+    .next-btn {
+      display: none;
+    }
+  }
 }
