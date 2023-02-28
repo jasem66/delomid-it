@@ -66,7 +66,7 @@ const Navbar = () => {
 
           <span className='nav-toggle'>
             <article onClick={() => setNavToggler(!navToggler)}>
-              {!navToggler ? <FiMenu /> : <FaTimes />}
+              {navToggler ? <FiMenu /> : <FaTimes />}
             </article>
           </span>
           <SearchBtn setSearchBar={setSearchBar} searchBar={searchBar} />
@@ -75,7 +75,7 @@ const Navbar = () => {
           </span>
         </div>
       </div>
-      <NavMobile />
+    <NavMobile navToggler={navToggler} />
     </section>
   )
 }

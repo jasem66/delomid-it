@@ -4,11 +4,13 @@ import { navLinks } from '../../utilities/constants'
 import { Link } from 'react-router-dom'
 import Dropdown from '../nav-dropdown/Dropdown'
 import { BiChevronUp, BiChevronDown } from 'react-icons/bi'
-const NavMobile = () => {
+const NavMobile = ({ navToggler }) => {
   const [openLinks, setOpenLinks] = useState(true)
   return (
-    <div className='navmob'>
-      <div className='navmob-container'>
+    <div className='navmob '>
+      <div
+        className={navToggler ? 'navmob-container hide' : 'navmob-container '}
+      >
         <ul className='navmob-list'>
           {navLinks.map((item) => {
             const { id, path, title } = item
@@ -28,10 +30,10 @@ const NavMobile = () => {
                       }
                     >
                       <BiChevronDown size={28} />
-                    </span>   
+                    </span>
                   </article>
                   <div className={openLinks ? 'hide' : 'show'}>
-                 <Dropdown />
+                    <Dropdown />
                   </div>
                 </li>
               )
