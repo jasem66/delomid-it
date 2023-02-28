@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import './business.scss'
 import { businessData, digitalData } from '../../data/bussinesData'
+import { Link } from 'react-router-dom'
 const Business = () => {
   return (
     <div className='business'>
       <div className='business-row'>
-        <div className="business-content">
-        <h3>Business Intelligence</h3>
-        <p>Expertise in data management and processing</p></div>
+        <div className='business-content'>
+          <h3>Business Intelligence</h3>
+          <p>Expertise in data management and processing</p>
+        </div>
         <div className='seperator'></div>
         <div className='business-container'>
           {businessData.map((item) => {
@@ -15,10 +17,15 @@ const Business = () => {
             return (
               <div key={id} className='single-business'>
                 <div className='icon-container'>
-                  <div className='overlay' />
-                  <div className='icon'>{icon}</div>
+                  <Link to='/james'>
+                    <div className='overlay' />
+                    <div className='icon'>{icon}</div>
+                  </Link>
                 </div>
-                <h3 className='title'>{title}</h3>
+                
+                  <Link to='/james'>
+                    <h3>{title}</h3>
+                  </Link>
                 <p>{description}</p>
               </div>
             )
@@ -33,20 +40,21 @@ const Business = () => {
         <h3>digital-online</h3>
         <p>Design of web and mobile applications</p>
         <div className='seperator-dark'></div>
-<div className="digital-container">
-        {digitalData.map((item) => {
-          const { id, icon, title, description } = item
-          return (
-            <div key={id} className='single-business'>
-              <div className='icon-container'>
-                <div className='overlay' />
-                <div className='icon'>{icon}</div>
+        <div className='digital-container'>
+          {digitalData.map((item) => {
+            const { id, icon, title, description } = item
+            return (
+              <div key={id} className='single-business'>
+                <div className='icon-container'>
+                  <div className='overlay' />
+                  <div className='icon'>{icon}</div>
+                </div>
+                <h3 className='title'>{title}</h3>
+                <p>{description}</p>
               </div>
-              <h3 className='title'>{title}</h3>
-              <p>{description}</p>
-            </div>
-          )
-        })}</div>
+            )
+          })}
+        </div>
       </div>
     </div>
   )

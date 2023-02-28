@@ -30,8 +30,9 @@
       h3 {
         font-size: var(--f-lg);
         transition: var(--transition);
+        color: var(--dark-clr);
       }
-      .title:hover {
+      h3:hover {
         color: var(--red-clr);
         cursor: pointer;
       }

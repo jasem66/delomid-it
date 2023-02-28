@@ -1,6 +1,7 @@
 import React from 'react'
 import './intelligence.scss'
 import { businessIntelliganceData } from '../../data/bussinesIntelliganceData'
+import { Link } from 'react-router-dom'
 const Intelligence = () => {
   return (
     <div className='intelligence'>
@@ -9,7 +10,8 @@ const Intelligence = () => {
 
         return (
           <div key={id} className='single-int'>
-          <div className="int-title"><h3>
+          <div className="int-title">
+          <h3>
               {icon} {title}
             </h3></div>  
             <p>{description}</p>
