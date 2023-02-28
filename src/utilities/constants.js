@@ -7,7 +7,7 @@ export const navLinks = [
   {
     id: 2,
     title: 'Our Services',
-    path: '/our services',
+    path: '/our-services',
   },
   {
     id: 3,
@@ -30,11 +30,11 @@ export const navDropdownLInks = [
   {
     id: 1,
     title: 'business intelligence',
-    path: '/business-intelligence',
+    path: '/our-services/business-intelligence',
   },
   {
     id: 2,
     title: 'digital-online',
-    path: '/digital-online',
+    path: '/our-services/digital-online',
   },
 ]

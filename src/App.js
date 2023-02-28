@@ -19,7 +19,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path='/' element={<Home />} />
-        <Route exact path='/our services' element={<OurServices />} />
+        <Route exact path='/our-services' element={<OurServices />} />
         <Route exact path='/career' element={<Career />} />
         <Route exact path='/career/:id' element={<SingleJob />} />
         <Route exact path='/contact' element={<Contact />} />
@@ -27,13 +27,13 @@ function App() {
 
         <Route
           exact
-          path='/business-intelligence'
-          element={<BusinessIntelligence />} 
+          path='/our-services/business-intelligence'
+          element={<BusinessIntelligence />}
         />
         <Route
           exact
-          path='/digital-online'
-         element={<DigitalOnline />}
+          path='/our-services/digital-online'
+          element={<DigitalOnline />}
         />
         <Route exact path='*' element={<Error />} />
       </Routes>

@@ -8,14 +8,19 @@ const BusinessIntelligence = () => {
     <>
       <PageHero
         title='Our Services'
-        link1={<Link to='/our services'>Our Services</Link>}
-        link2={
-          <cite style={{}}> <cite style={{ margin: '0 5px ' }}> ></cite>
-            <Link to='/business-intelligence'>
-             Business
-              Intelligence
+        link1={
+          <div style={{ margin: '0 5px ' }}>
+            <Link to='/our-services'>
+              <cite style={{}}>Our Services</cite>
             </Link>
-          </cite>
+          </div>
+        }
+        link2={
+          <div style={{ margin: '0 5px ' }}>
+            <Link to='/our-services/business-intelligence'>
+              ><cite> Business Intelligence </cite>
+            </Link>
+          </div>
         }
       />
 
