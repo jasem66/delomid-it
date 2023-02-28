@@ -5,6 +5,7 @@ import { FaFacebookF } from 'react-icons/fa'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { AiOutlinePhone } from 'react-icons/ai'
 import { AiOutlineMail } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 
 const Contacts = () => {
   return (
@@ -14,13 +15,24 @@ const Contacts = () => {
           <h3>Find us on social networks</h3>
           <div className='icons'>
             <div className='icon-wrapper'>
-             <div className="zindex">   <FaLinkedinIn size={50} className='font-icon'  /></div>
-           
+              <div className='zindex'>
+                <Link
+                  target='_blank'
+                  to='https://www.linkedin.com/company/delomid-it/'
+                >
+                  <FaLinkedinIn size={50} className='font-icon' />
+                </Link>
+              </div>
+
               <div className='overlay'></div>
             </div>
             <div className='icon-wrapper'>
-              {' '}
-              <FaFacebookF size={50}  className='font-icon' />
+              <Link
+                target='_blank'
+                to='https://www.facebook.com/delomidDigitalData'
+              >
+                <FaFacebookF size={50} className='font-icon' />
+              </Link>
               <div className='overlay'></div>
             </div>
           </div>
