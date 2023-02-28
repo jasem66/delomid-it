@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './nav-mobile.scss'
 import { navLinks } from '../../utilities/constants'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import Dropdown from '../nav-dropdown/Dropdown'
 import { BiChevronDown } from 'react-icons/bi'
 const NavMobile = ({ navToggler, setNavToggler }) => {

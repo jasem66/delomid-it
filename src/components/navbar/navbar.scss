@@ -63,12 +63,13 @@
     overflow: hidden;
   }
 }
+
 .nav-search,
 .nav-toggle {
   display: inline-block;
   color: var(--light-clr);
   font-size: 1.5rem;
-  padding-right: 1rem;
+    padding-right: 1rem;
   cursor: pointer;
   transition: var(--transition);
 }
