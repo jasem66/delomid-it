@@ -5,17 +5,13 @@
   bottom: -60px;
   z-index: 1;
   transition: var(--transition);
-padding: 10px 0;
+padding: 10px 0; 
+
   .single-dropdown:hover {
     color: var(--red-clr);
   }
 
-  .close {
-    height: 0;
-    overflow: hidden;
-    transition: var(--transition);
 
-  }
 
   .single-dropdown {
     display: block;
@@ -28,6 +24,9 @@ padding: 10px 0;
 @media screen and (max-width: 768px) {
   .dropdown {
     padding: 0;
+    // .close{
+    //   height: 85px;
+    // }
     .single-dropdown {
       font-size: var(--f-sm);
       padding: var(--p-sm);

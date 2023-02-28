@@ -5,7 +5,7 @@ import './dropdown.scss'
 
 const Dropdown = ({ setDropdown, dropdown }) => {
   return (
-    <div className={dropdown ? 'dropdown' : 'dropdown  close'}>
+    <div className={dropdown ? 'dropdown close' : 'dropdown  '}>
       <ul>
         {navDropdownLInks.map((item) => {
           return (

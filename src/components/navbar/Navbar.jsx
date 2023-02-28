@@ -76,7 +76,7 @@ const Navbar = () => {
           </span>
         </div>
       </div>
-      {/* <NavMobile /> */}
+      <NavMobile />
     </section>
   )
 }

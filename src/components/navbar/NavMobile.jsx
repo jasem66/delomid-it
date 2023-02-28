@@ -15,8 +15,8 @@ const NavMobile = () => {
 
             if (title === 'Our Services') {
               return (
-                <li  style={{ paddingBottom: '0' }} key={id}>
-                  <article  onClick={() => setOpenLinks(!openLinks)}>
+                <li style={{ paddingBottom: '0' }} key={id}>
+                  <article onClick={() => setOpenLinks(!openLinks)}>
                     <Link className='mobnav-link' to={path}>
                       {title}
                     </Link>
@@ -28,10 +28,10 @@ const NavMobile = () => {
                       }
                     >
                       <BiChevronDown size={28} />
-                    </span>
+                    </span>   
                   </article>
                   <div className={openLinks ? 'hide' : 'show'}>
-                    <Dropdown />
+                 <Dropdown />
                   </div>
                 </li>
               )

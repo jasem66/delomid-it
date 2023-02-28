@@ -91,6 +91,15 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+.navbar {
+  .close{
+    width:auto  ;
+  }
+}
+
+}
+
 @media screen and (min-width: 922px) {
   .nav-smaller {
     height: 103px !important;
