@@ -1,5 +1,4 @@
 import React from 'react'
-import { BiChevronRight } from 'react-icons/bi'
 import { Link } from 'react-router-dom'
 import './page-hero.scss'
 const PageHero = ({ title,link1,link2 }) => {
@@ -11,7 +10,7 @@ const PageHero = ({ title,link1,link2 }) => {
           <Link to='/'>
             <span>Home</span>
           </Link> 
-          <cite style={{ margin: '0 5px ' }}> > </cite> {link1} {link2}
+          <cite style={{ margin: '0 5px ' }}>></cite>{link1}{link2}
         </div>
       </div>
     </div>

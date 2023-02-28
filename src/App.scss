@@ -40,8 +40,13 @@ time {
   align-items: center;
 }
 
+cite{
+  transition: var(--transition);
+}
+
 cite:hover{
-  
+  color: var(--red-clr);
+  text-decoration: underline;
 }
 
 ::placeholder {

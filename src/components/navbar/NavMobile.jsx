@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './nav-mobile.scss'
 import { navLinks } from '../../utilities/constants'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import Dropdown from '../nav-dropdown/Dropdown'
 import { BiChevronDown } from 'react-icons/bi'
 const NavMobile = ({ navToggler, setNavToggler }) => {
@@ -23,9 +23,15 @@ const NavMobile = ({ navToggler, setNavToggler }) => {
                       setOpenLinks(!openLinks)
                     }}
                   >
-                    <Link className='mobnav-link' to={path}>
+                    <NavLink
+                      style={({ isActive }) => {
+                        return { color: isActive ? '#43a9d1' : '' }
+                      }}
+                      className='mobnav-link'
+                      to={path}
+                    >
                       {title}
-                    </Link>
+                    </NavLink>
                     <span
                       className={
                         openLinks
@@ -36,10 +42,7 @@ const NavMobile = ({ navToggler, setNavToggler }) => {
                       <BiChevronDown size={28} />
                     </span>
                   </article>
-                  <div
-                  
-                    className={openLinks ? 'hide' : 'show'}
-                  >
+                  <div className={openLinks ? 'hide' : 'show'}>
                     <Dropdown
                       setNavToggler={setNavToggler}
                       navToggler={navToggler}
@@ -50,9 +53,15 @@ const NavMobile = ({ navToggler, setNavToggler }) => {
             }
             return (
               <li onClick={() => setNavToggler(true)} key={id}>
-                <Link className='mobnav-link' to={path}>
+                <NavLink
+                  style={({ isActive }) => {
+                    return { color: isActive ? '#43a9d1' : '' }
+                  }}
+                  className='mobnav-link'
+                  to={path}
+                >
                   {title}
-                </Link>
+                </NavLink>
               </li>
             )
           })}

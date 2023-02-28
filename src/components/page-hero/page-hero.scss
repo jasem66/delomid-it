@@ -14,6 +14,9 @@
     align-items: center;
     width: 90%;
     margin: auto;
+    h3{
+      font-size: 20px;
+    }
     .small-links {
       font-size: var(--f-sm);
       display: flex;
@@ -39,9 +42,16 @@
   .pagehero {
     .pagehero-container {
       display: block;
+    
       .small-links {
       float: right;
       }
     }
   }
 }
+@media screen and (min-width: 768px) {.pagehero {
+    .pagehero-container {
+      h3{
+     font-size: var(--f-xl);
+      }}}}
+
