@@ -3,8 +3,8 @@ import './nav-mobile.scss'
 import { navLinks } from '../../utilities/constants'
 import { Link } from 'react-router-dom'
 import Dropdown from '../nav-dropdown/Dropdown'
-import { BiChevronUp, BiChevronDown } from 'react-icons/bi'
-const NavMobile = ({ navToggler }) => {
+import { BiChevronDown } from 'react-icons/bi'
+const NavMobile = ({ navToggler, setNavToggler }) => {
   const [openLinks, setOpenLinks] = useState(true)
   return (
     <div className='navmob '>
@@ -18,7 +18,11 @@ const NavMobile = ({ navToggler }) => {
             if (title === 'Our Services') {
               return (
                 <li style={{ paddingBottom: '0' }} key={id}>
-                  <article onClick={() => setOpenLinks(!openLinks)}>
+                  <article
+                    onClick={() => {
+                      setOpenLinks(!openLinks)
+                    }}
+                  >
                     <Link className='mobnav-link' to={path}>
                       {title}
                     </Link>
@@ -32,14 +36,20 @@ const NavMobile = ({ navToggler }) => {
                       <BiChevronDown size={28} />
                     </span>
                   </article>
-                  <div className={openLinks ? 'hide' : 'show'}>
-                    <Dropdown />
+                  <div
+                  
+                    className={openLinks ? 'hide' : 'show'}
+                  >
+                    <Dropdown
+                      setNavToggler={setNavToggler}
+                      navToggler={navToggler}
+                    />
                   </div>
                 </li>
               )
             }
             return (
-              <li key={id}>
+              <li onClick={() => setNavToggler(true)} key={id}>
                 <Link className='mobnav-link' to={path}>
                   {title}
                 </Link>

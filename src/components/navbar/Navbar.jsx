@@ -40,14 +40,14 @@ const Navbar = () => {
           <ul className='nav-links'>
             {navLinks.map((item) => {
               const { id, title, path } = item
-              if (item.title === 'Our Services' ) {
+              if (item.title === 'Our Services') {
                 return (
                   <li
                     key={id}
                     onMouseEnter={() => setDropdown(true)}
                     onMouseLeave={() => setDropdown(false)}
                   >
-            <Link className='nav-link ' to={path}>
+                    <Link className='nav-link ' to={path}>
                       {title}
                     </Link>
                     <Dropdown setDropdown={setDropdown} dropdown={dropdown} />
@@ -75,7 +75,7 @@ const Navbar = () => {
           </span>
         </div>
       </div>
-    <NavMobile navToggler={navToggler} />
+      <NavMobile navToggler={navToggler} setNavToggler={setNavToggler} />
     </section>
   )
 }
