@@ -4,30 +4,25 @@
   position: absolute;
   bottom: -60px;
   z-index: 1;
-  transition: var(--transition-2);
+  transition: var(--transition);
   padding: 10px 0;
-  // max-height: 200px;
- 
-
 
   .single-dropdown:hover {
     color: var(--red-clr);
-    // animation: popin 1s ease-in-out; 
   }
 
   .single-dropdown {
-    // max-height: 200px;
-   display: block;
+    display: block;
     padding: 10px;
     font-size: var(--f-md);
-    transition: var(--transition-2);
+    transition: var(--transition);
   }
 }
 
 @media screen and (max-width: 768px) {
   .dropdown {
     padding: 0;
-
+  
     .single-dropdown {
       font-size: var(--f-sm);
       padding: var(--p-sm);
