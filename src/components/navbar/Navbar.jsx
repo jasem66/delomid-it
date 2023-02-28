@@ -50,6 +50,7 @@ const Navbar = () => {
                     <Link className='nav-link ' to={path}>
                       {title}
                     </Link>
+
                     <Dropdown setDropdown={setDropdown} dropdown={dropdown} />
                   </li>
                 )

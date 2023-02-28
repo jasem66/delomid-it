@@ -10,13 +10,11 @@ const Dropdown = ({ setDropdown, dropdown, setNavToggler, navToggler }) => {
         {navDropdownLInks.map((item) => {
           return (
             <Link
-            
-            
               onClick={() => {
                 // setDropdown()
-                 setNavToggler(true)
+                setNavToggler(true)
               }}
-              className='single-dropdown'
+              className= 'single-dropdown ' 
               to={item.path}
             >
               {item.title}

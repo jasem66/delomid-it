@@ -4,29 +4,30 @@
   position: absolute;
   bottom: -60px;
   z-index: 1;
-  transition: var(--transition);
-padding: 10px 0; 
+  transition: var(--transition-2);
+  padding: 10px 0;
+  // max-height: 200px;
+ 
+
 
   .single-dropdown:hover {
     color: var(--red-clr);
+    // animation: popin 1s ease-in-out; 
   }
 
-
-
   .single-dropdown {
-    display: block;
-    padding: 10px ;
+    // max-height: 200px;
+   display: block;
+    padding: 10px;
     font-size: var(--f-md);
-    transition: var(--transition);
+    transition: var(--transition-2);
   }
 }
 
 @media screen and (max-width: 768px) {
   .dropdown {
     padding: 0;
-    // .close{
-    //   height: 85px;
-    // }
+
     .single-dropdown {
       font-size: var(--f-sm);
       padding: var(--p-sm);
