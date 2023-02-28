@@ -11,7 +11,7 @@ import SearchBtn from '../search-btn/SearchBtn'
 import NavMobile from './NavMobile'
 
 const Navbar = () => {
-  const [dropdown, setDropdown] = useState(true)
+  const [dropdown, setDropdown] = useState(false)
   const [imageSize, setImageSize] = useState(false)
   const [searchBar, setSearchBar] = useState(false)
   const [navToggler, setNavToggler] = useState(false)
