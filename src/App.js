@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
+import './App.scss'
 import { BackToTopBtn, Error, Footer, Loading, Navbar, SingleJob } from './components'
 import {
   Blog,

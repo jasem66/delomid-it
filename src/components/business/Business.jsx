@@ -22,10 +22,10 @@ const Business = () => {
                     <div className='icon'>{icon}</div>
                   </Link>
                 </div>
-                
-                  <Link to='/james'>
-                    <h3>{title}</h3>
-                  </Link>
+
+                <Link to='/james'>
+                  <h3>{title}</h3>
+                </Link>
                 <p>{description}</p>
               </div>
             )
@@ -39,17 +39,21 @@ const Business = () => {
       <div className='business-row'>
         <h3>digital-online</h3>
         <p>Design of web and mobile applications</p>
-        <div className='seperator-dark'></div>
+        <div className='seperator'></div>
         <div className='digital-container'>
           {digitalData.map((item) => {
             const { id, icon, title, description } = item
             return (
               <div key={id} className='single-business'>
                 <div className='icon-container'>
-                  <div className='overlay' />
-                  <div className='icon'>{icon}</div>
+                  <Link to='james delomid'>
+                    <div className='overlay' />
+                    <div className='icon'>{icon}</div>
+                  </Link>
                 </div>
-                <h3 className='title'>{title}</h3>
+                <Link to='james delomid'>
+                  <h3 className='title'>{title}</h3>
+                </Link>
                 <p>{description}</p>
               </div>
             )

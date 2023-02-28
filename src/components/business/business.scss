@@ -131,14 +131,13 @@
       max-width: 1140px;
       display: flex;
       margin: auto;
-      padding-bottom: 2rem;
+      padding-bottom: 4rem;
       flex-wrap: wrap;
       .single-business {
-        padding: 1.5rem 1rem;
+        padding: var(--p-lg) 1rem;
         display: flex;
         justify-content: flex-start;
-        height: 350px;
-
+        // height: 380px;
         width: 28%;
 
         h3:hover {
