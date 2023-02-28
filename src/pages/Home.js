@@ -4,12 +4,12 @@ import { Business, Hero, HomeVideo, Jobs, Portfolio, Slider } from '../component
 const Home = () => {
   return (
     <div className='home'>
-      {/* <Hero/>
+      <Hero/>
 <Business/>
 <HomeVideo/>
 <Portfolio/>
-      <Jobs /> */}
-      <Slider/>
+      <Jobs />
+      {/* <Slider/> */}
     </div>
   )
 }

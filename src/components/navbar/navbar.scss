@@ -58,8 +58,8 @@
   }
 
   .close {
-    height: 0 !important;
-    width: 0 !important;
+    height: 0 ;
+    width: 0;
     overflow: hidden;
   }
 }
@@ -93,8 +93,9 @@
 
 @media screen and (max-width: 768px) {
 .navbar {
-  .close{
-    width:auto  ;
+ .close{  
+    width:auto  !important;
+    height: auto;
   }
 }
 

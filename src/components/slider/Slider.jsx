@@ -34,7 +34,7 @@ const Slider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex(currentIndex + 1)
-    }, 300033)
+    }, 3000)
     return () => clearInterval(interval)
   }, [currentIndex])
   useEffect(() => {
@@ -49,7 +49,6 @@ const Slider = () => {
 
   const RenderCards = () => {
     if (winSize > 1200) {
-      // Display 4 cards in large screens
       return sliderData
         .slice(currentIndex, currentIndex + 4)
         .map((card, index) => (
@@ -62,7 +61,6 @@ const Slider = () => {
         ))
     }
     if (winSize > 922) {
-      // Display 4 cards in large screens
       return sliderData
         .slice(currentIndex, currentIndex + 3)
         .map((card, index) => (
@@ -75,7 +73,6 @@ const Slider = () => {
         ))
     }
     if (winSize > 599) {
-      // Display 4 cards in large screens
       return sliderData
         .slice(currentIndex, currentIndex + 2)
         .map((card, index) => (
@@ -87,7 +84,6 @@ const Slider = () => {
           </div>
         ))
     } else {
-      // Display 1 card in small screens
       return (
         <div className={animeOn ? 'card right-anime-f' : 'card left-anime-f'}>
           <img src={sliderData[currentIndex]} alt='' />
@@ -101,7 +97,7 @@ const Slider = () => {
       <h3>Customer references</h3>
 
       <div className='seperator-container'>
-        <div className='seperator-down' ></div>
+        <div className='seperator-down'></div>
       </div>
       <div className='card-container'>
         <RenderCards />
