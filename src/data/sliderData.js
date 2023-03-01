@@ -1,6 +1,6 @@
 import images from '../utilities/images'
 
-export const sliderData = [
+export const sliders = [
   images.slider1,
   images.slider2,
   images.slider3,
@@ -20,4 +20,5 @@ export const sliderData = [
   images.slider17,
   images.slider18,
   images.slider19,
+ 
 ]

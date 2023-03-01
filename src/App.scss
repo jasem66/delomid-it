@@ -39,11 +39,11 @@ time {
   align-items: center;
 }
 
-cite{
+cite {
   transition: var(--transition);
 }
 
-cite:hover{
+cite:hover {
   color: var(--red-clr);
   text-decoration: underline;
 }
@@ -52,13 +52,11 @@ cite:hover{
   opacity: 0.5;
 }
 
-@media screen and (min-width:768px){
-  p{
-    font-size: var(--f-md) ;
+@media screen and (min-width: 768px) {
+  p {
+    font-size: var(--f-md);
   }
 }
-
-
 
 :root {
   /*---- colors---- */
@@ -94,8 +92,7 @@ cite:hover{
   --line-1: 1.2rem;
   --line-2: 1.7rem;
   --line-3: 2rem;
-    --line-4: 2.4rem;
-
+  --line-4: 2.4rem;
 
   /*---- transition---- */
   --transition: all 0.2s ease-in-out;
@@ -157,7 +154,6 @@ cite:hover{
 .popin-anime {
   animation: popin 1s ease-in-out;
 }
-
 
 .up-anime {
   animation: moveup 1s ease-in-out;
@@ -224,21 +220,31 @@ cite:hover{
 }
 @keyframes moveright-f {
   0% {
-    transform: translateX(-100%);
+    transform: translate3d(-270px, 0px, 0px);
+    overflow: hidden;
+
     scroll-behavior: smooth;
   }
   100% {
     transform: translateX(0);
+    overflow: hidden;
+
     scroll-behavior: smooth;
   }
 }
 @keyframes moveleft-f {
   0% {
-    transform: translateX(100%);
+    opacity: 0;
+    transform: translateX(250px);
+    overflow: hidden;
     scroll-behavior: smooth;
   }
+
   100% {
+    opacity: 1;
+
     transform: translateX(0);
+    overflow: hidden;
     scroll-behavior: smooth;
   }
 }

@@ -30,13 +30,16 @@
   position: relative;
   max-width: 1140px;
   width: 100%;
-  height: 370px;
+  height: 100%;
   padding: 3rem 0;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1rem;   
+   overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 
   article {
     display: flex;
@@ -52,16 +55,18 @@
 .card {
   width: 23%;
   margin-bottom: 20px;
-  transition: transform 0.2s ease-in-out;
+  // transition: transform 0.2s ease-in-out;
   display: flex;
   justify-content: center;
 
   img {
-    width: 250px;
+    max-width: 250px;
+    height: 250px;
+    object-fit: contain;
     padding: 3rem;
     margin: 0 5rem;
     opacity: 0.7;
-    transition: var(--transition);
+    // transition: var(--transition);
   }
   img:hover {
     opacity: 1;
