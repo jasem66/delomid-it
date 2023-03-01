@@ -8,9 +8,9 @@
     align-items: center;
     h3 {
       color: var(--light-clr);
-      font-size: var(--f-xxl);
+      font-size: var(--f-xl);
       opacity: 1;
-      padding: var(--p-lg);
+      padding:var(--p-sm) 0 var(--p-xl) 0;
       text-align: center;
     }
     video {
@@ -23,6 +23,12 @@
 @media screen and (min-width: 768px) {
   .home-video {
     .video-container {
+          h3 {
+      color: var(--light-clr);
+      font-size: var(--f-xxl);
+      padding:var(--p-md) 0 var(--p-xl) 0;
+
+    }
       video {
         width: 60%;
       }

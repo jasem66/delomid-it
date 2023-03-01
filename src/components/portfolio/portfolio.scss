@@ -1,4 +1,6 @@
 .portfolio {
+ p, h3{      opacity: 0.6;
+}
   .portfolio-row {
     max-width: 1140px;
     margin: auto;
@@ -6,7 +8,6 @@
       text-align: center;
       padding: var(--p-sm) 0;
       padding-top: 1.5rem;
-      opacity: 0.8;
     }
     p {
       text-align: center;
@@ -16,7 +17,7 @@
   }
   .seperator-container {
     position: relative;
-    padding: var(--p-md);
+    padding: var(--p-sm);
   }
   .seperator-down {
     position: absolute;
@@ -37,7 +38,7 @@
       h3 {
         font-size: var(--f-lg);
         text-align: left;
-        padding-top: 0;
+        padding: 5px 0;
       }
       p {
         text-align: left;
@@ -55,7 +56,8 @@
 @media screen and (min-width: 599px) {
   .portfolio {
     .seperator-down {
-      max-width: 300px;
+      width: 30%;
+      max-width: 400px;
     }
   }
 }
@@ -65,8 +67,11 @@
     .portfolio-row {
       h3 {
         font-size: var(--f-xxl);
+                padding:40px 0 0 0;
+
       }
       p {
+        padding:1.6rem 0;
         color: var(--f-dark);
         text-align: center;
         font-size: var(--f-lg);
@@ -80,7 +85,7 @@
         margin: auto;
 
         h3 {
-          font-size: var(--f-xl);
+          font-size: 24px;
         }
         p {
           font-size: var(--f-md);
