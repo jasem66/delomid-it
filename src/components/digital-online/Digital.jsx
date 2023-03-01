@@ -10,9 +10,10 @@ const Digital = () => {
         return (
           <div key={id} className='single-int'>
             <div className='int-title'>
+              <article>
               <h3>
                 {icon} {title}
-              </h3>
+              </h3></article>
             </div>
             <p>{desc}</p>
           </div>
