@@ -24,7 +24,7 @@ const careers = () => {
                   <AiOutlineClockCircle />
                   {date}
                 </time>
-                <p>{desc}</p>
+                <p>{desc.substring(0, 104)}...</p>
                 <Link to='/career/id'>
                   <button className='btn'>Learn More</button>
                 </Link>
@@ -52,7 +52,7 @@ const careers = () => {
                   <AiOutlineClockCircle />
                   {date}
                 </time>
-                <p>{desc}</p>
+                <p>{desc.substring(0, 104)}...</p>
                 <button className='btn'>Learn More</button>
               </div>
             )
@@ -78,7 +78,7 @@ const careers = () => {
                   <AiOutlineClockCircle />
                   {date}
                 </time>
-                <p>{desc}</p>
+                <p>{desc.substring(0, 104)}...</p>
                 <button className='btn'>Learn More</button>
               </div>
             )
