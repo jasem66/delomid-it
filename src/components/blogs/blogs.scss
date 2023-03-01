@@ -8,6 +8,7 @@
   .blogs-col {
     img {
       max-width: 100%; // mohem!!!
+      transition: var(--transition);
     }
     img:hover{
      opacity: .7;
