@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './business.scss'
 import { businessData, digitalData } from '../../data/bussinesData'
 import { Link } from 'react-router-dom'

@@ -16,7 +16,12 @@
     width: 90%;
     h2 {
       font-size: var(--f-xl);
+      padding-bottom: 8px;
       font-weight: 100;
+    }
+
+    time {
+      opacity: 1;
     }
 
     .jobs-col {
@@ -57,11 +62,26 @@
     }
   }
 }
+@media screen and (min-width: 599px) {
+  .jobs {
+    .jobs-row {
+      h2 {
+        font-size: var(--f-xxl);
+        margin: var(--p-sm) 0;
+       
+      }
+    }
+  }
+}
 
 @media screen and (min-width: 922px) {
- .jobs {
+  .jobs {
     .jobs-row {
-
-animation: movedownSlow 1s ease-in-out
-
-    }}}
+      animation: movedownSlow 1s ease-in-out;
+            h2 {
+        margin-top: var(--p-md) ;
+       
+      }
+    }
+  }
+}

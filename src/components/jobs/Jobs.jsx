@@ -1,8 +1,7 @@
 import React from 'react'
 import './jobs.scss'
 import { jobsData } from '../../data/jobsData'
-import images from '../../utilities/images'
-
+import { AiOutlineClockCircle } from 'react-icons/ai'
 const Jobs = () => {
   return (
     <div className='jobs'>
@@ -16,9 +15,11 @@ const Jobs = () => {
               return (
                 <div key={id} className='single-job'>
                   <h3>{title}</h3>
-                  <time>{date}</time>
+                  <time>
+                    <AiOutlineClockCircle />
+                    {date}
+                  </time>
                   <p>{desc}</p>
-
                   <button className='btn'>Learn More</button>
                 </div>
               )
