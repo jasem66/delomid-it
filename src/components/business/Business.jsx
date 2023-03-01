@@ -7,7 +7,7 @@ const Business = () => {
     <div className='business'>
       <div className='business-row'>
         <div className='business-content'>
-          <h3>Business Intelligence</h3>
+          <h3 className='big-title'>Business Intelligence</h3>
           <p>Expertise in data management and processing</p>
         </div>
         <div className='seperator'></div>
@@ -37,7 +37,7 @@ const Business = () => {
       </div>
 
       <div className='business-row'>
-        <h3>digital-online</h3>
+        <h3 className='big-title'>Digital Online</h3>
         <p>Design of web and mobile applications</p>
         <div className='seperator'></div>
         <div className='digital-container'>

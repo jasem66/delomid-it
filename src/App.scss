@@ -54,7 +54,7 @@ cite:hover{
 
 @media screen and (min-width:768px){
   p{
-    // font-size: var(--f-md) !important;
+    font-size: var(--f-md) ;
   }
 }
 
@@ -94,6 +94,8 @@ cite:hover{
   --line-1: 1.2rem;
   --line-2: 1.7rem;
   --line-3: 2rem;
+    --line-4: 2.4rem;
+
 
   /*---- transition---- */
   --transition: all 0.2s ease-in-out;
@@ -155,25 +157,7 @@ cite:hover{
 .popin-anime {
   animation: popin 1s ease-in-out;
 }
-/* .seperator-container {
-  position: relative;
-  padding: 3.5rem;
-}
-.seperator-down {
-  position: absolute;
-  border: 1px solid var(--dark-clr);
-  width: 90%;
-  margin: auto;
-  left: 0;
-  right: 0;
-  opacity: 0.3;
-} */
 
-/* .hover-title {
-  color: var(--red-clr);
-  text-decoration: underline;
-  cursor: pointer;
-} */
 
 .up-anime {
   animation: moveup 1s ease-in-out;
@@ -298,3 +282,23 @@ cite:hover{
     transform: translate(100);
   }
 }
+
+/* .seperator-container {
+  position: relative;
+  padding: 3.5rem;
+}
+.seperator-down {
+  position: absolute;
+  border: 1px solid var(--dark-clr);
+  width: 90%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  opacity: 0.3;
+} */
+
+/* .hover-title {
+  color: var(--red-clr);
+  text-decoration: underline;
+  cursor: pointer;
+} */
