@@ -1,11 +1,19 @@
 .intelligence {
   background-color: #ffffff;
+  .int-overlay{
+    background-color: hotpink;
+    width: 100% !important;
+    height: 100% !important;
+  }
   .single-int {
     .int-title {
       background-image: url(../../assets/triangle-gris.jpg);
       background-position: center;
       background-attachment: fixed;
-    
+article{
+          background-color: rgba(255, 255, 255, 0.6);
+
+}
     }
     h3 {
       color: var(--dark-blue-clr);

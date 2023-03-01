@@ -10,10 +10,14 @@ const Intelligence = () => {
 
         return (
           <div key={id} className='single-int'>
-          <div className="int-title">
-          <h3>
-              {icon} {title}
-            </h3></div>  
+            <div className='int-title'>
+         <article>
+           <h3>
+                {icon} {title}
+              </h3>
+         </article>
+             
+            </div>
             <p>{description}</p>
           </div>
         )
