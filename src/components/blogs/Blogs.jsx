@@ -16,7 +16,7 @@ const Blogs = () => {
                   <img src={image} alt={title} />
                 </div>
                 <h3>{title}</h3>
-                <time> <AiOutlineClockCircle/>{date}</time>
+                <time> <AiOutlineClockCircle/> {date}</time>
                 <p>{text}</p>
 
                 <button className='btn'>Read More</button>
