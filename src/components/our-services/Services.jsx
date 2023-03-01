@@ -32,11 +32,15 @@ const Services = () => {
                 }
               >
                 <article>
-                  <div className='icon' style={{ color: `#${color}` }}>
+                  <div
+                    className='icon'
+                    title='find out more'
+                    style={{ color: `#${color}` }}
+                  >
                     {icon}
                   </div>
                 </article>
-                <h3>{title}</h3>
+                <h3 title='find out more'>{title}</h3>
                 <div className='desc-wrapper'>
                   {desc.map((item) => {
                     return <p>{item}</p>
