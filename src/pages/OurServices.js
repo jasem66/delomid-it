@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Loading, PageHero, Test } from '../components'
+import { Carousel,  PageHero } from '../components'
 import Services from '../components/our-services/Services'
 
 const OurServices = () => {
@@ -16,7 +16,6 @@ const OurServices = () => {
           </div>
         }
       />
-      <Test/>
       <Services />
     </>
   )

@@ -1,15 +1,15 @@
 import React from 'react'
-import { Business, Hero, HomeVideo, Jobs, Portfolio, Slider } from '../components'
+import { Business, Carousel, Hero, HomeVideo, Jobs, Portfolio } from '../components'
 
 const Home = () => {
   return (
     <div className='home'>
-      <Hero/>
-<Business/>
-<HomeVideo/>
-<Portfolio/>
+      <Hero />
+      <Business />
+      <HomeVideo />
+      <Portfolio />
       <Jobs />
-      <Slider/>
+      <Carousel />
     </div>
   )
 }
