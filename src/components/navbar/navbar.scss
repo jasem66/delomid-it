@@ -101,12 +101,14 @@
   display: inline-block;
   color: var(--light-clr);
   font-size: 1.5rem;
+  padding-right: 10px;
   cursor: pointer;
   transition: var(--transition);
 }
 .nav-search:hover,
 .nav-toggle:hover {
   color: var(--red-clr);
+  cursor: pointer;
 }
 
 @media screen and (min-width: 599px) {
@@ -121,8 +123,10 @@
       height: 80px;
     }
   }
+  .nav-toggle {
+    padding: 0;
+  }
 }
-
 @media screen and (max-width: 768px) {
   .navbar {
     .close {
@@ -132,7 +136,7 @@
   }
 }
 
-@media screen and (min-width: 922px) {
+@media screen and (min-width: 768px) {
   .nav-smaller {
     height: 103px !important;
   }

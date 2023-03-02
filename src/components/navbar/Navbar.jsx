@@ -84,9 +84,18 @@ const Navbar = () => {
               <FaTimes className={!navToggler && 'menu-icon-close '} />
             </article>
           </span>
-          <SearchBtn setSearchBar={setSearchBar} searchBar={searchBar} />
+          <SearchBtn
+            setSearchBar={setSearchBar}
+            searchBar={searchBar}
+            setNavToggler={setNavToggler}
+          />
           <span className={!searchBar ? 'nav-search ' : ' nav-search hidden'}>
-            <HiSearch onClick={() => setSearchBar(true)} />
+            <HiSearch
+              onClick={() => {
+                setSearchBar(true)
+                setNavToggler(true)
+              }}
+            />
           </span>
         </div>
       </div>

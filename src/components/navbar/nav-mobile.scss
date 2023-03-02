@@ -41,7 +41,6 @@ max-height:400px;
   .hide {
     opacity: 0;
     max-height: 0;
-    // height: 0;
     overflow: hidden;
     transition: var(--transition);
   }
