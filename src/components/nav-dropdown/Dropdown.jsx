@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { navDropdownLInks } from '../../utilities/constants'
 import './dropdown.scss'
 
@@ -9,16 +9,18 @@ const Dropdown = ({ setDropdown, dropdown, setNavToggler, navToggler }) => {
       <ul>
         {navDropdownLInks.map((item) => {
           return (
-            <Link
+            <NavLink
+              style={({ isActive }) => {
+                return { color: isActive ? '#43a9d1' : '' }
+              }}
               onClick={() => {
-                // setDropdown()
                 setNavToggler(true)
               }}
-              className= 'single-dropdown ' 
+              className='single-dropdown '
               to={item.path}
             >
               {item.title}
-            </Link>
+            </NavLink>
           )
         })}
       </ul>

@@ -15,6 +15,8 @@ const Navbar = () => {
   const [imageSize, setImageSize] = useState(false)
   const [searchBar, setSearchBar] = useState(false)
   const [navToggler, setNavToggler] = useState(true)
+    const [openLinks, setOpenLinks] = useState(true)
+
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -77,7 +79,12 @@ const Navbar = () => {
           </ul>
 
           <span className='nav-toggle'>
-            <article onClick={() => setNavToggler(!navToggler)}>
+            <article
+              onClick={() => {
+                setNavToggler(!navToggler)
+                setOpenLinks(true)
+              }}
+            >
               <FiMenu
                 className={navToggler ? 'menu-icon ' : ' menu-icon  transform'}
               />
@@ -99,7 +106,12 @@ const Navbar = () => {
           </span>
         </div>
       </div>
-      <NavMobile navToggler={navToggler} setNavToggler={setNavToggler} />
+      <NavMobile
+        navToggler={navToggler}
+        setNavToggler={setNavToggler}
+        openLinks={openLinks}
+        setOpenLinks={setOpenLinks}
+      />
     </section>
   )
 }
