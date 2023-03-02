@@ -20,6 +20,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    white-space: nowrap;
   }
 
   .nav-logo {
@@ -89,12 +90,17 @@
   }
 }
 
-.nav-search,
+.nav-search {
+  // position: relative;
+  color: var(--light-clr);
+  font-size: 1.5rem;
+  transition: var(--transition);
+  padding-right: 1rem;
+}
 .nav-toggle {
   display: inline-block;
   color: var(--light-clr);
   font-size: 1.5rem;
-  padding-right: 1rem;
   cursor: pointer;
   transition: var(--transition);
 }
@@ -141,7 +147,7 @@
 
     .nav-search,
     .nav-toggle {
-      margin-left: 2rem;
+      // margin-left: 2rem;
     }
 
     .nav-toggle {

@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   background-color: var(--light-blue-clr);
-
+margin-left: 20px ;
 
 }
 .search-close {
@@ -21,7 +21,7 @@
 }
 
 .searchbtn > input {
-  background-color: var(--light-blue-clr);
+  background-color: transparent;
   border: none;
   padding: 0px 10px;
   transition: var(--transition-2);
@@ -84,4 +84,9 @@ input[placeholder] {
   .cancle-search {
     position: static;
   }
+}
+
+@media screen and (min-width: 922px) {
+
+
 }
