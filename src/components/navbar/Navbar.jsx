@@ -78,7 +78,10 @@ const Navbar = () => {
 
           <span className='nav-toggle'>
             <article onClick={() => setNavToggler(!navToggler)}>
-              {navToggler ? <FiMenu /> : <FaTimes />}
+              <FiMenu
+                className={navToggler ? 'menu-icon ' : ' menu-icon  transform'}
+              />
+              <FaTimes className={!navToggler && 'menu-icon-close '} />
             </article>
           </span>
           <SearchBtn setSearchBar={setSearchBar} searchBar={searchBar} />

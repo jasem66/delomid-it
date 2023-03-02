@@ -62,6 +62,31 @@
     width: 0;
     overflow: hidden;
   }
+
+  .nav-toggle article {
+    position: relative;
+  }
+
+  .menu-icon {
+    position: absolute;
+    z-index: 1;
+    background-color: var(--dark-blue-clr);
+    transition: var(--transition);
+  }
+
+  .menu-icon-close {
+    position: relative;
+    z-index: 1;
+    background-color: var(--dark-blue-clr);
+    transition: var(--transition);
+    transform: rotate(90deg);
+  }
+  .transform {
+    opacity: 0;
+    z-index: 0;
+    background-color: transparent;
+    transform: rotate(360deg);
+  }
 }
 
 .nav-search,
@@ -69,7 +94,7 @@
   display: inline-block;
   color: var(--light-clr);
   font-size: 1.5rem;
-    padding-right: 1rem;
+  padding-right: 1rem;
   cursor: pointer;
   transition: var(--transition);
 }
@@ -94,7 +119,6 @@
 
 @media screen and (max-width: 768px) {
   .navbar {
-
     .close {
       width: auto !important;
       height: auto;
