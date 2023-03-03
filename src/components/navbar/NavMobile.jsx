@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom'
 import Dropdown from '../nav-dropdown/Dropdown'
 import { BiChevronDown } from 'react-icons/bi'
 const NavMobile = ({ navToggler, setNavToggler, setOpenLinks, openLinks }) => {
-  // const [openLinks, setOpenLinks] = useState(true)
   return (
     <div className='navmob '>
       <div

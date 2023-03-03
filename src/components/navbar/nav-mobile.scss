@@ -4,7 +4,7 @@
   background-color: var(--dark-blue-clr);
   .navmob-container {
     width: 90%;
-max-height:400px;
+    max-height: 400px;
     margin: 0 auto;
     transition: var(--transition-2);
   }
@@ -46,8 +46,10 @@ max-height:400px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width:922px) {
   .navmob {
-    display: none;
+    display: none !important;
+   
+    
   }
 }

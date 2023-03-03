@@ -15,8 +15,7 @@ const Navbar = () => {
   const [imageSize, setImageSize] = useState(false)
   const [searchBar, setSearchBar] = useState(false)
   const [navToggler, setNavToggler] = useState(true)
-    const [openLinks, setOpenLinks] = useState(true)
-
+  const [openLinks, setOpenLinks] = useState(true)
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -27,8 +26,10 @@ const Navbar = () => {
   }, [])
 
   return (
-    <section className={imageSize ? 'navbar nav-smaller' : 'navbar'}>
-      <div className='nav-container'>
+    <section
+      className={imageSize ? 'navbar nav-smaller' : 'navbar'}
+    >
+      <div className='nav-container '>
         <div className='nav-logo'>
           <Link to='/'>
             <img
@@ -105,13 +106,14 @@ const Navbar = () => {
             />
           </span>
         </div>
-      </div>
-      <NavMobile
+      </div> 
+      <article className='nav-mob-section'>  <NavMobile 
         navToggler={navToggler}
         setNavToggler={setNavToggler}
         openLinks={openLinks}
         setOpenLinks={setOpenLinks}
-      />
+      /></article>
+    
     </section>
   )
 }
