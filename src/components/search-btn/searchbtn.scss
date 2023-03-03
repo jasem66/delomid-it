@@ -8,8 +8,7 @@
   display: flex;
   align-items: center;
   background-color: var(--light-blue-clr);
-margin-left: 20px ;
-
+  margin-left: 20px;
 }
 .search-close {
   overflow: hidden; //mohem
@@ -65,7 +64,6 @@ input[placeholder] {
     width: 45%;
     max-width: 200px;
     height: auto;
-    // margin-left: 1rem;
     border-radius: 5px;
     padding-right: 10px;
   }
@@ -86,6 +84,7 @@ input[placeholder] {
 }
 
 @media screen and (min-width: 922px) {
+    .searchbtn {
 
-
+    }
 }
