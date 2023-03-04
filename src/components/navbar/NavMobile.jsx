@@ -16,7 +16,7 @@ const NavMobile = ({ navToggler, setNavToggler, setOpenLinks, openLinks }) => {
 
             if (title === 'Our Services') {
               return (
-                <li style={{ paddingBottom: '0' }} key={id}>
+                <li  key={id}>
                   <article
                     onClick={() => {
                       setOpenLinks(!openLinks)
@@ -38,7 +38,7 @@ const NavMobile = ({ navToggler, setNavToggler, setOpenLinks, openLinks }) => {
                           : 'mobnav-link turn-180'
                       }
                     >
-                      <BiChevronDown size={28} />
+                      <BiChevronDown size={30} />
                     </span>
                   </article>
                   <div className={openLinks ? 'hide' : 'show'}>
