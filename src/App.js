@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { store } from './redux/store'
-import { Provider } from 'react-redux' 
+import { Provider, useDispatch, useSelector } from 'react-redux'
+import { closeMenu } from './redux/featueres/navbar/navbarSlice'
 import './App.scss'
 import {
   BackToTopBtn,
@@ -22,10 +23,11 @@ import {
 } from './pages'
 
 function App() {
-  const [loading, setLoading] = useState(true)
+  // const dispatch = useDispatch()
+  // const isMenuOpen = useSelector((state) => state.navbar.isMenuOpen)
   return (
-    <BrowserRouter>
-      <Provider store={store}>
+    <Provider store={store}>
+      <BrowserRouter >
         <Navbar />
         <Routes>
           <Route exact path='/' element={<Home />} />
@@ -49,8 +51,8 @@ function App() {
         </Routes>
         <BackToTopBtn />
         <Footer />{' '}
-      </Provider>
-    </BrowserRouter>
+      </BrowserRouter>{' '}
+    </Provider>
   )
 }
 

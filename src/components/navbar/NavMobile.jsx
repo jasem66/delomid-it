@@ -69,10 +69,9 @@ const NavMobile = ({ navToggler, setNavToggler, setOpenLinks, openLinks }) => {
                       <BiChevronDown size={30} />
                     </span>
                   </article>
-                  <div className={isDropdownMenuOpen ? 'hide' : 'show'}>
+                  <div className={isDropdownMenuOpen ? 'show' : 'hide'}>
                     <Dropdown
-                      setNavToggler={setNavToggler}
-                      navToggler={navToggler}
+          
                     />
                   </div>
                 </li>

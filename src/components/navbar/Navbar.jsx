@@ -12,7 +12,6 @@ import NavMobile from './NavMobile'
 import { useSelector, useDispatch } from 'react-redux'
 import {
   openMenu,
-  closeMenu,
   toggleMenu,
   openLink,
   resizeImage,
@@ -20,33 +19,26 @@ import {
   openDropdownMenu,
   closeDropdownMenu,
   openSearch,
-  closeSearch,
-  isLinksOpen,
+
 } from '../../redux/featueres/navbar/navbarSlice'
 const Navbar = () => {
-  const [dropdown, setDropdown] = useState(false)
-  // const [imageSize, setImageSize] = useState(false)
-  const [searchBar, setSearchBar] = useState(false)
-  const [navToggler, setNavToggler] = useState(true)
-  const [openLinks, setOpenLinks] = useState(true)
+
 
   const dispatch = useDispatch()
   const {
     isLoading,
     isMenuOpen,
-    isdropdownOpen,
     isImageResized,
-    isDropdownMenuOpen,
     isSearchOpen,
   } = useSelector((state) => state.navbar)
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 100) {
-  dispatch(resizeImage()) 
-      } else{
-    dispatch(notResizeImage()) 
-      }  
+        dispatch(resizeImage())
+      } else {
+        dispatch(notResizeImage())
+      }
     })
   }, [])
 
@@ -77,6 +69,7 @@ const Navbar = () => {
                     onMouseLeave={() => dispatch(closeDropdownMenu())}
                   >
                     <NavLink
+                
                       style={({ isActive }) => {
                         return { color: isActive ? '#43a9d1' : '' }
                       }}
@@ -85,7 +78,7 @@ const Navbar = () => {
                     >
                       {title}
                     </NavLink>
-                    <Dropdown setDropdown={setDropdown} dropdown={dropdown} />
+                    <Dropdown  />
                   </li>
                 )
               }
@@ -106,42 +99,27 @@ const Navbar = () => {
           </ul>
 
           <span className='nav-toggle'>
-            <article
-              onClick={
-                () => dispatch(toggleMenu(), openLink())
-
-                // setOpenLinks(true)
-              }
-            >
+            <article onClick={() => dispatch(toggleMenu(), openLink())}>
               <FiMenu
-                className={isMenuOpen ? 'menu-icon ' : ' menu-icon  transform'}
+                className={isMenuOpen ? 'menu-icon transform' : ' menu-icon  '}
               />
-              <FaTimes className={!isMenuOpen && 'menu-icon-close '} />
+              <FaTimes className={isMenuOpen && 'menu-icon-close '} />
             </article>
           </span>
-          <SearchBtn
-            setSearchBar={setSearchBar}
-            searchBar={searchBar}
-            setNavToggler={setNavToggler}
-          />
-          <span className={!isSearchOpen ? 'nav-search ' : ' nav-search hidden'}>
+          <SearchBtn />
+          <span
+            className={!isSearchOpen ? 'nav-search ' : ' nav-search hidden'}
+          >
             <HiSearch
               onClick={() => {
                 dispatch(openSearch(), openMenu())
-                // openMenu(true)
               }}
             />
           </span>
         </div>
       </div>
       <article className='nav-mob-section'>
-        {' '}
-        <NavMobile
-          navToggler={navToggler}
-          setNavToggler={setNavToggler}
-          openLinks={openLinks}
-          setOpenLinks={setOpenLinks}
-        />
+        <NavMobile />
       </article>
     </section>
   )

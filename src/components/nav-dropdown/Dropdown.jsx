@@ -15,10 +15,10 @@ import {
   openSearch,
   closeSearch,
   isLinksOpen,
-  toggleDropdownMenu
+  toggleDropdownMenu,
 } from '../../redux/featueres/navbar/navbarSlice'
 
-const Dropdown = ({ setDropdown, dropdown, setNavToggler, navToggler }) => {   
+const Dropdown = () => {
   const dispatch = useDispatch()
   const {
     isLoading,
@@ -33,13 +33,15 @@ const Dropdown = ({ setDropdown, dropdown, setNavToggler, navToggler }) => {
       <ul>
         {navDropdownLInks.map((item) => {
           return (
+            
             <NavLink
               key={item.id}
               style={({ isActive }) => {
                 return { color: isActive ? '#43a9d1' : '' }
               }}
               onClick={() => {
-                dispatch(openDropdownMenu(), closeMenu())
+                dispatch([openDropdownMenu(),
+                closeMenu()])
               }}
               className='single-dropdown '
               to={item.path}
