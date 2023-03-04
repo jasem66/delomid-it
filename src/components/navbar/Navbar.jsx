@@ -15,42 +15,55 @@ import {
   closeMenu,
   toggleMenu,
   openLink,
-  notResizeImage,
   resizeImage,
+  notResizeImage,
+  openDropdownMenu,
+  closeDropdownMenu,
+  openSearch,
+  closeSearch,
 } from '../../redux/featueres/navbar/navbarSlice'
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(false)
-  const [imageSize, setImageSize] = useState(false)
+  // const [imageSize, setImageSize] = useState(false)
   const [searchBar, setSearchBar] = useState(false)
   const [navToggler, setNavToggler] = useState(true)
   const [openLinks, setOpenLinks] = useState(true)
 
   const dispatch = useDispatch()
-  const { isLoading, isMenuOpen, isdropdownOpen } = useSelector(
-    (state) => state.navbar
-  )
+  const {
+    isLoading,
+    isMenuOpen,
+    isdropdownOpen,
+    isImageResized,
+    isDropdownMenuOpen,
+    isSearchOpen,
+  } = useSelector((state) => state.navbar)
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 100) {
-       dispatch(resizeImage()) 
-      } else setImageSize(false)
+  dispatch(resizeImage()) 
+      } else{
+    dispatch(notResizeImage()) 
+      }  
     })
   }, [])
 
   return (
-    <section className={imageSize ? 'navbar nav-smaller' : 'navbar'}>
+    <section className={isImageResized ? 'navbar nav-smaller' : 'navbar'}>
       <div className='nav-container '>
         <div className='nav-logo'>
           <Link to='/'>
             <img
-              className={imageSize ? 'delomid-logo-smaller' : 'delomid-logo '}
+              className={
+                isImageResized ? 'delomid-logo-smaller' : 'delomid-logo '
+              }
               src={images.logo}
               alt='Delomid-it'
             />
           </Link>
         </div>
-        <h1>{isLoading.toString()}</h1>
+        <h1>{isImageResized.toString()}</h1>
         <div className='nav-row'>
           <ul className='nav-links'>
             {navLinks.map((item) => {
@@ -59,8 +72,8 @@ const Navbar = () => {
                 return (
                   <li
                     key={id}
-                    onMouseEnter={() => setDropdown(true)}
-                    onMouseLeave={() => setDropdown(false)}
+                    onMouseEnter={() => dispatch(openDropdownMenu)}
+                    onMouseLeave={() => dispatch(closeDropdownMenu)}
                   >
                     <NavLink
                       style={({ isActive }) => {
@@ -95,7 +108,6 @@ const Navbar = () => {
             <article
               onClick={
                 () => dispatch(toggleMenu(), openLink())
-              
 
                 // setOpenLinks(true)
               }
@@ -111,11 +123,11 @@ const Navbar = () => {
             searchBar={searchBar}
             setNavToggler={setNavToggler}
           />
-          <span className={!searchBar ? 'nav-search ' : ' nav-search hidden'}>
+          <span className={!isSearchOpen ? 'nav-search ' : ' nav-search hidden'}>
             <HiSearch
               onClick={() => {
-                setSearchBar(true)
-                openMenu(true)
+                dispatch(openSearch(), openMenu())
+                // openMenu(true)
               }}
             />
           </span>

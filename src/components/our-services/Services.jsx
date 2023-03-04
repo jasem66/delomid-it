@@ -11,7 +11,6 @@ const Services = () => {
     window.addEventListener('resize', handleSize)
     if (size > 992) {
       setAnimeOn(true)
-      console.log(animeOn, size)
     } else setAnimeOn(false)
   }, [size])
 
