@@ -9,7 +9,15 @@ import { Link, NavLink } from 'react-router-dom'
 import Dropdown from '../nav-dropdown/Dropdown'
 import SearchBtn from '../search-btn/SearchBtn'
 import NavMobile from './NavMobile'
-
+import { useSelector, useDispatch } from 'react-redux'
+import {
+  openMenu,
+  closeMenu,
+  toggleMenu,
+  openLink,
+  notResizeImage,
+  resizeImage,
+} from '../../redux/featueres/navbar/navbarSlice'
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(false)
   const [imageSize, setImageSize] = useState(false)
@@ -17,18 +25,21 @@ const Navbar = () => {
   const [navToggler, setNavToggler] = useState(true)
   const [openLinks, setOpenLinks] = useState(true)
 
+  const dispatch = useDispatch()
+  const { isLoading, isMenuOpen, isdropdownOpen } = useSelector(
+    (state) => state.navbar
+  )
+
   useEffect(() => {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 100) {
-        setImageSize(true)
+       dispatch(resizeImage()) 
       } else setImageSize(false)
     })
   }, [])
 
   return (
-    <section
-      className={imageSize ? 'navbar nav-smaller' : 'navbar'}
-    >
+    <section className={imageSize ? 'navbar nav-smaller' : 'navbar'}>
       <div className='nav-container '>
         <div className='nav-logo'>
           <Link to='/'>
@@ -39,6 +50,7 @@ const Navbar = () => {
             />
           </Link>
         </div>
+        <h1>{isLoading.toString()}</h1>
         <div className='nav-row'>
           <ul className='nav-links'>
             {navLinks.map((item) => {
@@ -81,15 +93,17 @@ const Navbar = () => {
 
           <span className='nav-toggle'>
             <article
-              onClick={() => {
-                setNavToggler(!navToggler)
-                setOpenLinks(true)
-              }}
+              onClick={
+                () => dispatch(toggleMenu(), openLink())
+              
+
+                // setOpenLinks(true)
+              }
             >
               <FiMenu
-                className={navToggler ? 'menu-icon ' : ' menu-icon  transform'}
+                className={isMenuOpen ? 'menu-icon ' : ' menu-icon  transform'}
               />
-              <FaTimes className={!navToggler && 'menu-icon-close '} />
+              <FaTimes className={!isMenuOpen && 'menu-icon-close '} />
             </article>
           </span>
           <SearchBtn
@@ -101,19 +115,21 @@ const Navbar = () => {
             <HiSearch
               onClick={() => {
                 setSearchBar(true)
-                setNavToggler(true)
+                openMenu(true)
               }}
             />
           </span>
         </div>
-      </div> 
-      <article className='nav-mob-section'>  <NavMobile 
-        navToggler={navToggler}
-        setNavToggler={setNavToggler}
-        openLinks={openLinks}
-        setOpenLinks={setOpenLinks}
-      /></article>
-    
+      </div>
+      <article className='nav-mob-section'>
+        {' '}
+        <NavMobile
+          navToggler={navToggler}
+          setNavToggler={setNavToggler}
+          openLinks={openLinks}
+          setOpenLinks={setOpenLinks}
+        />
+      </article>
     </section>
   )
 }

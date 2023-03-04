@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className='hero'>
       <div className='video-wrapper'>
-        <video autoplay muted loop id='myVideo'>
+        <video autoPlay muted loop id='myVideo'>
           <source src={images.video} type='video/mp4' />
         </video>
         <div className='overlay'>

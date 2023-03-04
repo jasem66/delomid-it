@@ -12,7 +12,7 @@ const Carousel = () => {
     speed: 1000,
     slidesToShow: 4,
     slidesToScroll: 4,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
     cssEase: 'linear',
 
@@ -50,9 +50,9 @@ const Carousel = () => {
           <h2>Customer references</h2>
           <div className='seperator'></div>
           <Slider {...settings}>
-            {sliders.map((item) => {
+            {sliders.map((item,index) => {
               return (
-                <div className='image-wrapper'>
+                <div key={index} className='image-wrapper'>
                   <img src={item} alt='' />
                 </div>
               )
