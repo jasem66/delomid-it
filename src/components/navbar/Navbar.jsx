@@ -21,6 +21,7 @@ import {
   closeDropdownMenu,
   openSearch,
   closeSearch,
+  isLinksOpen,
 } from '../../redux/featueres/navbar/navbarSlice'
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(false)
@@ -72,8 +73,8 @@ const Navbar = () => {
                 return (
                   <li
                     key={id}
-                    onMouseEnter={() => dispatch(openDropdownMenu)}
-                    onMouseLeave={() => dispatch(closeDropdownMenu)}
+                    onMouseEnter={() => dispatch(openDropdownMenu())}
+                    onMouseLeave={() => dispatch(closeDropdownMenu())}
                   >
                     <NavLink
                       style={({ isActive }) => {

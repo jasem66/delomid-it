@@ -1,14 +1,41 @@
 import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import './nav-mobile.scss'
 import { navLinks } from '../../utilities/constants'
 import { NavLink } from 'react-router-dom'
 import Dropdown from '../nav-dropdown/Dropdown'
 import { BiChevronDown } from 'react-icons/bi'
+
+import {
+  openMenu,
+  closeMenu,
+  toggleMenu,
+  openLink,
+  resizeImage,
+  notResizeImage,
+  openDropdownMenu,
+  closeDropdownMenu,
+  openSearch,
+  closeSearch,
+  toggleDropdownMenu,
+} from '../../redux/featueres/navbar/navbarSlice'
+
 const NavMobile = ({ navToggler, setNavToggler, setOpenLinks, openLinks }) => {
+  const dispatch = useDispatch()
+  const {
+    isLoading,
+    isMenuOpen,
+    isdropdownOpen,
+    isImageResized,
+    isDropdownMenuOpen,
+    isSearchOpen,
+    isLinksOpen,
+  } = useSelector((state) => state.navbar)
+
   return (
     <div className='navmob '>
       <div
-        className={navToggler ? 'navmob-container hide' : 'navmob-container '}
+        className={isMenuOpen ? 'navmob-container ' : 'navmob-container hide'}
       >
         <ul className='navmob-list'>
           {navLinks.map((item) => {
@@ -16,10 +43,11 @@ const NavMobile = ({ navToggler, setNavToggler, setOpenLinks, openLinks }) => {
 
             if (title === 'Our Services') {
               return (
-                <li  key={id}>
+                <li key={id}>
                   <article
                     onClick={() => {
-                      setOpenLinks(!openLinks)
+                      dispatch(toggleDropdownMenu()
+                      )
                     }}
                   >
                     <NavLink
@@ -33,7 +61,7 @@ const NavMobile = ({ navToggler, setNavToggler, setOpenLinks, openLinks }) => {
                     </NavLink>
                     <span
                       className={
-                        openLinks
+                        isDropdownMenuOpen
                           ? ' mobnav-link link-chev'
                           : 'mobnav-link turn-180'
                       }
@@ -41,7 +69,7 @@ const NavMobile = ({ navToggler, setNavToggler, setOpenLinks, openLinks }) => {
                       <BiChevronDown size={30} />
                     </span>
                   </article>
-                  <div className={openLinks ? 'hide' : 'show'}>
+                  <div className={isDropdownMenuOpen ? 'hide' : 'show'}>
                     <Dropdown
                       setNavToggler={setNavToggler}
                       navToggler={navToggler}
@@ -51,7 +79,7 @@ const NavMobile = ({ navToggler, setNavToggler, setOpenLinks, openLinks }) => {
               )
             }
             return (
-              <li onClick={() => setNavToggler(true)} key={id}>
+              <li onClick={() => dispatch(closeMenu())} key={id}>
                 <NavLink
                   style={({ isActive }) => {
                     return { color: isActive ? '#43a9d1' : '' }

@@ -25,6 +25,9 @@ export const navbarSlice = createSlice({
     openLink: (state) => {
       state.isLinksOpen = true
     },
+    closeLink: (state) => {
+      state.isLinksOpen = false
+    },
     resizeImage: (state) => {
       state.isImageResized = true
     },
@@ -36,6 +39,9 @@ export const navbarSlice = createSlice({
     },
     closeDropdownMenu: (state) => {
       state.isDropdownMenuOpen = false
+    },
+    toggleDropdownMenu: (state) => {
+      state.isDropdownMenuOpen = !state.isDropdownMenuOpen
     },
     openSearch: (state) => {
       state.isSearchOpen = true
@@ -62,5 +68,6 @@ export const {
   isSearchOpen,
   openSearch,
   closeSearch,
+  toggleDropdownMenu,
 } = navbarSlice.actions
 export default navbarSlice.reducer
