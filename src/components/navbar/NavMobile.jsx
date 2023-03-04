@@ -7,30 +7,15 @@ import Dropdown from '../nav-dropdown/Dropdown'
 import { BiChevronDown } from 'react-icons/bi'
 
 import {
-  openMenu,
   closeMenu,
-  toggleMenu,
-  openLink,
-  resizeImage,
-  notResizeImage,
-  openDropdownMenu,
-  closeDropdownMenu,
-  openSearch,
-  closeSearch,
   toggleDropdownMenu,
 } from '../../redux/featueres/navbar/navbarSlice'
 
-const NavMobile = ({ navToggler, setNavToggler, setOpenLinks, openLinks }) => {
+const NavMobile = () => {
   const dispatch = useDispatch()
-  const {
-    isLoading,
-    isMenuOpen,
-    isdropdownOpen,
-    isImageResized,
-    isDropdownMenuOpen,
-    isSearchOpen,
-    isLinksOpen,
-  } = useSelector((state) => state.navbar)
+  const { isLoading, isMenuOpen, isDropdownMenuOpen } = useSelector(
+    (state) => state.navbar
+  )
 
   return (
     <div className='navmob '>
@@ -46,8 +31,7 @@ const NavMobile = ({ navToggler, setNavToggler, setOpenLinks, openLinks }) => {
                 <li key={id}>
                   <article
                     onClick={() => {
-                      dispatch(toggleDropdownMenu()
-                      )
+                      dispatch(toggleDropdownMenu())
                     }}
                   >
                     <NavLink
@@ -70,9 +54,7 @@ const NavMobile = ({ navToggler, setNavToggler, setOpenLinks, openLinks }) => {
                     </span>
                   </article>
                   <div className={isDropdownMenuOpen ? 'show' : 'hide'}>
-                    <Dropdown
-          
-                    />
+                    <Dropdown />
                   </div>
                 </li>
               )

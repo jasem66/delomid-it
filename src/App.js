@@ -28,7 +28,7 @@ function App() {
     <Provider store={store}>
 
         <BrowserRouter>
-          {/* <Navbar /> */}
+          <Navbar />
           <Routes>
             <Route exact path='/' element={<Home />} />
             <Route exact path='/our-services' element={<OurServices />} />
@@ -50,7 +50,7 @@ function App() {
             <Route exact path='*' element={<Error />} />
           </Routes>
           <BackToTopBtn />
-          {/* <Footer /> */}
+          <Footer />
         </BrowserRouter>
       
     </Provider>

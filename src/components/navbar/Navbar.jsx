@@ -19,12 +19,11 @@ import {
   openDropdownMenu,
   closeDropdownMenu,
   openSearch,
-  loading,
-  notLoading,
+
 } from '../../redux/featueres/navbar/navbarSlice'
 const Navbar = () => {
   const dispatch = useDispatch()
-  const { isLoading, isMenuOpen, isImageResized, isSearchOpen } = useSelector(
+  const { isMenuOpen, isImageResized, isSearchOpen } = useSelector(
     (state) => state.navbar
   )
 

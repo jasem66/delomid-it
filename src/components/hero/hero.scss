@@ -36,7 +36,7 @@
 }
 @media screen and (min-width: 599px) {
   .hero {
-    height: calc(100vh - 70px);
+    height: calc(100vh - 80px);
     .video-wrapper {
       height: calc(100vh - 70px);
       position: relative;
@@ -67,8 +67,9 @@
   }
 }
 
-@media screen and (min-width: 920px) {
-  .hero {
+@media screen and (min-width: 922px) {
+  .hero {    height: calc(100vh - 135px);
+
     h3 {
       animation: 1s movedown ease-out;
     }

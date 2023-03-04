@@ -15,9 +15,9 @@ const Home = () => {
   const { isLoading } = useSelector((state) => state.navbar)
   return (
     <div className='home'>
-      {isLoading ? (
+      {/* {isLoading ? (
         <Loading />
-      ) : (
+      ) : ( )}*/}
         <>
           <Hero />
           <Business />
@@ -26,7 +26,7 @@ const Home = () => {
           <Jobs />
           <Carousel />
         </>
-      )}
+      
     </div>
   )
 }

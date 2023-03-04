@@ -31,7 +31,7 @@
     width: 10.5rem;
     height: 50px;
     object-fit: cover;
-    transition: var(--transition);
+
   }
   .delomid-logo-smaller {
     width: 10.5rem;
@@ -39,10 +39,12 @@
     object-fit: cover;
     transition: var(--transition);
   }
-
-  img:hover {
+img{
     transition: var(--transition);
-    opacity: 0.8;
+
+}
+  img:hover {
+    opacity: 0.7;
   }
   .nav-links {
     display: none;
@@ -138,13 +140,11 @@
 }
 
 @media screen and (min-width: 768px) {
-  .navbar{
-  
+  .navbar {
   }
- }
+}
 
 @media screen and (min-width: 922px) {
-
   .nav-smaller {
     height: 100px !important;
   }
