@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  isLoading: false,
+  isLoading: true,
   isDropdownMenuOpen: false,
   isImageResized: false,
   isSearchOpen: false,
@@ -13,6 +13,12 @@ export const navbarSlice = createSlice({
   name: 'navbar',
   initialState,
   reducers: {
+    loading: (state) => {
+      state.isLoading = true
+    },
+    notLoading: (state) => {
+      state.isLoading = false
+    },
     toggleMenu: (state) => {
       state.isMenuOpen = !state.isMenuOpen
     },
@@ -69,5 +75,7 @@ export const {
   openSearch,
   closeSearch,
   toggleDropdownMenu,
+  loading,
+  notLoading
 } = navbarSlice.actions
 export default navbarSlice.reducer

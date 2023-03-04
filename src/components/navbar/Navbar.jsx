@@ -19,18 +19,14 @@ import {
   openDropdownMenu,
   closeDropdownMenu,
   openSearch,
-
+  loading,
+  notLoading,
 } from '../../redux/featueres/navbar/navbarSlice'
 const Navbar = () => {
-
-
   const dispatch = useDispatch()
-  const {
-    isLoading,
-    isMenuOpen,
-    isImageResized,
-    isSearchOpen,
-  } = useSelector((state) => state.navbar)
+  const { isLoading, isMenuOpen, isImageResized, isSearchOpen } = useSelector(
+    (state) => state.navbar
+  )
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -56,7 +52,6 @@ const Navbar = () => {
             />
           </Link>
         </div>
-        <h1>{isImageResized.toString()}</h1>
         <div className='nav-row'>
           <ul className='nav-links'>
             {navLinks.map((item) => {
@@ -69,7 +64,6 @@ const Navbar = () => {
                     onMouseLeave={() => dispatch(closeDropdownMenu())}
                   >
                     <NavLink
-                
                       style={({ isActive }) => {
                         return { color: isActive ? '#43a9d1' : '' }
                       }}
@@ -78,7 +72,8 @@ const Navbar = () => {
                     >
                       {title}
                     </NavLink>
-                    <Dropdown  />
+
+                    <Dropdown />
                   </li>
                 )
               }

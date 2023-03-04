@@ -1,15 +1,32 @@
 import React from 'react'
-import { Business, Carousel, Hero, HomeVideo, Jobs, Portfolio } from '../components'
+import { useDispatch, useSelector } from 'react-redux'
+import {
+  Business,
+  Carousel,
+  Hero,
+  HomeVideo,
+  Jobs,
+  Loading,
+  Portfolio,
+} from '../components'
 
 const Home = () => {
+  const dispatch = useDispatch()
+  const { isLoading } = useSelector((state) => state.navbar)
   return (
     <div className='home'>
-      <Hero />
-      <Business />
-      <HomeVideo />
-      <Portfolio />
-      <Jobs />
-      <Carousel />
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <>
+          <Hero />
+          <Business />
+          <HomeVideo />
+          <Portfolio />
+          <Jobs />
+          <Carousel />
+        </>
+      )}
     </div>
   )
 }
