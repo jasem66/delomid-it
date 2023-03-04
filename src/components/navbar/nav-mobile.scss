@@ -3,12 +3,13 @@
   width: 100%;
   background-color: var(--dark-blue-clr);
   .navmob-container {
-    width: 90%;
+    width: 95%;
     max-height: 400px;
     margin: 0 auto;
     transition: var(--transition-2);
+  
   }
-  li {
+  li { 
     padding: var(--p-sm) 0;
     font-size: var(--f-sm);
     transition: var(--transition);
@@ -16,7 +17,10 @@
 
   li article {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+
+
   }
   .mobnav-link {
     display: block;
