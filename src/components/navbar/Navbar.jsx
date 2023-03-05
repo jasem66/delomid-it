@@ -29,7 +29,7 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (windovi.scrollY > 100) {
+      if (window.scrollY > 100) {
         dispatch(resizeImage())
       } else {
         dispatch(notResizeImage())

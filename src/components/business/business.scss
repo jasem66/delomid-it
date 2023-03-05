@@ -135,10 +135,6 @@
           font-size: var(--f-md);
         }
 
-        // h3:hover {
-        //   opacity: 1;
-        //   color: var(--red-clr);
-        // }
       }
     }
   }
@@ -149,6 +145,14 @@
     width: 25%;
     max-width: 100%;
   }
+@media screen and (min-width: 922px) {
+  .business {
+.business-content{
+  margin-top: 3rem;
+}
+  }}
+
+
   // ----  digital container  ---- //
 
   .business-row {

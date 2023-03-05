@@ -7,7 +7,7 @@ const initialState = {
   isSearchOpen: false,
   isMenuOpen: false,
   isLinksOpen: false,
-  isanimated : false
+  isAnimated: false,
 }
 
 export const navbarSlice = createSlice({
@@ -56,10 +56,12 @@ export const navbarSlice = createSlice({
     closeSearch: (state) => {
       state.isSearchOpen = false
     },
-    animationControl: (state) => {
-      state.isanimated = !state.isanimated
+    animationOn: (state) => {
+      state.isAnimated = true
     },
-    
+    animationOff: (state) => {
+      state.isAnimated = false
+    },
   },
 })
 
@@ -82,5 +84,7 @@ export const {
   toggleDropdownMenu,
   loading,
   notLoading,
+  animationOn,
+  animationOff,
 } = navbarSlice.actions
 export default navbarSlice.reducer

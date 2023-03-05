@@ -1,4 +1,5 @@
 .navbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--dark-blue-clr);
   height: 50px;
   position: sticky;
@@ -31,7 +32,6 @@
     width: 10.5rem;
     height: 50px;
     object-fit: cover;
-
   }
   .delomid-logo-smaller {
     width: 10.5rem;
@@ -39,10 +39,9 @@
     object-fit: cover;
     transition: var(--transition);
   }
-img{
+  img {
     transition: var(--transition);
-
-}
+  }
   img:hover {
     opacity: 0.7;
   }
@@ -136,11 +135,6 @@ img{
       width: auto !important;
       height: auto;
     }
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .navbar {
   }
 }
 
