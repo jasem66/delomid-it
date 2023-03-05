@@ -4,29 +4,16 @@ import { NavLink } from 'react-router-dom'
 import { navDropdownLInks } from '../../utilities/constants'
 import './dropdown.scss'
 import {
-  openMenu,
   closeMenu,
-  toggleMenu,
-  openLink,
-  resizeImage,
-  notResizeImage,
   openDropdownMenu,
-  closeDropdownMenu,
-  openSearch,
-  closeSearch,
-  isLinksOpen,
-  toggleDropdownMenu,
+
 } from '../../redux/featueres/navbar/navbarSlice'
 
 const Dropdown = () => {
   const dispatch = useDispatch()
   const {
-    isLoading,
-    isMenuOpen,
-    isdropdownOpen,
-    isImageResized,
+   
     isDropdownMenuOpen,
-    isSearchOpen,
   } = useSelector((state) => state.navbar)
   return (
     <div className={isDropdownMenuOpen ? 'dropdown ' : 'dropdown close '}>

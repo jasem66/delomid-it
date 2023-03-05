@@ -4,7 +4,7 @@ import images from '../../utilities/images'
 import { HiSearch } from 'react-icons/hi'
 import { FiMenu } from 'react-icons/fi'
 import { FaTimes } from 'react-icons/fa'
-import { navLinks } from '../../utilities/constants'
+import { navDropdownLInks, navLinks } from '../../utilities/constants'
 import { Link, NavLink } from 'react-router-dom'
 import Dropdown from '../nav-dropdown/Dropdown'
 import SearchBtn from '../search-btn/SearchBtn'
@@ -19,13 +19,11 @@ import {
   openDropdownMenu,
   closeDropdownMenu,
   openSearch,
-
 } from '../../redux/featueres/navbar/navbarSlice'
 const Navbar = () => {
   const dispatch = useDispatch()
-  const { isMenuOpen, isImageResized, isSearchOpen } = useSelector(
-    (state) => state.navbar
-  )
+  const { isMenuOpen, isImageResized, isSearchOpen, isDropdownMenuOpen } =
+    useSelector((state) => state.navbar)
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -62,17 +60,37 @@ const Navbar = () => {
                     onMouseEnter={() => dispatch(openDropdownMenu())}
                     onMouseLeave={() => dispatch(closeDropdownMenu())}
                   >
-                    <NavLink
+                    <NavLink  className='dropdown-link '
                       style={({ isActive }) => {
                         return { color: isActive ? '#43a9d1' : '' }
                       }}
-                      className='nav-link '
+                    
                       to={path}
                     >
                       {title}
                     </NavLink>
-
-                    <Dropdown />
+                    <div
+                      className={
+                        isDropdownMenuOpen ? 'show-dropdown' : 'hide-dropdown'
+                      }
+                    >
+                      {navDropdownLInks.map((item) => {
+                        return (
+                          <li>
+                            <NavLink
+                              key={item.id}
+                              style={({ isActive }) => {
+                                return { color: isActive ? '#43a9d1' : '' }
+                              }}
+                              className='single-dropdown '
+                              to={item.path}
+                            >
+                              {item.title}
+                            </NavLink>
+                          </li>
+                        )
+                      })}
+                    </div>
                   </li>
                 )
               }

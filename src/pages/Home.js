@@ -1,9 +1,9 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {
+  Hero,
   Business,
   Carousel,
-  Hero,
   HomeVideo,
   Jobs,
   Loading,
@@ -18,15 +18,14 @@ const Home = () => {
       {/* {isLoading ? (
         <Loading />
       ) : ( )}*/}
-        <>
-          <Hero />
-          <Business />
-          <HomeVideo />
-          <Portfolio />
-          <Jobs />
-          <Carousel />
-        </>
-      
+      <>
+        <Hero />
+        <Business />
+        <HomeVideo />
+        <Portfolio />
+        <Jobs />
+        <Carousel />
+      </>
     </div>
   )
 }
