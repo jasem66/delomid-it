@@ -13,7 +13,7 @@ import {
 
 const NavMobile = () => {
   const dispatch = useDispatch()
-  const { isLoading, isMenuOpen, isDropdownMenuOpen } = useSelector(
+  const { isMenuOpen, isDropdownMenuOpen } = useSelector(
     (state) => state.navbar
   )
 

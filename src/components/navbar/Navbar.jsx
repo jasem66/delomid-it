@@ -3,10 +3,9 @@ import './navbar.scss'
 import images from '../../utilities/images'
 import { HiSearch } from 'react-icons/hi'
 import { FiMenu } from 'react-icons/fi'
-import { FaTimes } from 'react-icons/fa'
+import { RiCloseFill } from 'react-icons/ri'
 import { navDropdownLInks, navLinks } from '../../utilities/constants'
 import { Link, NavLink } from 'react-router-dom'
-import Dropdown from '../nav-dropdown/Dropdown'
 import SearchBtn from '../search-btn/SearchBtn'
 import NavMobile from './NavMobile'
 import { useSelector, useDispatch } from 'react-redux'
@@ -60,11 +59,11 @@ const Navbar = () => {
                     onMouseEnter={() => dispatch(openDropdownMenu())}
                     onMouseLeave={() => dispatch(closeDropdownMenu())}
                   >
-                    <NavLink  className='dropdown-link '
+                    <NavLink
+                      className='dropdown-link '
                       style={({ isActive }) => {
                         return { color: isActive ? '#43a9d1' : '' }
                       }}
-                    
                       to={path}
                     >
                       {title}
@@ -115,7 +114,7 @@ const Navbar = () => {
               <FiMenu
                 className={isMenuOpen ? 'menu-icon transform' : ' menu-icon  '}
               />
-              <FaTimes className={isMenuOpen && 'menu-icon-close '} />
+              <RiCloseFill className={isMenuOpen && 'menu-icon-close '} />
             </article>
           </span>
           <SearchBtn />

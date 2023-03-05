@@ -33,13 +33,14 @@
   }
   .link-chev {
     transition: var(--transition);
-    transform: rotate(0deg);
+    transform: rotate(180deg);
   }
   .turn-180 {
-    transform: rotate(180deg);
+    transform: rotate(0deg);
     transition: var(--transition);
   }
   .show {
+
     max-height: 95px;
     transition: var(--transition);
   }
