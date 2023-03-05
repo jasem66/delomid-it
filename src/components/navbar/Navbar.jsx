@@ -18,6 +18,7 @@ import {
   openDropdownMenu,
   closeDropdownMenu,
   openSearch,
+  closeMenu,
 } from '../../redux/featueres/navbar/navbarSlice'
 const Navbar = () => {
   const dispatch = useDispatch()
@@ -58,6 +59,7 @@ const Navbar = () => {
                     key={id}
                     onMouseEnter={() => dispatch(openDropdownMenu())}
                     onMouseLeave={() => dispatch(closeDropdownMenu())}
+                    onClick={() => dispatch(closeDropdownMenu())}
                   >
                     <NavLink
                       className='dropdown-link '

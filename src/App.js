@@ -1,15 +1,12 @@
-import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { store } from './redux/store'
-import { Provider, useDispatch, useSelector } from 'react-redux'
+import { Provider} from 'react-redux'
 import './App.scss'
 import {
   BackToTopBtn,
   Error,
   Footer,
-  Loading,
   Navbar,
-  SingleJob,
 } from './components'
 import {
   Blog,
@@ -36,7 +33,6 @@ function App() {
             {/* <Route exact path='/career/:id' element={<SingleJob />} /> */}
             <Route exact path='/contact' element={<Contact />} />
             <Route exact path='/blog' element={<Blog />} />
-
             <Route
               exact
               path='/our-services/business-intelligence'
