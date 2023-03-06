@@ -28,8 +28,8 @@ const Dropdown = () => {
                 return { color: isActive ? '#43a9d1' : '' }
               }}
               onClick={() => {
-                dispatch([openDropdownMenu(),
-                closeMenu()])
+                dispatch(openDropdownMenu(),
+                dispatch(closeMenu()))
               }}
               className='single-dropdown '
               to={item.path}

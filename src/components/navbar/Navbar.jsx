@@ -112,7 +112,15 @@ const Navbar = () => {
           </ul>
 
           <span className='nav-toggle'>
-            <article onClick={() => dispatch(toggleMenu(), openLink())}>
+            <article
+              onClick={() =>
+                dispatch(
+                  toggleMenu(),
+                  dispatch(closeDropdownMenu()),
+                  openLink()
+                )
+              }
+            >
               <FiMenu
                 className={isMenuOpen ? 'menu-icon transform' : ' menu-icon  '}
               />

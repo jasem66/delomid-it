@@ -26,18 +26,18 @@ const Footer = () => {
           </ul>
           <div className='addresses'>
             <address>
-              <a href='mailto:jasemsarafraz66@gmail.com'>
+              <a href='tel:+3225440445'>
                 <AiFillPhone className='icon' /> <span> +32 2 544 04 45</span>{' '}
                 (Belgium)
               </a>
             </address>
             <address>
-              <a href='   mailto:jasemsarafraz66@gmail.com'>
+              <a href='tel:+352621471746'>
                 <span>+352 621 47 17 46</span> (Luxembourg)
               </a>
             </address>
             <address>
-              <a href='   mailto:jasemsarafraz66@gmail.com'>
+              <a href='   mailto:info@delomid-it.com'>
                 <MdEmail className='icon' />
                 <span> info@delomid-it.com </span>
               </a>

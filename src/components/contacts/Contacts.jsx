@@ -46,7 +46,7 @@ const Contacts = () => {
             <div className='icon'>
               <AiOutlinePhone />
             </div>
-            <a href='tell:+32 2 544 04 45'>+32 2 544 04 45</a>
+            <a href='tel:+3225440445'>+32 2 544 04 45</a>
             <article></article>
             <div className='icon'>
               <AiOutlineMail />
