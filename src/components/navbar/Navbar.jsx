@@ -35,6 +35,20 @@ const Navbar = () => {
     })
   }, [])
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (windowWidth > 920) {
+        dispatch(closeDropdownMenu())
+        console.log('hehehehehehehehhehehe')
+      }
+      setWindowWidth(window.innerWidth)
+    }
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [windowWidth])
+
   return (
     <section className={isImageResized ? 'navbar nav-smaller' : 'navbar'}>
       <div className='nav-container '>

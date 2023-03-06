@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import './nav-mobile.scss'
 import { navLinks } from '../../utilities/constants'
 import { NavLink } from 'react-router-dom'
 import Dropdown from '../nav-dropdown/Dropdown'
 import { BiChevronDown } from 'react-icons/bi'
-
 import {
   closeMenu,
   toggleDropdownMenu,
 } from '../../redux/featueres/navbar/navbarSlice'
 
 const NavMobile = () => {
+
   const dispatch = useDispatch()
   const { isMenuOpen, isDropdownMenuOpen } = useSelector(
     (state) => state.navbar
@@ -20,7 +20,7 @@ const NavMobile = () => {
   return (
     <div className='navmob '>
       <div
-        className={isMenuOpen ? 'navmob-container ' : 'navmob-container hide'}
+        className={isMenuOpen ? 'navmob-container' : 'navmob-container hide'}
       >
         <ul className='navmob-list'>
           {navLinks.map((item) => {

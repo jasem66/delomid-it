@@ -30,7 +30,7 @@ export const navDropdownLInks = [
   {
     id: 6,
     title: 'business intelligence',
-    path: 'business-intelligence',
+    path: '/our-services/business-intelligence',
   },
   {
     id: 7,
