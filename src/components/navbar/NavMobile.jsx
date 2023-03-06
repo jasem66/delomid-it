@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import './nav-mobile.scss'
-import { navDropdownLInks, navLinks } from '../../utilities/constants'
+import { navLinks } from '../../utilities/constants'
 import { NavLink } from 'react-router-dom'
 import Dropdown from '../nav-dropdown/Dropdown'
 import { BiChevronDown } from 'react-icons/bi'
@@ -9,7 +9,6 @@ import { BiChevronDown } from 'react-icons/bi'
 import {
   closeMenu,
   toggleDropdownMenu,
-  openDropdownMenu,
 } from '../../redux/featueres/navbar/navbarSlice'
 
 const NavMobile = () => {
@@ -54,35 +53,8 @@ const NavMobile = () => {
                       <BiChevronDown size={30} />
                     </span>
                   </article>
-
-                  {/* <div className={isDropdownMenuOpen ? 'show' : 'hide'}>
+                  <div className={isDropdownMenuOpen ? 'show' : 'hide'}>
                     <Dropdown />
-                  </div> */}
-
-                  <div
-                    className={
-                      isDropdownMenuOpen ? 'dropdown ' : 'dropdown close '
-                    }
-                  >
-                    <ul>
-                      {navDropdownLInks.map((item) => {
-                        return (
-                          <NavLink
-                            key={item.id}
-                            style={({ isActive }) => {
-                              return { color: isActive ? '#43a9d1' : '' }
-                            }}
-                            onClick={() => {
-                              dispatch([openDropdownMenu(), closeMenu()])
-                            }}
-                            className='single-dropdown '
-                            to={item.path}
-                          >
-                            {item.title}
-                          </NavLink>
-                        )
-                      })}
-                    </ul>
                   </div>
                 </li>
               )
