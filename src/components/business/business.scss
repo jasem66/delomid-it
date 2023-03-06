@@ -189,12 +189,12 @@
       padding: 1rem 0 2rem 0;
     }
     .business-container,
-    .business-content {
+    .business-content,.business-content-digital {
       animation: popin 1.2s ease-in-out;
     }
     .digital-container {
       .single-business {
-        animation: movedown 1.2s ease-in-out;
+        animation: popin 1.2s ease-in-out;
         height: 300px;
       }
     }

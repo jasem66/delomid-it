@@ -2,11 +2,12 @@ import React, { useEffect, useRef, useState } from 'react'
 import './business.scss'
 import { businessData, digitalData } from '../../data/bussinesData'
 import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
-import {
-  animationOn,
-  animationOff,
-} from '../../redux/featueres/navbar/navbarSlice'
+// import { useDispatch } from 'react-redux'
+// import {
+//   animationOn,
+//   animationOff,
+// } from '../../redux/featueres/navbar/navbarSlice'
+
 const Business = () => {
 
   // const [isVisible, setIsVisible] = useState(false)
@@ -82,10 +83,11 @@ const Business = () => {
       </div>
 
       <div className='business-row'>
+        <div className='business-content-digital' >
         <h3 className='big-title' >
           Digital Online
         </h3>
-        <p>Design of web and mobile applications</p>
+        <p>Design of web and mobile applications</p></div>
         <div className='seperator'></div>
         <div className='digital-container'>
           {digitalData.map((item) => {
@@ -93,7 +95,7 @@ const Business = () => {
             return (
               <div
                 key={id}
-                className='single-business down-anime ' 
+                className='single-business ' 
               >
                 <div className='icon-container'>
                   <Link to='james delomid'>
