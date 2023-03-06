@@ -35,7 +35,7 @@ function App() {
             <Route exact path='/blog' element={<Blog />} />
             <Route
               exact
-              path='/our-services/business-intelligence'
+              path='business-intelligence'
               element={<BusinessIntelligence />}
             />
             <Route
