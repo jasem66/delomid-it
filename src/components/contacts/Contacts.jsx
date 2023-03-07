@@ -15,7 +15,7 @@ const Contacts = () => {
           <h3>Find us on social networks</h3>
           <div className='icons'>
             <div className='icon-wrapper'>
-              <div className='zindex'>
+              <div className='address'>
                 <Link
                   target='_blank'
                   to='https://www.linkedin.com/company/delomid-it/'

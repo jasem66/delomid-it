@@ -8,6 +8,9 @@
   text-align: center;
   video {
     display: none;
+    height: 0;
+    width: 0;
+    opacity: 0;
   }
   .hero-contents {
     padding: 1.5rem;
@@ -46,6 +49,7 @@
       width: 100%;
       height: calc(100vh - 70px);
       object-fit: cover;
+    opacity: 1;
     }
   }
   .overlay {
