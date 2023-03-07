@@ -5,9 +5,16 @@ import { navLinks } from '../../utilities/constants'
 import { navDropdownLInks } from '../../utilities/constants'
 import { MdEmail } from 'react-icons/md'
 import { AiFillPhone } from 'react-icons/ai'
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
 const Footer = () => {
-  
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
   const newLinks = navLinks.concat(navDropdownLInks)
 
   return (

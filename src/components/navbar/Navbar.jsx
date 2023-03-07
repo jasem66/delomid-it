@@ -5,7 +5,7 @@ import { HiSearch } from 'react-icons/hi'
 import { FiMenu } from 'react-icons/fi'
 import { RiCloseFill } from 'react-icons/ri'
 import { navDropdownLInks, navLinks } from '../../utilities/constants'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import SearchBtn from '../search-btn/SearchBtn'
 import NavMobile from './NavMobile'
 import { useSelector, useDispatch } from 'react-redux'
@@ -21,6 +21,12 @@ import {
   closeMenu,
 } from '../../redux/featueres/navbar/navbarSlice'
 const Navbar = () => {
+
+    const { pathname } = useLocation()
+
+    useEffect(() => {
+      window.scrollTo(0, 0)
+    }, [pathname])
   const dispatch = useDispatch()
   const { isMenuOpen, isImageResized, isSearchOpen, isDropdownMenuOpen } =
     useSelector((state) => state.navbar)

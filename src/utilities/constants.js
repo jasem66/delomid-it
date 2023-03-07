@@ -29,12 +29,12 @@ export const navLinks = [
 export const navDropdownLInks = [
   {
     id: 6,
-    title: 'business intelligence',
+    title: 'Business Intelligence',
     path: '/our-services/business-intelligence',
   },
   {
     id: 7,
-    title: 'digital-online',
+    title: 'Digital Online',
     path: '/our-services/digital-online',
   },
 ]
